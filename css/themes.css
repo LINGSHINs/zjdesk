@@ -1,0 +1,4206 @@
+/* ==========================================================================
+   Themes.css - 超大型CSS主题皮肤库
+   包含56种精心设计的主题皮肤
+   每种主题通过 .theme-xxx 类名和CSS变量实现
+   ========================================================================== */
+
+/* ==========================================================================
+   1. Default - 默认清新苹果风
+   ========================================================================== */
+.theme-default {
+  --bg-primary: #f5f5f7;
+  --bg-secondary: #ffffff;
+  --bg-tertiary: #e8e8ed;
+  --bg-hover: #ececf1;
+  --text-primary: #1d1d1f;
+  --text-secondary: #6e6e73;
+  --text-accent: #0071e3;
+  --text-muted: #86868b;
+  --accent-primary: #0071e3;
+  --accent-secondary: #0077ed;
+  --accent-tertiary: #2997ff;
+  --accent-success: #34c759;
+  --accent-error: #ff3b30;
+  --accent-warning: #ff9500;
+  --accent-info: #5ac8fa;
+  --accent-hover: #0077ed;
+  --border-color: #d2d2d7;
+  --border-light: #e5e5ea;
+  --divider-color: #e8e8ed;
+  --card-bg: #ffffff;
+  --card-bg-hover: #fafafa;
+  --card-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+  --card-shadow-hover: 0 4px 20px rgba(0, 0, 0, 0.12);
+  --input-bg: #ffffff;
+  --input-border: #d2d2d7;
+  --input-focus: #0071e3;
+  --sidebar-bg: #fafafa;
+  --sidebar-text: #1d1d1f;
+  --sidebar-border: #e5e5ea;
+  --nav-bg: rgba(255, 255, 255, 0.8);
+  --nav-text: #1d1d1f;
+  --link-color: #0071e3;
+  --link-hover: #0077ed;
+  --code-bg: #f5f5f7;
+  --code-text: #1d1d1f;
+  --code-border: #e5e5ea;
+  --heading-color: #1d1d1f;
+  --button-bg: #0071e3;
+  --button-text: #ffffff;
+  --button-hover: #0077ed;
+  --button-secondary-bg: #e8e8ed;
+  --button-secondary-text: #1d1d1f;
+  --button-secondary-hover: #d2d2d7;
+  --overlay-bg: rgba(0, 0, 0, 0.4);
+  --scrollbar-track: #f5f5f7;
+  --scrollbar-thumb: #c7c7cc;
+  --scrollbar-thumb-hover: #aeaeb2;
+  --font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif;
+  --font-mono: 'SF Mono', Menlo, Monaco, Consolas, 'Courier New', monospace;
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 16px;
+  --radius-xl: 20px;
+  --transition-fast: 0.15s ease;
+  --transition-normal: 0.25s ease;
+  --transition-slow: 0.4s ease;
+}
+
+/* ==========================================================================
+   2. Dark - 深色模式
+   ========================================================================== */
+.theme-dark {
+  --bg-primary: #1c1c1e;
+  --bg-secondary: #2c2c2e;
+  --bg-tertiary: #3a3a3c;
+  --bg-hover: #3a3a3c;
+  --text-primary: #ffffff;
+  --text-secondary: #ebebf5;
+  --text-accent: #0a84ff;
+  --text-muted: #8e8e93;
+  --accent-primary: #0a84ff;
+  --accent-secondary: #409cff;
+  --accent-tertiary: #64d2ff;
+  --accent-success: #30d158;
+  --accent-error: #ff453a;
+  --accent-warning: #ff9f0a;
+  --accent-info: #64d2ff;
+  --accent-hover: #409cff;
+  --border-color: #48484a;
+  --border-light: #38383a;
+  --divider-color: #38383a;
+  --card-bg: #2c2c2e;
+  --card-bg-hover: #3a3a3c;
+  --card-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+  --card-shadow-hover: 0 8px 30px rgba(0, 0, 0, 0.5);
+  --input-bg: #3a3a3c;
+  --input-border: #48484a;
+  --input-focus: #0a84ff;
+  --sidebar-bg: #252527;
+  --sidebar-text: #ffffff;
+  --sidebar-border: #38383a;
+  --nav-bg: rgba(28, 28, 30, 0.85);
+  --nav-text: #ffffff;
+  --link-color: #0a84ff;
+  --link-hover: #409cff;
+  --code-bg: #2c2c2e;
+  --code-text: #f5f5f7;
+  --code-border: #48484a;
+  --heading-color: #ffffff;
+  --button-bg: #0a84ff;
+  --button-text: #ffffff;
+  --button-hover: #409cff;
+  --button-secondary-bg: #3a3a3c;
+  --button-secondary-text: #ffffff;
+  --button-secondary-hover: #48484a;
+  --overlay-bg: rgba(0, 0, 0, 0.6);
+  --scrollbar-track: #1c1c1e;
+  --scrollbar-thumb: #48484a;
+  --scrollbar-thumb-hover: #636366;
+  --font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', Roboto, sans-serif;
+  --font-mono: 'SF Mono', Menlo, Monaco, Consolas, 'Courier New', monospace;
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 16px;
+  --radius-xl: 20px;
+  --transition-fast: 0.15s ease;
+  --transition-normal: 0.25s ease;
+  --transition-slow: 0.4s ease;
+}
+
+/* ==========================================================================
+   3. Pokemon - 宝可梦GBA点阵屏幕风
+   ========================================================================== */
+.theme-pokemon {
+  --bg-primary: #9bbc0f;
+  --bg-secondary: #8bac0f;
+  --bg-tertiary: #306230;
+  --bg-hover: #a9c720;
+  --text-primary: #0f380f;
+  --text-secondary: #306230;
+  --text-accent: #0f380f;
+  --text-muted: #306230;
+  --accent-primary: #e51c23;
+  --accent-secondary: #ffcb05;
+  --accent-tertiary: #3b4cca;
+  --accent-success: #4caf50;
+  --accent-error: #e51c23;
+  --accent-warning: #ff9800;
+  --accent-info: #2196f3;
+  --accent-hover: #ffcb05;
+  --border-color: #0f380f;
+  --border-light: #306230;
+  --divider-color: #306230;
+  --card-bg: #8bac0f;
+  --card-bg-hover: #9bbc0f;
+  --card-shadow: 4px 4px 0 #0f380f;
+  --card-shadow-hover: 6px 6px 0 #0f380f;
+  --input-bg: #9bbc0f;
+  --input-border: #0f380f;
+  --input-focus: #ffcb05;
+  --sidebar-bg: #8bac0f;
+  --sidebar-text: #0f380f;
+  --sidebar-border: #0f380f;
+  --nav-bg: #306230;
+  --nav-text: #9bbc0f;
+  --link-color: #3b4cca;
+  --link-hover: #e51c23;
+  --code-bg: #0f380f;
+  --code-text: #9bbc0f;
+  --code-border: #0f380f;
+  --heading-color: #0f380f;
+  --button-bg: #e51c23;
+  --button-text: #ffffff;
+  --button-hover: #ffcb05;
+  --button-secondary-bg: #306230;
+  --button-secondary-text: #9bbc0f;
+  --button-secondary-hover: #0f380f;
+  --overlay-bg: rgba(15, 56, 15, 0.7);
+  --scrollbar-track: #8bac0f;
+  --scrollbar-thumb: #0f380f;
+  --scrollbar-thumb-hover: #306230;
+  --font-family: 'Press Start 2P', 'VT323', 'Courier New', monospace;
+  --font-mono: 'Press Start 2P', 'VT323', monospace;
+  --radius-sm: 0px;
+  --radius-md: 0px;
+  --radius-lg: 0px;
+  --radius-xl: 0px;
+  --transition-fast: 0.1s steps(2);
+  --transition-normal: 0.2s steps(4);
+  --transition-slow: 0.3s steps(6);
+  --pixel-border: 4px solid #0f380f;
+  --gb-lightest: #9bbc0f;
+  --gb-light: #8bac0f;
+  --gb-dark: #306230;
+  --gb-darkest: #0f380f;
+}
+
+/* ==========================================================================
+   4. Cyberpunk - 赛博朋克霓虹风
+   ========================================================================== */
+.theme-cyberpunk {
+  --bg-primary: #0d0221;
+  --bg-secondary: #1a0533;
+  --bg-tertiary: #260940;
+  --bg-hover: #330d4d;
+  --text-primary: #f0f0f0;
+  --text-secondary: #b88aff;
+  --text-accent: #ff2a6d;
+  --text-muted: #7b2cbf;
+  --accent-primary: #ff2a6d;
+  --accent-secondary: #05d9e8;
+  --accent-tertiary: #d1d7e0;
+  --accent-success: #39ff14;
+  --accent-error: #ff073a;
+  --accent-warning: #f9f002;
+  --accent-info: #05d9e8;
+  --accent-hover: #ff6b9d;
+  --border-color: #ff2a6d;
+  --border-light: #7b2cbf;
+  --divider-color: #3d1a5c;
+  --card-bg: rgba(26, 5, 51, 0.9);
+  --card-bg-hover: rgba(38, 9, 64, 0.95);
+  --card-shadow: 0 0 20px rgba(255, 42, 109, 0.3), 0 0 40px rgba(5, 217, 232, 0.2);
+  --card-shadow-hover: 0 0 30px rgba(255, 42, 109, 0.5), 0 0 60px rgba(5, 217, 232, 0.3);
+  --input-bg: rgba(13, 2, 33, 0.8);
+  --input-border: #ff2a6d;
+  --input-focus: #05d9e8;
+  --sidebar-bg: #1a0533;
+  --sidebar-text: #f0f0f0;
+  --sidebar-border: #ff2a6d;
+  --nav-bg: rgba(13, 2, 33, 0.9);
+  --nav-text: #05d9e8;
+  --link-color: #ff2a6d;
+  --link-hover: #05d9e8;
+  --code-bg: #1a0533;
+  --code-text: #39ff14;
+  --code-border: #ff2a6d;
+  --heading-color: #ff2a6d;
+  --button-bg: #ff2a6d;
+  --button-text: #0d0221;
+  --button-hover: #05d9e8;
+  --button-secondary-bg: #260940;
+  --button-secondary-text: #05d9e8;
+  --button-secondary-hover: #330d4d;
+  --overlay-bg: rgba(13, 2, 33, 0.85);
+  --scrollbar-track: #1a0533;
+  --scrollbar-thumb: #ff2a6d;
+  --scrollbar-thumb-hover: #05d9e8;
+  --font-family: 'Orbitron', 'Rajdhani', 'Share Tech Mono', sans-serif;
+  --font-mono: 'Share Tech Mono', 'Courier New', monospace;
+  --radius-sm: 2px;
+  --radius-md: 4px;
+  --radius-lg: 8px;
+  --radius-xl: 12px;
+  --transition-fast: 0.1s ease;
+  --transition-normal: 0.2s ease;
+  --transition-slow: 0.3s ease;
+  --neon-glow-pink: 0 0 10px #ff2a6d, 0 0 20px #ff2a6d, 0 0 40px #ff2a6d;
+  --neon-glow-cyan: 0 0 10px #05d9e8, 0 0 20px #05d9e8, 0 0 40px #05d9e8;
+  --neon-glow-yellow: 0 0 10px #f9f002, 0 0 20px #f9f002;
+  --grid-color: rgba(255, 42, 109, 0.1);
+}
+
+/* ==========================================================================
+   5. Stardew - 星露谷像素风
+   ========================================================================== */
+.theme-stardew {
+  --bg-primary: #2d5a27;
+  --bg-secondary: #3a7232;
+  --bg-tertiary: #4a8a3f;
+  --bg-hover: #5aa34c;
+  --text-primary: #fff8e7;
+  --text-secondary: #e8d5b7;
+  --text-accent: #ffd93d;
+  --text-muted: #c4a574;
+  --accent-primary: #ffd93d;
+  --accent-secondary: #ff6b6b;
+  --accent-tertiary: #6bcb77;
+  --accent-success: #6bcb77;
+  --accent-error: #ff6b6b;
+  --accent-warning: #ffa94d;
+  --accent-info: #74c0fc;
+  --accent-hover: #ffe066;
+  --border-color: #8b5a2b;
+  --border-light: #a0522d;
+  --divider-color: #6b4423;
+  --card-bg: #3a7232;
+  --card-bg-hover: #4a8a3f;
+  --card-shadow: 4px 4px 0 #1a3518, inset 0 0 0 2px #8b5a2b;
+  --card-shadow-hover: 6px 6px 0 #1a3518, inset 0 0 0 2px #a0522d;
+  --input-bg: #2d5a27;
+  --input-border: #8b5a2b;
+  --input-focus: #ffd93d;
+  --sidebar-bg: #1f3d1a;
+  --sidebar-text: #fff8e7;
+  --sidebar-border: #8b5a2b;
+  --nav-bg: #1a3518;
+  --nav-text: #ffd93d;
+  --link-color: #ffd93d;
+  --link-hover: #ffe066;
+  --code-bg: #1a3518;
+  --code-text: #ffd93d;
+  --code-border: #8b5a2b;
+  --heading-color: #ffd93d;
+  --button-bg: #8b5a2b;
+  --button-text: #fff8e7;
+  --button-hover: #a0522d;
+  --button-secondary-bg: #4a8a3f;
+  --button-secondary-text: #fff8e7;
+  --button-secondary-hover: #5aa34c;
+  --overlay-bg: rgba(26, 53, 24, 0.8);
+  --scrollbar-track: #1f3d1a;
+  --scrollbar-thumb: #8b5a2b;
+  --scrollbar-thumb-hover: #a0522d;
+  --font-family: 'VT323', 'Press Start 2P', 'Courier New', monospace;
+  --font-mono: 'VT323', 'Courier New', monospace;
+  --radius-sm: 0px;
+  --radius-md: 0px;
+  --radius-lg: 0px;
+  --radius-xl: 0px;
+  --transition-fast: 0.1s steps(2);
+  --transition-normal: 0.2s steps(3);
+  --transition-slow: 0.3s steps(5);
+  --wood-dark: #5c3d2e;
+  --wood-light: #8b5a2b;
+  --grass-light: #6bcb77;
+  --heart-red: #ff6b6b;
+  --energy-yellow: #ffd93d;
+}
+
+/* ==========================================================================
+   6. Shinkai - 新海诚漫画风
+   ========================================================================== */
+.theme-shinkai {
+  --bg-primary: #e8f4fd;
+  --bg-secondary: #d4e9f7;
+  --bg-tertiary: #b8d8eb;
+  --bg-hover: #c5e0f2;
+  --text-primary: #2c3e50;
+  --text-secondary: #5d6d7e;
+  --text-accent: #e74c3c;
+  --text-muted: #7f8c8d;
+  --accent-primary: #3498db;
+  --accent-secondary: #e74c3c;
+  --accent-tertiary: #f39c12;
+  --accent-success: #27ae60;
+  --accent-error: #e74c3c;
+  --accent-warning: #f39c12;
+  --accent-info: #3498db;
+  --accent-hover: #2980b9;
+  --border-color: #aed6f1;
+  --border-light: #d4e9f7;
+  --divider-color: #d4e9f7;
+  --card-bg: rgba(255, 255, 255, 0.85);
+  --card-bg-hover: rgba(255, 255, 255, 0.95);
+  --card-shadow: 0 8px 32px rgba(52, 152, 219, 0.15), 0 2px 8px rgba(0, 0, 0, 0.05);
+  --card-shadow-hover: 0 12px 40px rgba(52, 152, 219, 0.25), 0 4px 12px rgba(0, 0, 0, 0.08);
+  --input-bg: rgba(255, 255, 255, 0.9);
+  --input-border: #aed6f1;
+  --input-focus: #3498db;
+  --sidebar-bg: #d4e9f7;
+  --sidebar-text: #2c3e50;
+  --sidebar-border: #aed6f1;
+  --nav-bg: rgba(232, 244, 253, 0.9);
+  --nav-text: #2c3e50;
+  --link-color: #3498db;
+  --link-hover: #e74c3c;
+  --code-bg: #ecf0f1;
+  --code-text: #2c3e50;
+  --code-border: #aed6f1;
+  --heading-color: #2c3e50;
+  --button-bg: #3498db;
+  --button-text: #ffffff;
+  --button-hover: #2980b9;
+  --button-secondary-bg: #b8d8eb;
+  --button-secondary-text: #2c3e50;
+  --button-secondary-hover: #aed6f1;
+  --overlay-bg: rgba(44, 62, 80, 0.4);
+  --scrollbar-track: #e8f4fd;
+  --scrollbar-thumb: #aed6f1;
+  --scrollbar-thumb-hover: #3498db;
+  --font-family: 'Hiragino Sans', 'Noto Sans CJK SC', 'PingFang SC', 'Microsoft YaHei', sans-serif;
+  --font-mono: 'Consolas', 'Monaco', 'Courier New', monospace;
+  --radius-sm: 8px;
+  --radius-md: 16px;
+  --radius-lg: 24px;
+  --radius-xl: 32px;
+  --transition-fast: 0.2s ease;
+  --transition-normal: 0.4s ease;
+  --transition-slow: 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  --sky-gradient: linear-gradient(180deg, #87ceeb 0%, #e8f4fd 100%);
+  --cloud-white: #ffffff;
+  --sunset-orange: #f39c12;
+}
+
+/* ==========================================================================
+   7. Ink - 水墨风
+   ========================================================================== */
+.theme-ink {
+  --bg-primary: #f5f5f0;
+  --bg-secondary: #ebebe5;
+  --bg-tertiary: #e0e0d8;
+  --bg-hover: #d8d8d0;
+  --text-primary: #1a1a1a;
+  --text-secondary: #4a4a4a;
+  --text-accent: #8b0000;
+  --text-muted: #7a7a7a;
+  --accent-primary: #1a1a1a;
+  --accent-secondary: #8b0000;
+  --accent-tertiary: #4a4a4a;
+  --accent-success: #2d5a27;
+  --accent-error: #8b0000;
+  --accent-warning: #b8860b;
+  --accent-info: #2c3e50;
+  --accent-hover: #333333;
+  --border-color: #b8b8b0;
+  --border-light: #d0d0c8;
+  --divider-color: #d0d0c8;
+  --card-bg: rgba(255, 255, 255, 0.7);
+  --card-bg-hover: rgba(255, 255, 255, 0.9);
+  --card-shadow: 2px 2px 10px rgba(0, 0, 0, 0.08);
+  --card-shadow-hover: 4px 4px 20px rgba(0, 0, 0, 0.12);
+  --input-bg: rgba(255, 255, 255, 0.8);
+  --input-border: #b8b8b0;
+  --input-focus: #1a1a1a;
+  --sidebar-bg: #ebebe5;
+  --sidebar-text: #1a1a1a;
+  --sidebar-border: #b8b8b0;
+  --nav-bg: rgba(245, 245, 240, 0.9);
+  --nav-text: #1a1a1a;
+  --link-color: #1a1a1a;
+  --link-hover: #8b0000;
+  --code-bg: #ebebe5;
+  --code-text: #1a1a1a;
+  --code-border: #b8b8b0;
+  --heading-color: #1a1a1a;
+  --button-bg: #1a1a1a;
+  --button-text: #f5f5f0;
+  --button-hover: #333333;
+  --button-secondary-bg: #e0e0d8;
+  --button-secondary-text: #1a1a1a;
+  --button-secondary-hover: #d0d0c8;
+  --overlay-bg: rgba(26, 26, 26, 0.5);
+  --scrollbar-track: #ebebe5;
+  --scrollbar-thumb: #b8b8b0;
+  --scrollbar-thumb-hover: #8a8a82;
+  --font-family: 'STKaiti', 'KaiTi', '楷体', 'Songti SC', 'SimSun', serif;
+  --font-mono: 'Consolas', 'Monaco', 'Courier New', monospace;
+  --radius-sm: 2px;
+  --radius-md: 4px;
+  --radius-lg: 8px;
+  --radius-xl: 12px;
+  --transition-fast: 0.2s ease;
+  --transition-normal: 0.4s ease;
+  --transition-slow: 0.6s ease;
+  --ink-black: #1a1a1a;
+  --ink-gray: #4a4a4a;
+  --ink-light: #7a7a7a;
+  --seal-red: #8b0000;
+  --paper-color: #f5f5f0;
+}
+
+/* ==========================================================================
+   8. LiquidGlass - iOS液态玻璃
+   ========================================================================== */
+.theme-liquidglass {
+  --bg-primary: rgba(255, 255, 255, 0.2);
+  --bg-secondary: rgba(255, 255, 255, 0.3);
+  --bg-tertiary: rgba(255, 255, 255, 0.4);
+  --bg-hover: rgba(255, 255, 255, 0.5);
+  --text-primary: #ffffff;
+  --text-secondary: rgba(255, 255, 255, 0.85);
+  --text-accent: #ffffff;
+  --text-muted: rgba(255, 255, 255, 0.6);
+  --accent-primary: #ffffff;
+  --accent-secondary: #007aff;
+  --accent-tertiary: rgba(255, 255, 255, 0.6);
+  --accent-success: #34c759;
+  --accent-error: #ff3b30;
+  --accent-warning: #ffcc00;
+  --accent-info: #007aff;
+  --accent-hover: rgba(255, 255, 255, 0.9);
+  --border-color: rgba(255, 255, 255, 0.3);
+  --border-light: rgba(255, 255, 255, 0.2);
+  --divider-color: rgba(255, 255, 255, 0.15);
+  --card-bg: rgba(255, 255, 255, 0.25);
+  --card-bg-hover: rgba(255, 255, 255, 0.35);
+  --card-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  --card-shadow-hover: 0 12px 40px rgba(0, 0, 0, 0.15);
+  --input-bg: rgba(255, 255, 255, 0.3);
+  --input-border: rgba(255, 255, 255, 0.4);
+  --input-focus: #ffffff;
+  --sidebar-bg: rgba(0, 0, 0, 0.3);
+  --sidebar-text: #ffffff;
+  --sidebar-border: rgba(255, 255, 255, 0.2);
+  --nav-bg: rgba(255, 255, 255, 0.15);
+  --nav-text: #ffffff;
+  --link-color: #ffffff;
+  --link-hover: rgba(255, 255, 255, 0.7);
+  --code-bg: rgba(0, 0, 0, 0.3);
+  --code-text: #ffffff;
+  --code-border: rgba(255, 255, 255, 0.2);
+  --heading-color: #ffffff;
+  --button-bg: rgba(255, 255, 255, 0.3);
+  --button-text: #ffffff;
+  --button-hover: rgba(255, 255, 255, 0.45);
+  --button-secondary-bg: rgba(0, 0, 0, 0.2);
+  --button-secondary-text: #ffffff;
+  --button-secondary-hover: rgba(0, 0, 0, 0.3);
+  --overlay-bg: rgba(0, 0, 0, 0.4);
+  --scrollbar-track: rgba(255, 255, 255, 0.1);
+  --scrollbar-thumb: rgba(255, 255, 255, 0.3);
+  --scrollbar-thumb-hover: rgba(255, 255, 255, 0.5);
+  --font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Helvetica Neue', Arial, sans-serif;
+  --font-mono: 'SF Mono', Menlo, Monaco, Consolas, monospace;
+  --radius-sm: 12px;
+  --radius-md: 20px;
+  --radius-lg: 28px;
+  --radius-xl: 36px;
+  --transition-fast: 0.2s ease;
+  --transition-normal: 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  --transition-slow: 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  --backdrop-blur: blur(20px) saturate(180%);
+  --backdrop-blur-light: blur(10px) saturate(150%);
+  --glass-border: 1px solid rgba(255, 255, 255, 0.3);
+  --glass-highlight: inset 0 1px 0 rgba(255, 255, 255, 0.4);
+}
+
+/* ==========================================================================
+   9. Nord - 北极冷色调
+   ========================================================================== */
+.theme-nord {
+  --bg-primary: #2e3440;
+  --bg-secondary: #3b4252;
+  --bg-tertiary: #434c5e;
+  --bg-hover: #4c566a;
+  --text-primary: #eceff4;
+  --text-secondary: #d8dee9;
+  --text-accent: #88c0d0;
+  --text-muted: #a7aeba;
+  --accent-primary: #88c0d0;
+  --accent-secondary: #81a1c1;
+  --accent-tertiary: #5e81ac;
+  --accent-success: #a3be8c;
+  --accent-error: #bf616a;
+  --accent-warning: #ebcb8b;
+  --accent-info: #88c0d0;
+  --accent-hover: #81a1c1;
+  --border-color: #4c566a;
+  --border-light: #434c5e;
+  --divider-color: #434c5e;
+  --card-bg: #3b4252;
+  --card-bg-hover: #434c5e;
+  --card-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
+  --card-shadow-hover: 0 8px 24px rgba(0, 0, 0, 0.4);
+  --input-bg: #2e3440;
+  --input-border: #4c566a;
+  --input-focus: #88c0d0;
+  --sidebar-bg: #272c36;
+  --sidebar-text: #eceff4;
+  --sidebar-border: #434c5e;
+  --nav-bg: rgba(46, 52, 64, 0.9);
+  --nav-text: #eceff4;
+  --link-color: #88c0d0;
+  --link-hover: #81a1c1;
+  --code-bg: #2e3440;
+  --code-text: #eceff4;
+  --code-border: #4c566a;
+  --heading-color: #eceff4;
+  --button-bg: #5e81ac;
+  --button-text: #eceff4;
+  --button-hover: #81a1c1;
+  --button-secondary-bg: #434c5e;
+  --button-secondary-text: #eceff4;
+  --button-secondary-hover: #4c566a;
+  --overlay-bg: rgba(46, 52, 64, 0.8);
+  --scrollbar-track: #2e3440;
+  --scrollbar-thumb: #4c566a;
+  --scrollbar-thumb-hover: #5e81ac;
+  --font-family: 'Inter', 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  --font-mono: 'JetBrains Mono', 'Fira Code', 'Consolas', monospace;
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  --radius-xl: 16px;
+  --transition-fast: 0.15s ease;
+  --transition-normal: 0.25s ease;
+  --transition-slow: 0.35s ease;
+  --nord0: #2e3440;
+  --nord1: #3b4252;
+  --nord2: #434c5e;
+  --nord3: #4c566a;
+  --nord4: #d8dee9;
+  --nord5: #e5e9f0;
+  --nord6: #eceff4;
+  --nord7: #8fbcbb;
+  --nord8: #88c0d0;
+  --nord9: #81a1c1;
+  --nord10: #5e81ac;
+  --nord11: #bf616a;
+  --nord12: #d08770;
+  --nord13: #ebcb8b;
+  --nord14: #a3be8c;
+  --nord15: #b48ead;
+}
+
+/* ==========================================================================
+   10. Dracula - 德古拉吸血鬼风
+   ========================================================================== */
+.theme-dracula {
+  --bg-primary: #282a36;
+  --bg-secondary: #21222c;
+  --bg-tertiary: #343746;
+  --bg-hover: #44475a;
+  --text-primary: #f8f8f2;
+  --text-secondary: #bd93f9;
+  --text-accent: #ff79c6;
+  --text-muted: #6272a4;
+  --accent-primary: #bd93f9;
+  --accent-secondary: #ff79c6;
+  --accent-tertiary: #8be9fd;
+  --accent-success: #50fa7b;
+  --accent-error: #ff5555;
+  --accent-warning: #f1fa8c;
+  --accent-info: #8be9fd;
+  --accent-hover: #ff79c6;
+  --border-color: #44475a;
+  --border-light: #343746;
+  --divider-color: #343746;
+  --card-bg: #21222c;
+  --card-bg-hover: #282a36;
+  --card-shadow: 0 4px 20px rgba(189, 147, 249, 0.15);
+  --card-shadow-hover: 0 8px 30px rgba(189, 147, 249, 0.25);
+  --input-bg: #282a36;
+  --input-border: #44475a;
+  --input-focus: #bd93f9;
+  --sidebar-bg: #1e1f29;
+  --sidebar-text: #f8f8f2;
+  --sidebar-border: #44475a;
+  --nav-bg: rgba(33, 34, 44, 0.9);
+  --nav-text: #f8f8f2;
+  --link-color: #bd93f9;
+  --link-hover: #ff79c6;
+  --code-bg: #282a36;
+  --code-text: #f8f8f2;
+  --code-border: #44475a;
+  --heading-color: #bd93f9;
+  --button-bg: #bd93f9;
+  --button-text: #282a36;
+  --button-hover: #ff79c6;
+  --button-secondary-bg: #44475a;
+  --button-secondary-text: #f8f8f2;
+  --button-secondary-hover: #6272a4;
+  --overlay-bg: rgba(40, 42, 54, 0.85);
+  --scrollbar-track: #21222c;
+  --scrollbar-thumb: #44475a;
+  --scrollbar-thumb-hover: #6272a4;
+  --font-family: 'Fira Sans', 'Segoe UI', Roboto, sans-serif;
+  --font-mono: 'Fira Code', 'JetBrains Mono', 'Consolas', monospace;
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 16px;
+  --radius-xl: 20px;
+  --transition-fast: 0.15s ease;
+  --transition-normal: 0.25s ease;
+  --transition-slow: 0.35s ease;
+  --dracula-bg: #282a36;
+  --dracula-current-line: #44475a;
+  --dracula-selection: #44475a;
+  --dracula-comment: #6272a4;
+  --dracula-cyan: #8be9fd;
+  --dracula-green: #50fa7b;
+  --dracula-orange: #ffb86c;
+  --dracula-pink: #ff79c6;
+  --dracula-purple: #bd93f9;
+  --dracula-red: #ff5555;
+  --dracula-yellow: #f1fa8c;
+}
+
+/* ==========================================================================
+   11. Monokai - Monokai经典代码风
+   ========================================================================== */
+.theme-monokai {
+  --bg-primary: #272822;
+  --bg-secondary: #1e1f1c;
+  --bg-tertiary: #3e3d32;
+  --bg-hover: #49483e;
+  --text-primary: #f8f8f2;
+  --text-secondary: #a6e22e;
+  --text-accent: #f92672;
+  --text-muted: #75715e;
+  --accent-primary: #a6e22e;
+  --accent-secondary: #f92672;
+  --accent-tertiary: #66d9ef;
+  --accent-success: #a6e22e;
+  --accent-error: #f92672;
+  --accent-warning: #e6db74;
+  --accent-info: #66d9ef;
+  --accent-hover: #fd971f;
+  --border-color: #49483e;
+  --border-light: #3e3d32;
+  --divider-color: #3e3d32;
+  --card-bg: #1e1f1c;
+  --card-bg-hover: #272822;
+  --card-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
+  --card-shadow-hover: 0 8px 24px rgba(0, 0, 0, 0.4);
+  --input-bg: #272822;
+  --input-border: #49483e;
+  --input-focus: #a6e22e;
+  --sidebar-bg: #191a16;
+  --sidebar-text: #f8f8f2;
+  --sidebar-border: #49483e;
+  --nav-bg: rgba(30, 31, 28, 0.9);
+  --nav-text: #f8f8f2;
+  --link-color: #66d9ef;
+  --link-hover: #f92672;
+  --code-bg: #272822;
+  --code-text: #f8f8f2;
+  --code-border: #49483e;
+  --heading-color: #f92672;
+  --button-bg: #a6e22e;
+  --button-text: #272822;
+  --button-hover: #e6db74;
+  --button-secondary-bg: #49483e;
+  --button-secondary-text: #f8f8f2;
+  --button-secondary-hover: #75715e;
+  --overlay-bg: rgba(39, 40, 34, 0.85);
+  --scrollbar-track: #1e1f1c;
+  --scrollbar-thumb: #49483e;
+  --scrollbar-thumb-hover: #75715e;
+  --font-family: 'Consolas', 'Monaco', 'Courier New', monospace;
+  --font-mono: 'Consolas', 'Monaco', 'Fira Code', monospace;
+  --radius-sm: 4px;
+  --radius-md: 6px;
+  --radius-lg: 10px;
+  --radius-xl: 14px;
+  --transition-fast: 0.1s ease;
+  --transition-normal: 0.2s ease;
+  --transition-slow: 0.3s ease;
+  --monokai-bg: #272822;
+  --monokai-fg: #f8f8f2;
+  --monokai-comment: #75715e;
+  --monokai-red: #f92672;
+  --monokai-orange: #fd971f;
+  --monokai-yellow: #e6db74;
+  --monokai-green: #a6e22e;
+  --monokai-cyan: #66d9ef;
+  --monokai-blue: #ae81ff;
+  --monokai-magenta: #f92672;
+}
+
+/* ==========================================================================
+   12. Gruvbox - 复古暖色调
+   ========================================================================== */
+.theme-gruvbox {
+  --bg-primary: #282828;
+  --bg-secondary: #3c3836;
+  --bg-tertiary: #504945;
+  --bg-hover: #665c54;
+  --text-primary: #ebdbb2;
+  --text-secondary: #d5c4a1;
+  --text-accent: #fe8019;
+  --text-muted: #a89984;
+  --accent-primary: #fe8019;
+  --accent-secondary: #fb4934;
+  --accent-tertiary: #b8bb26;
+  --accent-success: #b8bb26;
+  --accent-error: #fb4934;
+  --accent-warning: #fabd2f;
+  --accent-info: #83a598;
+  --accent-hover: #fabd2f;
+  --border-color: #665c54;
+  --border-light: #504945;
+  --divider-color: #504945;
+  --card-bg: #3c3836;
+  --card-bg-hover: #504945;
+  --card-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
+  --card-shadow-hover: 0 8px 24px rgba(0, 0, 0, 0.4);
+  --input-bg: #282828;
+  --input-border: #665c54;
+  --input-focus: #fe8019;
+  --sidebar-bg: #1d2021;
+  --sidebar-text: #ebdbb2;
+  --sidebar-border: #665c54;
+  --nav-bg: rgba(28, 28, 28, 0.9);
+  --nav-text: #ebdbb2;
+  --link-color: #83a598;
+  --link-hover: #fe8019;
+  --code-bg: #282828;
+  --code-text: #ebdbb2;
+  --code-border: #665c54;
+  --heading-color: #fe8019;
+  --button-bg: #fe8019;
+  --button-text: #282828;
+  --button-hover: #fabd2f;
+  --button-secondary-bg: #504945;
+  --button-secondary-text: #ebdbb2;
+  --button-secondary-hover: #665c54;
+  --overlay-bg: rgba(28, 28, 28, 0.85);
+  --scrollbar-track: #282828;
+  --scrollbar-thumb: #665c54;
+  --scrollbar-thumb-hover: #7c6f64;
+  --font-family: 'JetBrains Mono', 'Fira Code', 'Consolas', monospace;
+  --font-mono: 'JetBrains Mono', 'Fira Code', 'Consolas', monospace;
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  --radius-xl: 16px;
+  --transition-fast: 0.15s ease;
+  --transition-normal: 0.25s ease;
+  --transition-slow: 0.35s ease;
+  --gruvbox-dark0_hard: #1d2021;
+  --gruvbox-dark0: #282828;
+  --gruvbox-dark0_soft: #32302f;
+  --gruvbox-dark1: #3c3836;
+  --gruvbox-dark2: #504945;
+  --gruvbox-dark3: #665c54;
+  --gruvbox-dark4: #7c6f64;
+  --gruvbox-light0_hard: #f9f5d7;
+  --gruvbox-light0: #fbf1c7;
+  --gruvbox-light1: #ebdbb2;
+  --gruvbox-light2: #d5c4a1;
+  --gruvbox-light3: #bdae93;
+  --gruvbox-light4: #a89984;
+  --gruvbox-gray: #928374;
+  --gruvbox-red: #fb4934;
+  --gruvbox-green: #b8bb26;
+  --gruvbox-yellow: #fabd2f;
+  --gruvbox-blue: #83a598;
+  --gruvbox-purple: #d3869b;
+  --gruvbox-aqua: #8ec07c;
+  --gruvbox-orange: #fe8019;
+}
+
+/* ==========================================================================
+   13. Solarized Light - 日光浅色
+   ========================================================================== */
+.theme-solarized-light {
+  --bg-primary: #fdf6e3;
+  --bg-secondary: #eee8d5;
+  --bg-tertiary: #e4ddc5;
+  --bg-hover: #d8cfb8;
+  --text-primary: #657b83;
+  --text-secondary: #586e75;
+  --text-accent: #268bd2;
+  --text-muted: #93a1a1;
+  --accent-primary: #268bd2;
+  --accent-secondary: #cb4b16;
+  --accent-tertiary: #859900;
+  --accent-success: #859900;
+  --accent-error: #dc322f;
+  --accent-warning: #b58900;
+  --accent-info: #268bd2;
+  --accent-hover: #2aa198;
+  --border-color: #eee8d5;
+  --border-light: #fdf6e3;
+  --divider-color: #eee8d5;
+  --card-bg: #ffffff;
+  --card-bg-hover: #fdf6e3;
+  --card-shadow: 0 2px 12px rgba(101, 123, 131, 0.15);
+  --card-shadow-hover: 0 4px 20px rgba(101, 123, 131, 0.2);
+  --input-bg: #ffffff;
+  --input-border: #eee8d5;
+  --input-focus: #268bd2;
+  --sidebar-bg: #eee8d5;
+  --sidebar-text: #657b83;
+  --sidebar-border: #e4ddc5;
+  --nav-bg: rgba(253, 246, 227, 0.9);
+  --nav-text: #657b83;
+  --link-color: #268bd2;
+  --link-hover: #2aa198;
+  --code-bg: #eee8d5;
+  --code-text: #657b83;
+  --code-border: #e4ddc5;
+  --heading-color: #586e75;
+  --button-bg: #268bd2;
+  --button-text: #fdf6e3;
+  --button-hover: #2aa198;
+  --button-secondary-bg: #eee8d5;
+  --button-secondary-text: #657b83;
+  --button-secondary-hover: #e4ddc5;
+  --overlay-bg: rgba(101, 123, 131, 0.4);
+  --scrollbar-track: #fdf6e3;
+  --scrollbar-thumb: #d8cfb8;
+  --scrollbar-thumb-hover: #93a1a1;
+  --font-family: 'Source Sans Pro', 'Segoe UI', Roboto, sans-serif;
+  --font-mono: 'Source Code Pro', 'Consolas', 'Monaco', monospace;
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  --radius-xl: 16px;
+  --transition-fast: 0.15s ease;
+  --transition-normal: 0.25s ease;
+  --transition-slow: 0.35s ease;
+  --solarized-base03: #002b36;
+  --solarized-base02: #073642;
+  --solarized-base01: #586e75;
+  --solarized-base00: #657b83;
+  --solarized-base0: #839496;
+  --solarized-base1: #93a1a1;
+  --solarized-base2: #eee8d5;
+  --solarized-base3: #fdf6e3;
+  --solarized-yellow: #b58900;
+  --solarized-orange: #cb4b16;
+  --solarized-red: #dc322f;
+  --solarized-magenta: #d33682;
+  --solarized-violet: #6c71c4;
+  --solarized-blue: #268bd2;
+  --solarized-cyan: #2aa198;
+  --solarized-green: #859900;
+}
+
+/* ==========================================================================
+   14. Solarized Dark - 日光深色
+   ========================================================================== */
+.theme-solarized-dark {
+  --bg-primary: #002b36;
+  --bg-secondary: #073642;
+  --bg-tertiary: #0a4452;
+  --bg-hover: #0e5566;
+  --text-primary: #839496;
+  --text-secondary: #93a1a1;
+  --text-accent: #268bd2;
+  --text-muted: #586e75;
+  --accent-primary: #268bd2;
+  --accent-secondary: #cb4b16;
+  --accent-tertiary: #859900;
+  --accent-success: #859900;
+  --accent-error: #dc322f;
+  --accent-warning: #b58900;
+  --accent-info: #268bd2;
+  --accent-hover: #2aa198;
+  --border-color: #073642;
+  --border-light: #0a4452;
+  --divider-color: #0a4452;
+  --card-bg: #073642;
+  --card-bg-hover: #0a4452;
+  --card-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  --card-shadow-hover: 0 8px 30px rgba(0, 0, 0, 0.4);
+  --input-bg: #002b36;
+  --input-border: #0a4452;
+  --input-focus: #268bd2;
+  --sidebar-bg: #00242e;
+  --sidebar-text: #839496;
+  --sidebar-border: #0a4452;
+  --nav-bg: rgba(0, 43, 54, 0.9);
+  --nav-text: #839496;
+  --link-color: #268bd2;
+  --link-hover: #2aa198;
+  --code-bg: #073642;
+  --code-text: #839496;
+  --code-border: #0a4452;
+  --heading-color: #93a1a1;
+  --button-bg: #268bd2;
+  --button-text: #002b36;
+  --button-hover: #2aa198;
+  --button-secondary-bg: #0a4452;
+  --button-secondary-text: #839496;
+  --button-secondary-hover: #0e5566;
+  --overlay-bg: rgba(0, 43, 54, 0.8);
+  --scrollbar-track: #002b36;
+  --scrollbar-thumb: #0a4452;
+  --scrollbar-thumb-hover: #586e75;
+  --font-family: 'Source Sans Pro', 'Segoe UI', Roboto, sans-serif;
+  --font-mono: 'Source Code Pro', 'Consolas', 'Monaco', monospace;
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  --radius-xl: 16px;
+  --transition-fast: 0.15s ease;
+  --transition-normal: 0.25s ease;
+  --transition-slow: 0.35s ease;
+  --solarized-base03: #002b36;
+  --solarized-base02: #073642;
+  --solarized-base01: #586e75;
+  --solarized-base00: #657b83;
+  --solarized-base0: #839496;
+  --solarized-base1: #93a1a1;
+  --solarized-base2: #eee8d5;
+  --solarized-base3: #fdf6e3;
+  --solarized-yellow: #b58900;
+  --solarized-orange: #cb4b16;
+  --solarized-red: #dc322f;
+  --solarized-magenta: #d33682;
+  --solarized-violet: #6c71c4;
+  --solarized-blue: #268bd2;
+  --solarized-cyan: #2aa198;
+  --solarized-green: #859900;
+}
+
+/* ==========================================================================
+   15. Tokyo Night - 东京之夜
+   ========================================================================== */
+.theme-tokyo-night {
+  --bg-primary: #1a1b26;
+  --bg-secondary: #16161e;
+  --bg-tertiary: #24283b;
+  --bg-hover: #292e42;
+  --text-primary: #c0caf5;
+  --text-secondary: #a9b1d6;
+  --text-accent: #7aa2f7;
+  --text-muted: #565f89;
+  --accent-primary: #7aa2f7;
+  --accent-secondary: #bb9af7;
+  --accent-tertiary: #7dcfff;
+  --accent-success: #9ece6a;
+  --accent-error: #f7768e;
+  --accent-warning: #e0af68;
+  --accent-info: #7aa2f7;
+  --accent-hover: #bb9af7;
+  --border-color: #292e42;
+  --border-light: #24283b;
+  --divider-color: #24283b;
+  --card-bg: #16161e;
+  --card-bg-hover: #1a1b26;
+  --card-shadow: 0 4px 20px rgba(122, 162, 247, 0.1);
+  --card-shadow-hover: 0 8px 30px rgba(122, 162, 247, 0.2);
+  --input-bg: #1a1b26;
+  --input-border: #292e42;
+  --input-focus: #7aa2f7;
+  --sidebar-bg: #13131a;
+  --sidebar-text: #c0caf5;
+  --sidebar-border: #292e42;
+  --nav-bg: rgba(22, 22, 30, 0.9);
+  --nav-text: #c0caf5;
+  --link-color: #7aa2f7;
+  --link-hover: #bb9af7;
+  --code-bg: #1a1b26;
+  --code-text: #c0caf5;
+  --code-border: #292e42;
+  --heading-color: #bb9af7;
+  --button-bg: #7aa2f7;
+  --button-text: #1a1b26;
+  --button-hover: #bb9af7;
+  --button-secondary-bg: #24283b;
+  --button-secondary-text: #c0caf5;
+  --button-secondary-hover: #292e42;
+  --overlay-bg: rgba(26, 27, 38, 0.85);
+  --scrollbar-track: #16161e;
+  --scrollbar-thumb: #292e42;
+  --scrollbar-thumb-hover: #3b4261;
+  --font-family: 'Inter', 'Segoe UI', Roboto, sans-serif;
+  --font-mono: 'JetBrains Mono', 'Fira Code', 'Consolas', monospace;
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 16px;
+  --radius-xl: 20px;
+  --transition-fast: 0.15s ease;
+  --transition-normal: 0.25s ease;
+  --transition-slow: 0.35s ease;
+  --tokyo-bg: #1a1b26;
+  --tokyo-bg-dark: #16161e;
+  --tokyo-fg: #c0caf5;
+  --tokyo-fg-dark: #a9b1d6;
+  --tokyo-blue: #7aa2f7;
+  --tokyo-cyan: #7dcfff;
+  --tokyo-purple: #bb9af7;
+  --tokyo-green: #9ece6a;
+  --tokyo-yellow: #e0af68;
+  --tokyo-orange: #ff9e64;
+  --tokyo-red: #f7768e;
+  --tokyo-magenta: #bb9af7;
+  --tokyo-comment: #565f89;
+  --tokyo-selection: #33467c;
+  --tokyo-border: #292e42;
+}
+
+/* ==========================================================================
+   16. Catppuccin - 猫布奇诺奶茶色
+   ========================================================================== */
+.theme-catppuccin {
+  --bg-primary: #303446;
+  --bg-secondary: #292c3c;
+  --bg-tertiary: #414559;
+  --bg-hover: #51576d;
+  --text-primary: #c6d0f5;
+  --text-secondary: #b5bfe2;
+  --text-accent: #ca9ee6;
+  --text-muted: #737994;
+  --accent-primary: #ca9ee6;
+  --accent-secondary: #e5c890;
+  --accent-tertiary: #99d1db;
+  --accent-success: #a6d189;
+  --accent-error: #e78284;
+  --accent-warning: #e5c890;
+  --accent-info: #99d1db;
+  --accent-hover: #f4b8e4;
+  --border-color: #414559;
+  --border-light: #51576d;
+  --divider-color: #414559;
+  --card-bg: #292c3c;
+  --card-bg-hover: #303446;
+  --card-shadow: 0 4px 16px rgba(202, 158, 230, 0.1);
+  --card-shadow-hover: 0 8px 24px rgba(202, 158, 230, 0.2);
+  --input-bg: #303446;
+  --input-border: #51576d;
+  --input-focus: #ca9ee6;
+  --sidebar-bg: #232634;
+  --sidebar-text: #c6d0f5;
+  --sidebar-border: #414559;
+  --nav-bg: rgba(41, 44, 60, 0.9);
+  --nav-text: #c6d0f5;
+  --link-color: #ca9ee6;
+  --link-hover: #f4b8e4;
+  --code-bg: #292c3c;
+  --code-text: #c6d0f5;
+  --code-border: #414559;
+  --heading-color: #e5c890;
+  --button-bg: #ca9ee6;
+  --button-text: #303446;
+  --button-hover: #f4b8e4;
+  --button-secondary-bg: #414559;
+  --button-secondary-text: #c6d0f5;
+  --button-secondary-hover: #51576d;
+  --overlay-bg: rgba(48, 52, 70, 0.85);
+  --scrollbar-track: #292c3c;
+  --scrollbar-thumb: #51576d;
+  --scrollbar-thumb-hover: #626880;
+  --font-family: 'Inter', 'Segoe UI', Roboto, sans-serif;
+  --font-mono: 'JetBrains Mono', 'Fira Code', 'Consolas', monospace;
+  --radius-sm: 8px;
+  --radius-md: 14px;
+  --radius-lg: 20px;
+  --radius-xl: 28px;
+  --transition-fast: 0.2s ease;
+  --transition-normal: 0.3s ease;
+  --transition-slow: 0.4s ease;
+  --catppuccin-crust: #232634;
+  --catppuccin-mantle: #292c3c;
+  --catppuccin-base: #303446;
+  --catppuccin-surface0: #414559;
+  --catppuccin-surface1: #51576d;
+  --catppuccin-surface2: #626880;
+  --catppuccin-overlay0: #737994;
+  --catppuccin-overlay1: #838ba7;
+  --catppuccin-overlay2: #949cbb;
+  --catppuccin-text: #c6d0f5;
+  --catppuccin-subtext0: #a5adce;
+  --catppuccin-subtext1: #b5bfe2;
+  --catppuccin-lavender: #babbf1;
+  --catppuccin-blue: #8caaee;
+  --catppuccin-sapphire: #85c1dc;
+  --catppuccin-sky: #99d1db;
+  --catppuccin-teal: #81c8be;
+  --catppuccin-green: #a6d189;
+  --catppuccin-yellow: #e5c890;
+  --catppuccin-peach: #ef9f76;
+  --catppuccin-maroon: #ea999c;
+  --catppuccin-red: #e78284;
+  --catppuccin-mauve: #ca9ee6;
+  --catppuccin-pink: #f4b8e4;
+  --catppuccin-flamingo: #eebebe;
+  --catppuccin-rosewater: #f2d5cf;
+}
+
+/* ==========================================================================
+   17. Rose Pine - 玫瑰松
+   ========================================================================== */
+.theme-rose-pine {
+  --bg-primary: #191724;
+  --bg-secondary: #1f1d2e;
+  --bg-tertiary: #26233a;
+  --bg-hover: #2a283e;
+  --text-primary: #e0def4;
+  --text-secondary: #c4a7e7;
+  --text-accent: #eb6f92;
+  --text-muted: #908caa;
+  --accent-primary: #eb6f92;
+  --accent-secondary: #c4a7e7;
+  --accent-tertiary: #9ccfd8;
+  --accent-success: #9ccfd8;
+  --accent-error: #eb6f92;
+  --accent-warning: #f6c177;
+  --accent-info: #9ccfd8;
+  --accent-hover: #c4a7e7;
+  --border-color: #26233a;
+  --border-light: #2a283e;
+  --divider-color: #26233a;
+  --card-bg: #1f1d2e;
+  --card-bg-hover: #26233a;
+  --card-shadow: 0 4px 20px rgba(235, 111, 146, 0.1);
+  --card-shadow-hover: 0 8px 30px rgba(196, 167, 231, 0.15);
+  --input-bg: #191724;
+  --input-border: #26233a;
+  --input-focus: #eb6f92;
+  --sidebar-bg: #13121c;
+  --sidebar-text: #e0def4;
+  --sidebar-border: #26233a;
+  --nav-bg: rgba(25, 23, 36, 0.9);
+  --nav-text: #e0def4;
+  --link-color: #eb6f92;
+  --link-hover: #c4a7e7;
+  --code-bg: #1f1d2e;
+  --code-text: #e0def4;
+  --code-border: #26233a;
+  --heading-color: #c4a7e7;
+  --button-bg: #eb6f92;
+  --button-text: #191724;
+  --button-hover: #f6c177;
+  --button-secondary-bg: #26233a;
+  --button-secondary-text: #e0def4;
+  --button-secondary-hover: #2a283e;
+  --overlay-bg: rgba(25, 23, 36, 0.85);
+  --scrollbar-track: #1f1d2e;
+  --scrollbar-thumb: #26233a;
+  --scrollbar-thumb-hover: #403d52;
+  --font-family: 'Inter', 'Segoe UI', Roboto, sans-serif;
+  --font-mono: 'JetBrains Mono', 'Fira Code', 'Consolas', monospace;
+  --radius-sm: 6px;
+  --radius-md: 12px;
+  --radius-lg: 18px;
+  --radius-xl: 24px;
+  --transition-fast: 0.15s ease;
+  --transition-normal: 0.3s ease;
+  --transition-slow: 0.45s ease;
+  --rose-pine-base: #191724;
+  --rose-pine-surface: #1f1d2e;
+  --rose-pine-overlay: #26233a;
+  --rose-pine-muted: #6e6a86;
+  --rose-pine-subtle: #908caa;
+  --rose-pine-text: #e0def4;
+  --rose-pine-love: #eb6f92;
+  --rose-pine-gold: #f6c177;
+  --rose-pine-rose: #ebbcba;
+  --rose-pine-pine: #31748f;
+  --rose-pine-foam: #9ccfd8;
+  --rose-pine-iris: #c4a7e7;
+  --rose-pine-highlight-low: #21202e;
+  --rose-pine-highlight-med: #2a283e;
+  --rose-pine-highlight-high: #403d52;
+}
+
+/* ==========================================================================
+   18. Everforest - 森林绿
+   ========================================================================== */
+.theme-everforest {
+  --bg-primary: #2d353b;
+  --bg-secondary: #232a2e;
+  --bg-tertiary: #343f44;
+  --bg-hover: #3d484d;
+  --text-primary: #d3c6aa;
+  --text-secondary: #c0b89a;
+  --text-accent: #a7c080;
+  --text-muted: #859289;
+  --accent-primary: #a7c080;
+  --accent-secondary: #e69875;
+  --accent-tertiary: #7fbbb3;
+  --accent-success: #a7c080;
+  --accent-error: #e67e80;
+  --accent-warning: #dbbc7f;
+  --accent-info: #7fbbb3;
+  --accent-hover: #e69875;
+  --border-color: #3d484d;
+  --border-light: #343f44;
+  --divider-color: #343f44;
+  --card-bg: #232a2e;
+  --card-bg-hover: #2d353b;
+  --card-shadow: 0 4px 16px rgba(167, 192, 128, 0.1);
+  --card-shadow-hover: 0 8px 24px rgba(167, 192, 128, 0.15);
+  --input-bg: #2d353b;
+  --input-border: #3d484d;
+  --input-focus: #a7c080;
+  --sidebar-bg: #1e2428;
+  --sidebar-text: #d3c6aa;
+  --sidebar-border: #3d484d;
+  --nav-bg: rgba(35, 42, 46, 0.9);
+  --nav-text: #d3c6aa;
+  --link-color: #7fbbb3;
+  --link-hover: #a7c080;
+  --code-bg: #232a2e;
+  --code-text: #d3c6aa;
+  --code-border: #3d484d;
+  --heading-color: #a7c080;
+  --button-bg: #a7c080;
+  --button-text: #2d353b;
+  --button-hover: #dbbc7f;
+  --button-secondary-bg: #343f44;
+  --button-secondary-text: #d3c6aa;
+  --button-secondary-hover: #3d484d;
+  --overlay-bg: rgba(45, 53, 59, 0.85);
+  --scrollbar-track: #232a2e;
+  --scrollbar-thumb: #3d484d;
+  --scrollbar-thumb-hover: #4a555b;
+  --font-family: 'Inter', 'Segoe UI', Roboto, sans-serif;
+  --font-mono: 'JetBrains Mono', 'Fira Code', 'Consolas', monospace;
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  --radius-xl: 16px;
+  --transition-fast: 0.15s ease;
+  --transition-normal: 0.25s ease;
+  --transition-slow: 0.35s ease;
+  --everforest-bg_dim: #232a2e;
+  --everforest-bg0: #2d353b;
+  --everforest-bg1: #343f44;
+  --everforest-bg2: #3d484d;
+  --everforest-bg3: #475258;
+  --everforest-bg4: #4f585e;
+  --everforest-bg5: #56635f;
+  --everforest-fg: #d3c6aa;
+  --everforest-grey0: #7a8478;
+  --everforest-grey1: #859289;
+  --everforest-grey2: #9da9a0;
+  --everforest-red: #e67e80;
+  --everforest-orange: #e69875;
+  --everforest-yellow: #dbbc7f;
+  --everforest-green: #a7c080;
+  --everforest-cyan: #83c092;
+  --everforest-blue: #7fbbb3;
+  --everforest-purple: #d699b6;
+  --everforest-aqua: #83c092;
+}
+
+/* ==========================================================================
+   19. Material - Material Design
+   ========================================================================== */
+.theme-material {
+  --bg-primary: #fafafa;
+  --bg-secondary: #ffffff;
+  --bg-tertiary: #f5f5f5;
+  --bg-hover: #eeeeee;
+  --text-primary: #212121;
+  --text-secondary: #757575;
+  --text-accent: #6200ee;
+  --text-muted: #9e9e9e;
+  --accent-primary: #6200ee;
+  --accent-secondary: #03dac6;
+  --accent-tertiary: #ff6e40;
+  --accent-success: #00c853;
+  --accent-error: #b00020;
+  --accent-warning: #ffab00;
+  --accent-info: #2979ff;
+  --accent-hover: #7c4dff;
+  --border-color: #e0e0e0;
+  --border-light: #eeeeee;
+  --divider-color: #e0e0e0;
+  --card-bg: #ffffff;
+  --card-bg-hover: #fafafa;
+  --card-shadow: 0 2px 4px rgba(0, 0, 0, 0.1), 0 1px 2px rgba(0, 0, 0, 0.06);
+  --card-shadow-hover: 0 4px 8px rgba(0, 0, 0, 0.12), 0 2px 4px rgba(0, 0, 0, 0.08);
+  --card-shadow-elevated: 0 8px 16px rgba(0, 0, 0, 0.15), 0 4px 8px rgba(0, 0, 0, 0.1);
+  --input-bg: #ffffff;
+  --input-border: #e0e0e0;
+  --input-focus: #6200ee;
+  --sidebar-bg: #fafafa;
+  --sidebar-text: #212121;
+  --sidebar-border: #e0e0e0;
+  --nav-bg: #ffffff;
+  --nav-text: #212121;
+  --nav-elevation: 0 2px 4px rgba(0, 0, 0, 0.1);
+  --link-color: #6200ee;
+  --link-hover: #7c4dff;
+  --code-bg: #f5f5f5;
+  --code-text: #212121;
+  --code-border: #e0e0e0;
+  --heading-color: #212121;
+  --button-bg: #6200ee;
+  --button-text: #ffffff;
+  --button-hover: #7c4dff;
+  --button-secondary-bg: #e0e0e0;
+  --button-secondary-text: #212121;
+  --button-secondary-hover: #bdbdbd;
+  --overlay-bg: rgba(0, 0, 0, 0.5);
+  --scrollbar-track: #fafafa;
+  --scrollbar-thumb: #bdbdbd;
+  --scrollbar-thumb-hover: #9e9e9e;
+  --font-family: 'Roboto', 'Noto Sans', 'Segoe UI', sans-serif;
+  --font-mono: 'Roboto Mono', 'Consolas', 'Monaco', monospace;
+  --radius-sm: 4px;
+  --radius-md: 4px;
+  --radius-lg: 8px;
+  --radius-xl: 16px;
+  --transition-fast: 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-normal: 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-slow: 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+  --material-primary: #6200ee;
+  --material-primary-variant: #3700b3;
+  --material-secondary: #03dac6;
+  --material-secondary-variant: #018786;
+  --material-surface: #ffffff;
+  --material-on-primary: #ffffff;
+  --material-on-secondary: #000000;
+  --material-on-surface: #212121;
+  --material-on-background: #212121;
+  --material-elevation-1: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  --material-elevation-2: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+  --material-elevation-3: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+  --material-elevation-4: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
+
+/* ==========================================================================
+   20. Fluent - Windows Fluent设计
+   ========================================================================== */
+.theme-fluent {
+  --bg-primary: #f3f3f3;
+  --bg-secondary: #ffffff;
+  --bg-tertiary: #e9e9e9;
+  --bg-hover: #e0e0e0;
+  --text-primary: #000000;
+  --text-secondary: #5c5c5c;
+  --text-accent: #0078d4;
+  --text-muted: #8a8a8a;
+  --accent-primary: #0078d4;
+  --accent-secondary: #005a9e;
+  --accent-tertiary: #2b88d8;
+  --accent-success: #107c10;
+  --accent-error: #d13438;
+  --accent-warning: #ffb900;
+  --accent-info: #0078d4;
+  --accent-hover: #2b88d8;
+  --border-color: #d2d2d2;
+  --border-light: #e9e9e9;
+  --divider-color: #e9e9e9;
+  --card-bg: #ffffff;
+  --card-bg-hover: #f9f9f9;
+  --card-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  --card-shadow-hover: 0 4px 16px rgba(0, 0, 0, 0.12);
+  --input-bg: #ffffff;
+  --input-border: #d2d2d2;
+  --input-focus: #0078d4;
+  --sidebar-bg: #f9f9f9;
+  --sidebar-text: #000000;
+  --sidebar-border: #e9e9e9;
+  --nav-bg: rgba(255, 255, 255, 0.8);
+  --nav-text: #000000;
+  --link-color: #0078d4;
+  --link-hover: #2b88d8;
+  --code-bg: #f3f3f3;
+  --code-text: #000000;
+  --code-border: #d2d2d2;
+  --heading-color: #000000;
+  --button-bg: #0078d4;
+  --button-text: #ffffff;
+  --button-hover: #2b88d8;
+  --button-secondary-bg: #e9e9e9;
+  --button-secondary-text: #000000;
+  --button-secondary-hover: #d2d2d2;
+  --overlay-bg: rgba(0, 0, 0, 0.4);
+  --scrollbar-track: #f3f3f3;
+  --scrollbar-thumb: #c5c5c5;
+  --scrollbar-thumb-hover: #a8a8a8;
+  --font-family: 'Segoe UI', 'Segoe UI Variable', 'Segoe Fluent Icons', Tahoma, Arial, sans-serif;
+  --font-mono: 'Consolas', 'Cascadia Code', 'Courier New', monospace;
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  --radius-xl: 16px;
+  --transition-fast: 0.15s cubic-bezier(0.1, 0.9, 0.2, 1);
+  --transition-normal: 0.25s cubic-bezier(0.1, 0.9, 0.2, 1);
+  --transition-slow: 0.35s cubic-bezier(0.1, 0.9, 0.2, 1);
+  --fluent-accent: #0078d4;
+  --fluent-accent-light: #2b88d8;
+  --fluent-accent-dark: #005a9e;
+  --fluent-text-primary: #000000;
+  --fluent-text-secondary: #5c5c5c;
+  --fluent-bg-layer: #f9f9f9;
+  --fluent-bg-card: #ffffff;
+  --fluent-stroke-default: #d2d2d2;
+  --fluent-stroke-card: #e9e9e9;
+  --fluent-shadow-card: 0 2px 8px rgba(0, 0, 0, 0.08);
+  --fluent-focus-outer: 0 0 0 2px #ffffff, 0 0 0 4px #0078d4;
+}
+
+/* ==========================================================================
+   21. Retro Wave - 复古合成器波
+   ========================================================================== */
+.theme-retro-wave {
+  --bg-primary: #1a0a2e;
+  --bg-secondary: #2d1b4e;
+  --bg-tertiary: #3d2460;
+  --bg-hover: #4d2d72;
+  --text-primary: #ff71ce;
+  --text-secondary: #01cdfe;
+  --text-accent: #fffb96;
+  --text-muted: #7c5cb8;
+  --accent-primary: #ff71ce;
+  --accent-secondary: #01cdfe;
+  --accent-tertiary: #05ffa1;
+  --accent-success: #05ffa1;
+  --accent-error: #ff2a6d;
+  --accent-warning: #fffb96;
+  --accent-info: #01cdfe;
+  --accent-hover: #b967ff;
+  --border-color: #ff71ce;
+  --border-light: #4d2d72;
+  --divider-color: #3d2460;
+  --card-bg: linear-gradient(135deg, #2d1b4e 0%, #1a0a2e 100%);
+  --card-bg-hover: linear-gradient(135deg, #3d2460 0%, #2d1b4e 100%);
+  --card-shadow: 0 0 20px rgba(255, 113, 206, 0.3), 0 4px 20px rgba(0, 0, 0, 0.3);
+  --card-shadow-hover: 0 0 30px rgba(1, 205, 254, 0.4), 0 8px 30px rgba(0, 0, 0, 0.4);
+  --input-bg: rgba(26, 10, 46, 0.8);
+  --input-border: #ff71ce;
+  --input-focus: #01cdfe;
+  --sidebar-bg: #140722;
+  --sidebar-text: #ff71ce;
+  --sidebar-border: #ff71ce;
+  --nav-bg: rgba(26, 10, 46, 0.9);
+  --nav-text: #01cdfe;
+  --link-color: #ff71ce;
+  --link-hover: #01cdfe;
+  --code-bg: #1a0a2e;
+  --code-text: #05ffa1;
+  --code-border: #ff71ce;
+  --heading-color: #ff71ce;
+  --button-bg: #ff71ce;
+  --button-text: #1a0a2e;
+  --button-hover: #01cdfe;
+  --button-secondary-bg: #3d2460;
+  --button-secondary-text: #01cdfe;
+  --button-secondary-hover: #4d2d72;
+  --overlay-bg: rgba(26, 10, 46, 0.85);
+  --scrollbar-track: #2d1b4e;
+  --scrollbar-thumb: #ff71ce;
+  --scrollbar-thumb-hover: #01cdfe;
+  --font-family: 'Courier New', 'Monaco', 'Consolas', monospace;
+  --font-mono: 'Courier New', 'Monaco', 'Consolas', monospace;
+  --radius-sm: 2px;
+  --radius-md: 4px;
+  --radius-lg: 8px;
+  --radius-xl: 12px;
+  --transition-fast: 0.1s ease;
+  --transition-normal: 0.2s ease;
+  --transition-slow: 0.3s ease;
+  --retro-pink: #ff71ce;
+  --retro-cyan: #01cdfe;
+  --retro-green: #05ffa1;
+  --retro-purple: #b967ff;
+  --retro-yellow: #fffb96;
+  --retro-dark: #1a0a2e;
+  --scanline-color: rgba(0, 0, 0, 0.1);
+  --grid-gradient: linear-gradient(rgba(255, 113, 206, 0.1) 1px, transparent 1px);
+}
+
+/* ==========================================================================
+   22. Vaporwave - 蒸汽波
+   ========================================================================== */
+.theme-vaporwave {
+  --bg-primary: #94d0ee;
+  --bg-secondary: #ff71ce;
+  --bg-tertiary: #b967ff;
+  --bg-hover: #01cdfe;
+  --text-primary: #ffffff;
+  --text-secondary: #ffe6f7;
+  --text-accent: #fffb96;
+  --text-muted: #c4a5ff;
+  --accent-primary: #ff71ce;
+  --accent-secondary: #01cdfe;
+  --accent-tertiary: #b967ff;
+  --accent-success: #01cdfe;
+  --accent-error: #ff2a6d;
+  --accent-warning: #fffb96;
+  --accent-info: #94d0ee;
+  --accent-hover: #b967ff;
+  --border-color: #ff71ce;
+  --border-light: #01cdfe;
+  --divider-color: #b967ff;
+  --card-bg: linear-gradient(180deg, #b967ff 0%, #ff71ce 50%, #94d0ee 100%);
+  --card-bg-hover: linear-gradient(180deg, #c485ff 0%, #ff91d8 50%, #a8daf0 100%);
+  --card-shadow: 0 4px 20px rgba(185, 103, 255, 0.4);
+  --card-shadow-hover: 0 8px 30px rgba(255, 113, 206, 0.5);
+  --input-bg: rgba(255, 255, 255, 0.3);
+  --input-border: #ffffff;
+  --input-focus: #fffb96;
+  --sidebar-bg: linear-gradient(180deg, #b967ff 0%, #ff71ce 100%);
+  --sidebar-text: #ffffff;
+  --sidebar-border: #ffffff;
+  --nav-bg: rgba(185, 103, 255, 0.8);
+  --nav-text: #ffffff;
+  --link-color: #ffffff;
+  --link-hover: #fffb96;
+  --code-bg: rgba(255, 255, 255, 0.2);
+  --code-text: #ffffff;
+  --code-border: #ffffff;
+  --heading-color: #ffffff;
+  --button-bg: #ffffff;
+  --button-text: #b967ff;
+  --button-hover: #fffb96;
+  --button-secondary-bg: rgba(255, 255, 255, 0.3);
+  --button-secondary-text: #ffffff;
+  --button-secondary-hover: rgba(255, 255, 255, 0.5);
+  --overlay-bg: rgba(185, 103, 255, 0.5);
+  --scrollbar-track: #ff71ce;
+  --scrollbar-thumb: #ffffff;
+  --scrollbar-thumb-hover: #fffb96;
+  --font-family: 'Arial Rounded MT Bold', 'Helvetica Rounded', Arial, sans-serif;
+  --font-mono: 'Courier New', monospace;
+  --radius-sm: 8px;
+  --radius-md: 16px;
+  --radius-lg: 24px;
+  --radius-xl: 32px;
+  --transition-fast: 0.2s ease;
+  --transition-normal: 0.4s ease;
+  --transition-slow: 0.6s ease;
+  --vaporwave-pink: #ff71ce;
+  --vaporwave-cyan: #01cdfe;
+  --vaporwave-purple: #b967ff;
+  --vaporwave-yellow: #fffb96;
+  --vaporwave-mint: #05ffa1;
+  --vaporwave-gradient: linear-gradient(180deg, #b967ff 0%, #ff71ce 50%, #94d0ee 100%);
+}
+
+/* ==========================================================================
+   23. Synthwave - 合成器波
+   ========================================================================== */
+.theme-synthwave {
+  --bg-primary: #0f0c29;
+  --bg-secondary: #1a1744;
+  --bg-tertiary: #24245e;
+  --bg-hover: #2e2e78;
+  --text-primary: #f8f8f2;
+  --text-secondary: #ff2a6d;
+  --text-accent: #05d9e8;
+  --text-muted: #7b6fa8;
+  --accent-primary: #ff2a6d;
+  --accent-secondary: #05d9e8;
+  --accent-tertiary: #d1d7e0;
+  --accent-success: #72f1b8;
+  --accent-error: #ff2a6d;
+  --accent-warning: #f9f002;
+  --accent-info: #05d9e8;
+  --accent-hover: #d1d7e0;
+  --border-color: #ff2a6d;
+  --border-light: #24245e;
+  --divider-color: #24245e;
+  --card-bg: linear-gradient(180deg, #1a1744 0%, #0f0c29 100%);
+  --card-bg-hover: linear-gradient(180deg, #24245e 0%, #1a1744 100%);
+  --card-shadow: 0 0 20px rgba(255, 42, 109, 0.3), inset 0 1px 0 rgba(5, 217, 232, 0.2);
+  --card-shadow-hover: 0 0 40px rgba(5, 217, 232, 0.4), inset 0 1px 0 rgba(255, 42, 109, 0.3);
+  --input-bg: rgba(15, 12, 41, 0.9);
+  --input-border: #ff2a6d;
+  --input-focus: #05d9e8;
+  --sidebar-bg: #0a0818;
+  --sidebar-text: #f8f8f2;
+  --sidebar-border: #ff2a6d;
+  --nav-bg: rgba(15, 12, 41, 0.9);
+  --nav-text: #05d9e8;
+  --link-color: #ff2a6d;
+  --link-hover: #05d9e8;
+  --code-bg: #0f0c29;
+  --code-text: #72f1b8;
+  --code-border: #ff2a6d;
+  --heading-color: #ff2a6d;
+  --button-bg: #ff2a6d;
+  --button-text: #0f0c29;
+  --button-hover: #05d9e8;
+  --button-secondary-bg: #24245e;
+  --button-secondary-text: #05d9e8;
+  --button-secondary-hover: #2e2e78;
+  --overlay-bg: rgba(15, 12, 41, 0.85);
+  --scrollbar-track: #1a1744;
+  --scrollbar-thumb: #ff2a6d;
+  --scrollbar-thumb-hover: #05d9e8;
+  --font-family: 'Orbitron', 'Montserrat', sans-serif;
+  --font-mono: 'Fira Code', 'Consolas', monospace;
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  --radius-xl: 16px;
+  --transition-fast: 0.15s ease;
+  --transition-normal: 0.3s ease;
+  --transition-slow: 0.45s ease;
+  --synthwave-sun: #ff6a00;
+  --synthwave-sky-dark: #0f0c29;
+  --synthwave-sky-mid: #24245e;
+  --synthwave-pink: #ff2a6d;
+  --synthwave-cyan: #05d9e8;
+  --synthwave-yellow: #f9f002;
+  --synthwave-purple: #7b6fa8;
+  --synthwave-grid: rgba(255, 42, 109, 0.2);
+}
+
+/* ==========================================================================
+   24. Terminal Green - 绿色终端
+   ========================================================================== */
+.theme-terminal-green {
+  --bg-primary: #0a0a0a;
+  --bg-secondary: #0d0d0d;
+  --bg-tertiary: #1a1a1a;
+  --bg-hover: #222222;
+  --text-primary: #33ff33;
+  --text-secondary: #22cc22;
+  --text-accent: #00ff00;
+  --text-muted: #1a661a;
+  --accent-primary: #00ff00;
+  --accent-secondary: #33ff33;
+  --accent-tertiary: #66ff66;
+  --accent-success: #00ff00;
+  --accent-error: #ff0000;
+  --accent-warning: #ffff00;
+  --accent-info: #00ffff;
+  --accent-hover: #66ff66;
+  --border-color: #33ff33;
+  --border-light: #1a1a1a;
+  --divider-color: #1a661a;
+  --card-bg: #0d0d0d;
+  --card-bg-hover: #1a1a1a;
+  --card-shadow: 0 0 10px rgba(0, 255, 0, 0.2);
+  --card-shadow-hover: 0 0 20px rgba(0, 255, 0, 0.3);
+  --input-bg: #0a0a0a;
+  --input-border: #33ff33;
+  --input-focus: #00ff00;
+  --sidebar-bg: #050505;
+  --sidebar-text: #33ff33;
+  --sidebar-border: #33ff33;
+  --nav-bg: rgba(10, 10, 10, 0.95);
+  --nav-text: #00ff00;
+  --link-color: #00ff00;
+  --link-hover: #66ff66;
+  --code-bg: #0a0a0a;
+  --code-text: #33ff33;
+  --code-border: #33ff33;
+  --heading-color: #00ff00;
+  --button-bg: #00ff00;
+  --button-text: #0a0a0a;
+  --button-hover: #33ff33;
+  --button-secondary-bg: #1a1a1a;
+  --button-secondary-text: #33ff33;
+  --button-secondary-hover: #222222;
+  --overlay-bg: rgba(0, 0, 0, 0.9);
+  --scrollbar-track: #0a0a0a;
+  --scrollbar-thumb: #33ff33;
+  --scrollbar-thumb-hover: #66ff66;
+  --font-family: 'Courier New', 'Consolas', 'Monaco', monospace;
+  --font-mono: 'Courier New', 'Consolas', 'Monaco', monospace;
+  --radius-sm: 0px;
+  --radius-md: 0px;
+  --radius-lg: 0px;
+  --radius-xl: 0px;
+  --transition-fast: 0.05s linear;
+  --transition-normal: 0.1s linear;
+  --transition-slow: 0.15s linear;
+  --terminal-green-bright: #00ff00;
+  --terminal-green-normal: #33ff33;
+  --terminal-green-dim: #22cc22;
+  --terminal-green-dark: #1a661a;
+  --terminal-cursor: #00ff00;
+  --terminal-scanline: rgba(0, 255, 0, 0.03);
+  --terminal-glow: 0 0 5px rgba(0, 255, 0, 0.5);
+  --terminal-crt-curve: radial-gradient(ellipse at center, transparent 0%, rgba(0, 0, 0, 0.3) 100%);
+}
+
+/* ==========================================================================
+   25. Terminal Amber - 琥珀色终端
+   ========================================================================== */
+.theme-terminal-amber {
+  --bg-primary: #0a0700;
+  --bg-secondary: #140d00;
+  --bg-tertiary: #1f1400;
+  --bg-hover: #2a1c00;
+  --text-primary: #ffb000;
+  --text-secondary: #cc8c00;
+  --text-accent: #ffcc00;
+  --text-muted: #664400;
+  --accent-primary: #ffb000;
+  --accent-secondary: #ffcc00;
+  --accent-tertiary: #ffd633;
+  --accent-success: #88cc00;
+  --accent-error: #ff4400;
+  --accent-warning: #ffcc00;
+  --accent-info: #00aaff;
+  --accent-hover: #ffd633;
+  --border-color: #ffb000;
+  --border-light: #1f1400;
+  --divider-color: #664400;
+  --card-bg: #140d00;
+  --card-bg-hover: #1f1400;
+  --card-shadow: 0 0 10px rgba(255, 176, 0, 0.2);
+  --card-shadow-hover: 0 0 20px rgba(255, 176, 0, 0.3);
+  --input-bg: #0a0700;
+  --input-border: #ffb000;
+  --input-focus: #ffcc00;
+  --sidebar-bg: #050300;
+  --sidebar-text: #ffb000;
+  --sidebar-border: #ffb000;
+  --nav-bg: rgba(10, 7, 0, 0.95);
+  --nav-text: #ffcc00;
+  --link-color: #ffb000;
+  --link-hover: #ffd633;
+  --code-bg: #0a0700;
+  --code-text: #ffb000;
+  --code-border: #ffb000;
+  --heading-color: #ffcc00;
+  --button-bg: #ffb000;
+  --button-text: #0a0700;
+  --button-hover: #ffcc00;
+  --button-secondary-bg: #1f1400;
+  --button-secondary-text: #ffb000;
+  --button-secondary-hover: #2a1c00;
+  --overlay-bg: rgba(10, 7, 0, 0.9);
+  --scrollbar-track: #0a0700;
+  --scrollbar-thumb: #ffb000;
+  --scrollbar-thumb-hover: #ffcc00;
+  --font-family: 'Courier New', 'Consolas', 'Monaco', monospace;
+  --font-mono: 'Courier New', 'Consolas', 'Monaco', monospace;
+  --radius-sm: 0px;
+  --radius-md: 0px;
+  --radius-lg: 0px;
+  --radius-xl: 0px;
+  --transition-fast: 0.05s linear;
+  --transition-normal: 0.1s linear;
+  --transition-slow: 0.15s linear;
+  --amber-bright: #ffcc00;
+  --amber-normal: #ffb000;
+  --amber-dim: #cc8c00;
+  --amber-dark: #664400;
+  --amber-cursor: #ffb000;
+  --amber-scanline: rgba(255, 176, 0, 0.03);
+  --amber-glow: 0 0 5px rgba(255, 176, 0, 0.5);
+  --amber-phosphor: #ffb000;
+}
+
+/* ==========================================================================
+   26. Matrix - 黑客帝国矩阵
+   ========================================================================== */
+.theme-matrix {
+  --bg-primary: #000000;
+  --bg-secondary: #001100;
+  --bg-tertiary: #002200;
+  --bg-hover: #003300;
+  --text-primary: #00ff41;
+  --text-secondary: #00cc33;
+  --text-accent: #00ff66;
+  --text-muted: #006600;
+  --accent-primary: #00ff41;
+  --accent-secondary: #00cc33;
+  --accent-tertiary: #009922;
+  --accent-success: #00ff41;
+  --accent-error: #ff0000;
+  --accent-warning: #ffff00;
+  --accent-info: #00ffff;
+  --accent-hover: #00ff66;
+  --border-color: #00ff41;
+  --border-light: #003300;
+  --divider-color: #006600;
+  --card-bg: rgba(0, 17, 0, 0.9);
+  --card-bg-hover: rgba(0, 34, 0, 0.95);
+  --card-shadow: 0 0 15px rgba(0, 255, 65, 0.3);
+  --card-shadow-hover: 0 0 25px rgba(0, 255, 65, 0.5);
+  --input-bg: #000000;
+  --input-border: #00ff41;
+  --input-focus: #00ff66;
+  --sidebar-bg: #000a00;
+  --sidebar-text: #00ff41;
+  --sidebar-border: #00ff41;
+  --nav-bg: rgba(0, 0, 0, 0.95);
+  --nav-text: #00ff41;
+  --link-color: #00ff41;
+  --link-hover: #00ff66;
+  --code-bg: #001100;
+  --code-text: #00ff41;
+  --code-border: #00ff41;
+  --heading-color: #00ff41;
+  --button-bg: #00ff41;
+  --button-text: #000000;
+  --button-hover: #00cc33;
+  --button-secondary-bg: #002200;
+  --button-secondary-text: #00ff41;
+  --button-secondary-hover: #003300;
+  --overlay-bg: rgba(0, 0, 0, 0.9);
+  --scrollbar-track: #000000;
+  --scrollbar-thumb: #00ff41;
+  --scrollbar-thumb-hover: #00ff66;
+  --font-family: 'Courier New', 'Consolas', 'Monaco', monospace;
+  --font-mono: 'Courier New', 'Consolas', 'Monaco', monospace;
+  --radius-sm: 0px;
+  --radius-md: 0px;
+  --radius-lg: 0px;
+  --radius-xl: 0px;
+  --transition-fast: 0.05s linear;
+  --transition-normal: 0.1s linear;
+  --transition-slow: 0.15s linear;
+  --matrix-green: #00ff41;
+  --matrix-green-dark: #003b00;
+  --matrix-green-darker: #001a00;
+  --matrix-cursor: #00ff41;
+  --matrix-glow: 0 0 10px #00ff41, 0 0 20px #00ff41;
+  --matrix-rain-color: rgba(0, 255, 65, 0.7);
+  --matrix-rain-fade: rgba(0, 255, 65, 0.1);
+  --matrix-scanline: rgba(0, 0, 0, 0.1);
+}
+
+/* ==========================================================================
+   27. Autumn - 秋日暖阳
+   ========================================================================== */
+.theme-autumn {
+  --bg-primary: #faf0e6;
+  --bg-secondary: #fff5eb;
+  --bg-tertiary: #f5e6d3;
+  --bg-hover: #ebd9c0;
+  --text-primary: #5c3317;
+  --text-secondary: #8b5a2b;
+  --text-accent: #d2691e;
+  --text-muted: #a67c52;
+  --accent-primary: #d2691e;
+  --accent-secondary: #cd5c5c;
+  --accent-tertiary: #daa520;
+  --accent-success: #6b8e23;
+  --accent-error: #b22222;
+  --accent-warning: #daa520;
+  --accent-info: #4682b4;
+  --accent-hover: #cd853f;
+  --border-color: #d2b48c;
+  --border-light: #f5e6d3;
+  --divider-color: #ebd9c0;
+  --card-bg: #fff5eb;
+  --card-bg-hover: #faf0e6;
+  --card-shadow: 0 4px 16px rgba(210, 105, 30, 0.15);
+  --card-shadow-hover: 0 8px 24px rgba(210, 105, 30, 0.2);
+  --input-bg: #ffffff;
+  --input-border: #d2b48c;
+  --input-focus: #d2691e;
+  --sidebar-bg: #f5e6d3;
+  --sidebar-text: #5c3317;
+  --sidebar-border: #d2b48c;
+  --nav-bg: rgba(250, 240, 230, 0.9);
+  --nav-text: #5c3317;
+  --link-color: #d2691e;
+  --link-hover: #cd5c5c;
+  --code-bg: #f5e6d3;
+  --code-text: #5c3317;
+  --code-border: #d2b48c;
+  --heading-color: #8b4513;
+  --button-bg: #d2691e;
+  --button-text: #ffffff;
+  --button-hover: #cd853f;
+  --button-secondary-bg: #f5e6d3;
+  --button-secondary-text: #5c3317;
+  --button-secondary-hover: #ebd9c0;
+  --overlay-bg: rgba(92, 51, 23, 0.4);
+  --scrollbar-track: #faf0e6;
+  --scrollbar-thumb: #d2b48c;
+  --scrollbar-thumb-hover: #d2691e;
+  --font-family: 'Georgia', 'Times New Roman', serif;
+  --font-mono: 'Courier New', monospace;
+  --radius-sm: 6px;
+  --radius-md: 12px;
+  --radius-lg: 20px;
+  --radius-xl: 28px;
+  --transition-fast: 0.2s ease;
+  --transition-normal: 0.35s ease;
+  --transition-slow: 0.5s ease;
+  --autumn-leaf-red: #cd5c5c;
+  --autumn-leaf-orange: #d2691e;
+  --autumn-leaf-yellow: #daa520;
+  --autumn-leaf-brown: #8b4513;
+  --autumn-sky: #4682b4;
+  --autumn-grass: #6b8e23;
+  --autumn-warm: #faf0e6;
+}
+
+/* ==========================================================================
+   28. Spring - 春日清新
+   ========================================================================== */
+.theme-spring {
+  --bg-primary: #f0fff0;
+  --bg-secondary: #e6ffe6;
+  --bg-tertiary: #d4ffd4;
+  --bg-hover: #bfffbf;
+  --text-primary: #2d5016;
+  --text-secondary: #4a7c23;
+  --text-accent: #ff69b4;
+  --text-muted: #6b8e23;
+  --accent-primary: #ff69b4;
+  --accent-secondary: #98fb98;
+  --accent-tertiary: #87ceeb;
+  --accent-success: #32cd32;
+  --accent-error: #ff6b6b;
+  --accent-warning: #ffd93d;
+  --accent-info: #87ceeb;
+  --accent-hover: #ff85c1;
+  --border-color: #98fb98;
+  --border-light: #d4ffd4;
+  --divider-color: #bfffbf;
+  --card-bg: #ffffff;
+  --card-bg-hover: #f0fff0;
+  --card-shadow: 0 4px 16px rgba(152, 251, 152, 0.2);
+  --card-shadow-hover: 0 8px 24px rgba(152, 251, 152, 0.3);
+  --input-bg: #ffffff;
+  --input-border: #98fb98;
+  --input-focus: #ff69b4;
+  --sidebar-bg: #e6ffe6;
+  --sidebar-text: #2d5016;
+  --sidebar-border: #98fb98;
+  --nav-bg: rgba(240, 255, 240, 0.9);
+  --nav-text: #2d5016;
+  --link-color: #32cd32;
+  --link-hover: #ff69b4;
+  --code-bg: #e6ffe6;
+  --code-text: #2d5016;
+  --code-border: #98fb98;
+  --heading-color: #ff69b4;
+  --button-bg: #ff69b4;
+  --button-text: #ffffff;
+  --button-hover: #ff85c1;
+  --button-secondary-bg: #d4ffd4;
+  --button-secondary-text: #2d5016;
+  --button-secondary-hover: #bfffbf;
+  --overlay-bg: rgba(45, 80, 22, 0.3);
+  --scrollbar-track: #f0fff0;
+  --scrollbar-thumb: #98fb98;
+  --scrollbar-thumb-hover: #32cd32;
+  --font-family: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+  --font-mono: 'Consolas', 'Monaco', monospace;
+  --radius-sm: 8px;
+  --radius-md: 16px;
+  --radius-lg: 24px;
+  --radius-xl: 32px;
+  --transition-fast: 0.2s ease;
+  --transition-normal: 0.35s ease;
+  --transition-slow: 0.5s ease;
+  --spring-green: #98fb98;
+  --spring-green-dark: #32cd32;
+  --spring-pink: #ff69b4;
+  --spring-pink-light: #ffb6c1;
+  --spring-sky: #87ceeb;
+  --spring-yellow: #fffacd;
+  --spring-lavender: #e6e6fa;
+}
+
+/* ==========================================================================
+   29. Summer - 夏日海滩
+   ========================================================================== */
+.theme-summer {
+  --bg-primary: #e0f6ff;
+  --bg-secondary: #b3e5fc;
+  --bg-tertiary: #81d4fa;
+  --bg-hover: #4fc3f7;
+  --text-primary: #01579b;
+  --text-secondary: #0277bd;
+  --text-accent: #ff9800;
+  --text-muted: #0288d1;
+  --accent-primary: #ff9800;
+  --accent-secondary: #ffc107;
+  --accent-tertiary: #03a9f4;
+  --accent-success: #4caf50;
+  --accent-error: #f44336;
+  --accent-warning: #ff9800;
+  --accent-info: #03a9f4;
+  --accent-hover: #ffc107;
+  --border-color: #4fc3f7;
+  --border-light: #b3e5fc;
+  --divider-color: #81d4fa;
+  --card-bg: #ffffff;
+  --card-bg-hover: #e0f6ff;
+  --card-shadow: 0 4px 20px rgba(3, 169, 244, 0.15);
+  --card-shadow-hover: 0 8px 30px rgba(3, 169, 244, 0.25);
+  --input-bg: #ffffff;
+  --input-border: #4fc3f7;
+  --input-focus: #ff9800;
+  --sidebar-bg: #b3e5fc;
+  --sidebar-text: #01579b;
+  --sidebar-border: #4fc3f7;
+  --nav-bg: rgba(224, 246, 255, 0.9);
+  --nav-text: #01579b;
+  --link-color: #ff9800;
+  --link-hover: #ffc107;
+  --code-bg: #e0f6ff;
+  --code-text: #01579b;
+  --code-border: #4fc3f7;
+  --heading-color: #ff9800;
+  --button-bg: #ff9800;
+  --button-text: #ffffff;
+  --button-hover: #ffc107;
+  --button-secondary-bg: #b3e5fc;
+  --button-secondary-text: #01579b;
+  --button-secondary-hover: #81d4fa;
+  --overlay-bg: rgba(1, 87, 155, 0.3);
+  --scrollbar-track: #e0f6ff;
+  --scrollbar-thumb: #4fc3f7;
+  --scrollbar-thumb-hover: #03a9f4;
+  --font-family: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+  --font-mono: 'Consolas', 'Monaco', monospace;
+  --radius-sm: 10px;
+  --radius-md: 20px;
+  --radius-lg: 30px;
+  --radius-xl: 40px;
+  --transition-fast: 0.2s ease;
+  --transition-normal: 0.35s ease;
+  --transition-slow: 0.5s ease;
+  --summer-sky: #03a9f4;
+  --summer-sky-light: #b3e5fc;
+  --summer-sand: #ffe0b2;
+  --summer-sun: #ff9800;
+  --summer-sun-light: #ffc107;
+  --summer-ocean: #0288d1;
+  --summer-palm: #4caf50;
+  --summer-coral: #ff6b6b;
+}
+
+/* ==========================================================================
+   30. Winter - 冬日雪景
+   ========================================================================== */
+.theme-winter {
+  --bg-primary: #f0f8ff;
+  --bg-secondary: #e6f2ff;
+  --bg-tertiary: #cce0ff;
+  --bg-hover: #b3d1ff;
+  --text-primary: #1a237e;
+  --text-secondary: #283593;
+  --text-accent: #1565c0;
+  --text-muted: #3949ab;
+  --accent-primary: #1565c0;
+  --accent-secondary: #5c6bc0;
+  --accent-tertiary: #00acc1;
+  --accent-success: #26a69a;
+  --accent-error: #ef5350;
+  --accent-warning: #ffa726;
+  --accent-info: #42a5f5;
+  --accent-hover: #1976d2;
+  --border-color: #bbdefb;
+  --border-light: #e3f2fd;
+  --divider-color: #bbdefb;
+  --card-bg: #ffffff;
+  --card-bg-hover: #f0f8ff;
+  --card-shadow: 0 4px 20px rgba(21, 101, 192, 0.1);
+  --card-shadow-hover: 0 8px 30px rgba(21, 101, 192, 0.2);
+  --input-bg: #ffffff;
+  --input-border: #bbdefb;
+  --input-focus: #1565c0;
+  --sidebar-bg: #e6f2ff;
+  --sidebar-text: #1a237e;
+  --sidebar-border: #bbdefb;
+  --nav-bg: rgba(240, 248, 255, 0.9);
+  --nav-text: #1a237e;
+  --link-color: #1565c0;
+  --link-hover: #1976d2;
+  --code-bg: #e6f2ff;
+  --code-text: #1a237e;
+  --code-border: #bbdefb;
+  --heading-color: #283593;
+  --button-bg: #1565c0;
+  --button-text: #ffffff;
+  --button-hover: #1976d2;
+  --button-secondary-bg: #cce0ff;
+  --button-secondary-text: #1a237e;
+  --button-secondary-hover: #b3d1ff;
+  --overlay-bg: rgba(26, 35, 126, 0.4);
+  --scrollbar-track: #f0f8ff;
+  --scrollbar-thumb: #bbdefb;
+  --scrollbar-thumb-hover: #90caf9;
+  --font-family: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+  --font-mono: 'Consolas', 'Monaco', monospace;
+  --radius-sm: 8px;
+  --radius-md: 16px;
+  --radius-lg: 24px;
+  --radius-xl: 32px;
+  --transition-fast: 0.2s ease;
+  --transition-normal: 0.35s ease;
+  --transition-slow: 0.5s ease;
+  --winter-snow: #ffffff;
+  --winter-snow-blue: #f0f8ff;
+  --winter-ice: #b3e5fc;
+  --winter-sky: #1565c0;
+  --winter-night: #1a237e;
+  --winter-frost: #e3f2fd;
+  --winter-evergreen: #2e7d32;
+}
+
+/* ==========================================================================
+   31. Ocean - 深海蓝
+   ========================================================================== */
+.theme-ocean {
+  --bg-primary: #0a192f;
+  --bg-secondary: #0d2137;
+  --bg-tertiary: #112240;
+  --bg-hover: #1d3557;
+  --text-primary: #ccd6f6;
+  --text-secondary: #8892b0;
+  --text-accent: #64ffda;
+  --text-muted: #495670;
+  --accent-primary: #64ffda;
+  --accent-secondary: #00b4d8;
+  --accent-tertiary: #0077b6;
+  --accent-success: #64ffda;
+  --accent-error: #ff6b6b;
+  --accent-warning: #ffd93d;
+  --accent-info: #00b4d8;
+  --accent-hover: #00b4d8;
+  --border-color: #233554;
+  --border-light: #1d3557;
+  --divider-color: #233554;
+  --card-bg: #0d2137;
+  --card-bg-hover: #112240;
+  --card-shadow: 0 10px 30px -15px rgba(2, 12, 27, 0.7);
+  --card-shadow-hover: 0 20px 40px -15px rgba(2, 12, 27, 0.8);
+  --input-bg: #0a192f;
+  --input-border: #233554;
+  --input-focus: #64ffda;
+  --sidebar-bg: #08141f;
+  --sidebar-text: #ccd6f6;
+  --sidebar-border: #233554;
+  --nav-bg: rgba(10, 25, 47, 0.9);
+  --nav-text: #ccd6f6;
+  --link-color: #64ffda;
+  --link-hover: #00b4d8;
+  --code-bg: #0d2137;
+  --code-text: #64ffda;
+  --code-border: #233554;
+  --heading-color: #e6f1ff;
+  --button-bg: #64ffda;
+  --button-text: #0a192f;
+  --button-hover: #00b4d8;
+  --button-secondary-bg: #112240;
+  --button-secondary-text: #64ffda;
+  --button-secondary-hover: #1d3557;
+  --overlay-bg: rgba(10, 25, 47, 0.85);
+  --scrollbar-track: #0a192f;
+  --scrollbar-thumb: #233554;
+  --scrollbar-thumb-hover: #495670;
+  --font-family: 'Inter', 'SF Pro Display', 'Segoe UI', sans-serif;
+  --font-mono: 'SF Mono', 'Fira Code', 'Consolas', monospace;
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  --radius-xl: 16px;
+  --transition-fast: 0.2s ease;
+  --transition-normal: 0.3s ease;
+  --transition-slow: 0.4s ease;
+  --ocean-deep: #0a192f;
+  --ocean-deeper: #020c1b;
+  --ocean-mid: #112240;
+  --ocean-light: #1d3557;
+  --ocean-foam: #e6f1ff;
+  --ocean-teal: #64ffda;
+  --ocean-cyan: #00b4d8;
+  --ocean-blue: #0077b6;
+  --ocean-slate: #8892b0;
+}
+
+/* ==========================================================================
+   32. Forest - 森林深处
+   ========================================================================== */
+.theme-forest {
+  --bg-primary: #1b2d1b;
+  --bg-secondary: #223a22;
+  --bg-tertiary: #2d4a2d;
+  --bg-hover: #385a38;
+  --text-primary: #d4e4d4;
+  --text-secondary: #a3c4a3;
+  --text-accent: #88c888;
+  --text-muted: #5a8a5a;
+  --accent-primary: #88c888;
+  --accent-secondary: #5a9b5a;
+  --accent-tertiary: #2e7d32;
+  --accent-success: #66bb6a;
+  --accent-error: #e57373;
+  --accent-warning: #ffb74d;
+  --accent-info: #4fc3f7;
+  --accent-hover: #a5d6a7;
+  --border-color: #385a38;
+  --border-light: #2d4a2d;
+  --divider-color: #2d4a2d;
+  --card-bg: #223a22;
+  --card-bg-hover: #2d4a2d;
+  --card-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  --card-shadow-hover: 0 8px 30px rgba(0, 0, 0, 0.4);
+  --input-bg: #1b2d1b;
+  --input-border: #385a38;
+  --input-focus: #88c888;
+  --sidebar-bg: #142014;
+  --sidebar-text: #d4e4d4;
+  --sidebar-border: #385a38;
+  --nav-bg: rgba(27, 45, 27, 0.9);
+  --nav-text: #d4e4d4;
+  --link-color: #88c888;
+  --link-hover: #a5d6a7;
+  --code-bg: #223a22;
+  --code-text: #88c888;
+  --code-border: #385a38;
+  --heading-color: #a5d6a7;
+  --button-bg: #5a9b5a;
+  --button-text: #ffffff;
+  --button-hover: #88c888;
+  --button-secondary-bg: #2d4a2d;
+  --button-secondary-text: #d4e4d4;
+  --button-secondary-hover: #385a38;
+  --overlay-bg: rgba(27, 45, 27, 0.85);
+  --scrollbar-track: #1b2d1b;
+  --scrollbar-thumb: #385a38;
+  --scrollbar-thumb-hover: #5a8a5a;
+  --font-family: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+  --font-mono: 'Consolas', 'Monaco', monospace;
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 16px;
+  --radius-xl: 24px;
+  --transition-fast: 0.2s ease;
+  --transition-normal: 0.35s ease;
+  --transition-slow: 0.5s ease;
+  --forest-deep: #1b2d1b;
+  --forest-dark: #223a22;
+  --forest-mid: #2d4a2d;
+  --forest-light: #385a38;
+  --forest-leaf: #5a9b5a;
+  --forest-moss: #88c888;
+  --forest-sunlight: #ffd54f;
+  --forest-mist: #a3c4a3;
+  --forest-bark: #5d4037;
+}
+
+/* ==========================================================================
+   33. Desert - 沙漠黄昏
+   ========================================================================== */
+.theme-desert {
+  --bg-primary: #2d1b0e;
+  --bg-secondary: #3d2412;
+  --bg-tertiary: #4d2e17;
+  --bg-hover: #5d381c;
+  --text-primary: #f5deb3;
+  --text-secondary: #deb887;
+  --text-accent: #f4a460;
+  --text-muted: #cd853f;
+  --accent-primary: #f4a460;
+  --accent-secondary: #cd853f;
+  --accent-tertiary: #daa520;
+  --accent-success: #9acd32;
+  --accent-error: #cd5c5c;
+  --accent-warning: #daa520;
+  --accent-info: #87ceeb;
+  --accent-hover: #daa520;
+  --border-color: #8b4513;
+  --border-light: #5d381c;
+  --divider-color: #4d2e17;
+  --card-bg: #3d2412;
+  --card-bg-hover: #4d2e17;
+  --card-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+  --card-shadow-hover: 0 8px 30px rgba(244, 164, 96, 0.2);
+  --input-bg: #2d1b0e;
+  --input-border: #8b4513;
+  --input-focus: #f4a460;
+  --sidebar-bg: #1f1209;
+  --sidebar-text: #f5deb3;
+  --sidebar-border: #8b4513;
+  --nav-bg: rgba(45, 27, 14, 0.9);
+  --nav-text: #f5deb3;
+  --link-color: #f4a460;
+  --link-hover: #daa520;
+  --code-bg: #3d2412;
+  --code-text: #f4a460;
+  --code-border: #8b4513;
+  --heading-color: #daa520;
+  --button-bg: #cd853f;
+  --button-text: #2d1b0e;
+  --button-hover: #f4a460;
+  --button-secondary-bg: #4d2e17;
+  --button-secondary-text: #f5deb3;
+  --button-secondary-hover: #5d381c;
+  --overlay-bg: rgba(45, 27, 14, 0.85);
+  --scrollbar-track: #2d1b0e;
+  --scrollbar-thumb: #8b4513;
+  --scrollbar-thumb-hover: #cd853f;
+  --font-family: 'Georgia', 'Times New Roman', serif;
+  --font-mono: 'Courier New', monospace;
+  --radius-sm: 4px;
+  --radius-md: 10px;
+  --radius-lg: 18px;
+  --radius-xl: 26px;
+  --transition-fast: 0.2s ease;
+  --transition-normal: 0.4s ease;
+  --transition-slow: 0.6s ease;
+  --desert-sand: #f4a460;
+  --desert-sand-light: #f5deb3;
+  --desert-sand-dark: #cd853f;
+  --desert-dune: #8b4513;
+  --desert-sunset: #ff6347;
+  --desert-sky: #87ceeb;
+  --desert-cactus: #9acd32;
+  --desert-night: #2d1b0e;
+}
+
+/* ==========================================================================
+   34. Mountain - 山巅云雾
+   ========================================================================== */
+.theme-mountain {
+  --bg-primary: #f5f7fa;
+  --bg-secondary: #e4e9f0;
+  --bg-tertiary: #d3dae5;
+  --bg-hover: #c2cbd9;
+  --text-primary: #2c3e50;
+  --text-secondary: #5d6d7e;
+  --text-accent: #3498db;
+  --text-muted: #7f8c8d;
+  --accent-primary: #3498db;
+  --accent-secondary: #2980b9;
+  --accent-tertiary: #1abc9c;
+  --accent-success: #27ae60;
+  --accent-error: #e74c3c;
+  --accent-warning: #f39c12;
+  --accent-info: #3498db;
+  --accent-hover: #2980b9;
+  --border-color: #bdc3c7;
+  --border-light: #d3dae5;
+  --divider-color: #d3dae5;
+  --card-bg: #ffffff;
+  --card-bg-hover: #f5f7fa;
+  --card-shadow: 0 8px 32px rgba(44, 62, 80, 0.08);
+  --card-shadow-hover: 0 12px 40px rgba(44, 62, 80, 0.12);
+  --input-bg: #ffffff;
+  --input-border: #bdc3c7;
+  --input-focus: #3498db;
+  --sidebar-bg: #e4e9f0;
+  --sidebar-text: #2c3e50;
+  --sidebar-border: #bdc3c7;
+  --nav-bg: rgba(245, 247, 250, 0.9);
+  --nav-text: #2c3e50;
+  --link-color: #3498db;
+  --link-hover: #2980b9;
+  --code-bg: #e4e9f0;
+  --code-text: #2c3e50;
+  --code-border: #bdc3c7;
+  --heading-color: #2c3e50;
+  --button-bg: #3498db;
+  --button-text: #ffffff;
+  --button-hover: #2980b9;
+  --button-secondary-bg: #d3dae5;
+  --button-secondary-text: #2c3e50;
+  --button-secondary-hover: #c2cbd9;
+  --overlay-bg: rgba(44, 62, 80, 0.4);
+  --scrollbar-track: #f5f7fa;
+  --scrollbar-thumb: #bdc3c7;
+  --scrollbar-thumb-hover: #95a5a6;
+  --font-family: 'Inter', 'Segoe UI', Roboto, sans-serif;
+  --font-mono: 'Consolas', 'Monaco', monospace;
+  --radius-sm: 8px;
+  --radius-md: 16px;
+  --radius-lg: 24px;
+  --radius-xl: 32px;
+  --transition-fast: 0.2s ease;
+  --transition-normal: 0.35s ease;
+  --transition-slow: 0.5s ease;
+  --mountain-peak: #ffffff;
+  --mountain-snow: #f5f7fa;
+  --mountain-mist: #e4e9f0;
+  --mountain-slate: #7f8c8d;
+  --mountain-rock: #5d6d7e;
+  --mountain-sky: #3498db;
+  --mountain-sky-light: #85c1e9;
+  --mountain-forest: #27ae60;
+  --mountain-sunrise: #f39c12;
+}
+
+/* ==========================================================================
+   35. Galaxy - 银河星空
+   ========================================================================== */
+.theme-galaxy {
+  --bg-primary: #0a0a1a;
+  --bg-secondary: #12122a;
+  --bg-tertiary: #1a1a3a;
+  --bg-hover: #22224a;
+  --text-primary: #e8e8ff;
+  --text-secondary: #b0b0d0;
+  --text-accent: #a855f7;
+  --text-muted: #7070a0;
+  --accent-primary: #a855f7;
+  --accent-secondary: #ec4899;
+  --accent-tertiary: #06b6d4;
+  --accent-success: #10b981;
+  --accent-error: #ef4444;
+  --accent-warning: #f59e0b;
+  --accent-info: #3b82f6;
+  --accent-hover: #c084fc;
+  --border-color: #2a2a5a;
+  --border-light: #1a1a3a;
+  --divider-color: #22224a;
+  --card-bg: linear-gradient(135deg, #12122a 0%, #1a1a3a 100%);
+  --card-bg-hover: linear-gradient(135deg, #1a1a3a 0%, #22224a 100%);
+  --card-shadow: 0 4px 30px rgba(168, 85, 247, 0.15);
+  --card-shadow-hover: 0 8px 40px rgba(168, 85, 247, 0.25);
+  --input-bg: #0a0a1a;
+  --input-border: #2a2a5a;
+  --input-focus: #a855f7;
+  --sidebar-bg: #06060f;
+  --sidebar-text: #e8e8ff;
+  --sidebar-border: #2a2a5a;
+  --nav-bg: rgba(10, 10, 26, 0.9);
+  --nav-text: #e8e8ff;
+  --link-color: #a855f7;
+  --link-hover: #ec4899;
+  --code-bg: #12122a;
+  --code-text: #06b6d4;
+  --code-border: #2a2a5a;
+  --heading-color: #a855f7;
+  --button-bg: #a855f7;
+  --button-text: #ffffff;
+  --button-hover: #c084fc;
+  --button-secondary-bg: #1a1a3a;
+  --button-secondary-text: #e8e8ff;
+  --button-secondary-hover: #22224a;
+  --overlay-bg: rgba(10, 10, 26, 0.85);
+  --scrollbar-track: #0a0a1a;
+  --scrollbar-thumb: #2a2a5a;
+  --scrollbar-thumb-hover: #a855f7;
+  --font-family: 'Inter', 'Segoe UI', Roboto, sans-serif;
+  --font-mono: 'JetBrains Mono', 'Fira Code', 'Consolas', monospace;
+  --radius-sm: 6px;
+  --radius-md: 12px;
+  --radius-lg: 20px;
+  --radius-xl: 28px;
+  --transition-fast: 0.2s ease;
+  --transition-normal: 0.35s ease;
+  --transition-slow: 0.5s ease;
+  --galaxy-deep: #0a0a1a;
+  --galaxy-mid: #1a1a3a;
+  --galaxy-light: #2a2a5a;
+  --galaxy-star: #ffffff;
+  --galaxy-purple: #a855f7;
+  --galaxy-pink: #ec4899;
+  --galaxy-cyan: #06b6d4;
+  --galaxy-blue: #3b82f6;
+  --galaxy-gold: #f59e0b;
+  --galaxy-nebula-pink: rgba(236, 72, 153, 0.3);
+  --galaxy-nebula-purple: rgba(168, 85, 247, 0.3);
+}
+
+/* ==========================================================================
+   36. Sunset - 日落黄昏
+   ========================================================================== */
+.theme-sunset {
+  --bg-primary: #2d1b2e;
+  --bg-secondary: #3d2438;
+  --bg-tertiary: #4d2e42;
+  --bg-hover: #5d384c;
+  --text-primary: #ffe4e1;
+  --text-secondary: #ffc3a0;
+  --text-accent: #ff7e5f;
+  --text-muted: #c08080;
+  --accent-primary: #ff7e5f;
+  --accent-secondary: #feb47b;
+  --accent-tertiary: #ff6b6b;
+  --accent-success: #a8e6cf;
+  --accent-error: #ff4757;
+  --accent-warning: #ffd93d;
+  --accent-info: #74b9ff;
+  --accent-hover: #feb47b;
+  --border-color: #6d4c41;
+  --border-light: #5d384c;
+  --divider-color: #4d2e42;
+  --card-bg: linear-gradient(180deg, #3d2438 0%, #2d1b2e 100%);
+  --card-bg-hover: linear-gradient(180deg, #4d2e42 0%, #3d2438 100%);
+  --card-shadow: 0 4px 20px rgba(255, 126, 95, 0.2);
+  --card-shadow-hover: 0 8px 30px rgba(254, 180, 123, 0.3);
+  --input-bg: #2d1b2e;
+  --input-border: #6d4c41;
+  --input-focus: #ff7e5f;
+  --sidebar-bg: #1f1220;
+  --sidebar-text: #ffe4e1;
+  --sidebar-border: #6d4c41;
+  --nav-bg: rgba(45, 27, 46, 0.9);
+  --nav-text: #ffe4e1;
+  --link-color: #ff7e5f;
+  --link-hover: #feb47b;
+  --code-bg: #3d2438;
+  --code-text: #feb47b;
+  --code-border: #6d4c41;
+  --heading-color: #ff7e5f;
+  --button-bg: #ff7e5f;
+  --button-text: #ffffff;
+  --button-hover: #feb47b;
+  --button-secondary-bg: #4d2e42;
+  --button-secondary-text: #ffe4e1;
+  --button-secondary-hover: #5d384c;
+  --overlay-bg: rgba(45, 27, 46, 0.85);
+  --scrollbar-track: #2d1b2e;
+  --scrollbar-thumb: #6d4c41;
+  --scrollbar-thumb-hover: #ff7e5f;
+  --font-family: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+  --font-mono: 'Consolas', 'Monaco', monospace;
+  --radius-sm: 6px;
+  --radius-md: 14px;
+  --radius-lg: 22px;
+  --radius-xl: 30px;
+  --transition-fast: 0.2s ease;
+  --transition-normal: 0.4s ease;
+  --transition-slow: 0.6s ease;
+  --sunset-orange: #ff7e5f;
+  --sunset-peach: #feb47b;
+  --sunset-pink: #ff6b9d;
+  --sunset-purple: #6c5ce7;
+  --sunset-red: #ff4757;
+  --sunset-gold: #ffd93d;
+  --sunset-sky-deep: #2d1b2e;
+  --sunset-sky-mid: #4a2c4a;
+  --sunset-cloud: #ffe4e1;
+}
+
+/* ==========================================================================
+   37. Sunrise - 日出东方
+   ========================================================================== */
+.theme-sunrise {
+  --bg-primary: #fff5e6;
+  --bg-secondary: #ffe4c4;
+  --bg-tertiary: #ffd4a3;
+  --bg-hover: #ffc482;
+  --text-primary: #8b4513;
+  --text-secondary: #cd853f;
+  --text-accent: #ff6347;
+  --text-muted: #daa520;
+  --accent-primary: #ff6347;
+  --accent-secondary: #ffa500;
+  --accent-tertiary: #ffd700;
+  --accent-success: #32cd32;
+  --accent-error: #dc143c;
+  --accent-warning: #ffa500;
+  --accent-info: #4169e1;
+  --accent-hover: #ffa500;
+  --border-color: #ffd4a3;
+  --border-light: #ffe4c4;
+  --divider-color: #ffd4a3;
+  --card-bg: #ffffff;
+  --card-bg-hover: #fff5e6;
+  --card-shadow: 0 4px 20px rgba(255, 99, 71, 0.15);
+  --card-shadow-hover: 0 8px 30px rgba(255, 165, 0, 0.2);
+  --input-bg: #ffffff;
+  --input-border: #ffd4a3;
+  --input-focus: #ff6347;
+  --sidebar-bg: #ffe4c4;
+  --sidebar-text: #8b4513;
+  --sidebar-border: #ffd4a3;
+  --nav-bg: rgba(255, 245, 230, 0.9);
+  --nav-text: #8b4513;
+  --link-color: #ff6347;
+  --link-hover: #ffa500;
+  --code-bg: #ffe4c4;
+  --code-text: #8b4513;
+  --code-border: #ffd4a3;
+  --heading-color: #ff6347;
+  --button-bg: #ff6347;
+  --button-text: #ffffff;
+  --button-hover: #ffa500;
+  --button-secondary-bg: #ffd4a3;
+  --button-secondary-text: #8b4513;
+  --button-secondary-hover: #ffc482;
+  --overlay-bg: rgba(139, 69, 19, 0.3);
+  --scrollbar-track: #fff5e6;
+  --scrollbar-thumb: #ffd4a3;
+  --scrollbar-thumb-hover: #ffa500;
+  --font-family: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+  --font-mono: 'Consolas', 'Monaco', monospace;
+  --radius-sm: 8px;
+  --radius-md: 16px;
+  --radius-lg: 24px;
+  --radius-xl: 32px;
+  --transition-fast: 0.2s ease;
+  --transition-normal: 0.35s ease;
+  --transition-slow: 0.5s ease;
+  --sunrise-red: #ff6347;
+  --sunrise-orange: #ffa500;
+  --sunrise-gold: #ffd700;
+  --sunrise-yellow: #fffacd;
+  --sunrise-peach: #ffdab9;
+  --sunrise-sky: #87ceeb;
+  --sunrise-pink: #ffb6c1;
+  --sunrise-light: #fff5e6;
+}
+
+/* ==========================================================================
+   38. Coffee - 咖啡时光
+   ========================================================================== */
+.theme-coffee {
+  --bg-primary: #f5f0e8;
+  --bg-secondary: #ebe4d8;
+  --bg-tertiary: #ddd5c5;
+  --bg-hover: #cec6b2;
+  --text-primary: #3d2914;
+  --text-secondary: #6b4423;
+  --text-accent: #8b4513;
+  --text-muted: #9c7a5a;
+  --accent-primary: #8b4513;
+  --accent-secondary: #a0522d;
+  --accent-tertiary: #cd853f;
+  --accent-success: #556b2f;
+  --accent-error: #8b0000;
+  --accent-warning: #b8860b;
+  --accent-info: #4682b4;
+  --accent-hover: #a0522d;
+  --border-color: #c4a882;
+  --border-light: #ddd5c5;
+  --divider-color: #ddd5c5;
+  --card-bg: #ffffff;
+  --card-bg-hover: #f5f0e8;
+  --card-shadow: 0 4px 16px rgba(139, 69, 19, 0.12);
+  --card-shadow-hover: 0 8px 24px rgba(139, 69, 19, 0.18);
+  --input-bg: #ffffff;
+  --input-border: #c4a882;
+  --input-focus: #8b4513;
+  --sidebar-bg: #ebe4d8;
+  --sidebar-text: #3d2914;
+  --sidebar-border: #c4a882;
+  --nav-bg: rgba(245, 240, 232, 0.9);
+  --nav-text: #3d2914;
+  --link-color: #8b4513;
+  --link-hover: #a0522d;
+  --code-bg: #ebe4d8;
+  --code-text: #3d2914;
+  --code-border: #c4a882;
+  --heading-color: #6b4423;
+  --button-bg: #8b4513;
+  --button-text: #f5f0e8;
+  --button-hover: #a0522d;
+  --button-secondary-bg: #ddd5c5;
+  --button-secondary-text: #3d2914;
+  --button-secondary-hover: #cec6b2;
+  --overlay-bg: rgba(61, 41, 20, 0.4);
+  --scrollbar-track: #f5f0e8;
+  --scrollbar-thumb: #c4a882;
+  --scrollbar-thumb-hover: #8b4513;
+  --font-family: 'Georgia', 'Times New Roman', serif;
+  --font-mono: 'Courier New', monospace;
+  --radius-sm: 6px;
+  --radius-md: 12px;
+  --radius-lg: 20px;
+  --radius-xl: 28px;
+  --transition-fast: 0.2s ease;
+  --transition-normal: 0.35s ease;
+  --transition-slow: 0.5s ease;
+  --coffee-espresso: #3d2914;
+  --coffee-dark: #6b4423;
+  --coffee-medium: #8b4513;
+  --coffee-light: #a0522d;
+  --coffee-cream: #c4a882;
+  --coffee-milk: #ddd5c5;
+  --coffee-foam: #f5f0e8;
+  --coffee-caramel: #cd853f;
+  --coffee-vanilla: #f5deb3;
+}
+
+/* ==========================================================================
+   39. Candy - 糖果色
+   ========================================================================== */
+.theme-candy {
+  --bg-primary: #fff0f5;
+  --bg-secondary: #ffe4ec;
+  --bg-tertiary: #ffd6e0;
+  --bg-hover: #ffc8d4;
+  --text-primary: #c71585;
+  --text-secondary: #db7093;
+  --text-accent: #ff1493;
+  --text-muted: #dda0dd;
+  --accent-primary: #ff1493;
+  --accent-secondary: #ff69b4;
+  --accent-tertiary: #ff85c1;
+  --accent-success: #32cd32;
+  --accent-error: #ff6b6b;
+  --accent-warning: #ffd700;
+  --accent-info: #00bfff;
+  --accent-hover: #ff69b4;
+  --border-color: #ffb6c1;
+  --border-light: #ffd6e0;
+  --divider-color: #ffd6e0;
+  --card-bg: #ffffff;
+  --card-bg-hover: #fff0f5;
+  --card-shadow: 0 4px 20px rgba(255, 20, 147, 0.15);
+  --card-shadow-hover: 0 8px 30px rgba(255, 105, 180, 0.25);
+  --input-bg: #ffffff;
+  --input-border: #ffb6c1;
+  --input-focus: #ff1493;
+  --sidebar-bg: #ffe4ec;
+  --sidebar-text: #c71585;
+  --sidebar-border: #ffb6c1;
+  --nav-bg: rgba(255, 240, 245, 0.9);
+  --nav-text: #c71585;
+  --link-color: #ff1493;
+  --link-hover: #ff69b4;
+  --code-bg: #ffe4ec;
+  --code-text: #c71585;
+  --code-border: #ffb6c1;
+  --heading-color: #ff1493;
+  --button-bg: #ff1493;
+  --button-text: #ffffff;
+  --button-hover: #ff69b4;
+  --button-secondary-bg: #ffd6e0;
+  --button-secondary-text: #c71585;
+  --button-secondary-hover: #ffc8d4;
+  --overlay-bg: rgba(199, 21, 133, 0.3);
+  --scrollbar-track: #fff0f5;
+  --scrollbar-thumb: #ffb6c1;
+  --scrollbar-thumb-hover: #ff69b4;
+  --font-family: 'Comic Sans MS', 'Chalkboard SE', 'Marker Felt', cursive;
+  --font-mono: 'Courier New', monospace;
+  --radius-sm: 12px;
+  --radius-md: 20px;
+  --radius-lg: 30px;
+  --radius-xl: 40px;
+  --transition-fast: 0.2s ease;
+  --transition-normal: 0.35s ease;
+  --transition-slow: 0.5s ease;
+  --candy-pink: #ff1493;
+  --candy-pink-light: #ff69b4;
+  --candy-pink-pale: #ffb6c1;
+  --candy-blue: #00bfff;
+  --candy-green: #32cd32;
+  --candy-yellow: #ffd700;
+  --candy-orange: #ffa500;
+  --candy-purple: #dda0dd;
+  --candy-red: #ff6b6b;
+  --candy-sprinkle-1: #ff6b6b;
+  --candy-sprinkle-2: #ffd700;
+  --candy-sprinkle-3: #32cd32;
+  --candy-sprinkle-4: #00bfff;
+  --candy-sprinkle-5: #ff69b4;
+}
+
+/* ==========================================================================
+   40. Pastel - 马卡龙粉彩
+   ========================================================================== */
+.theme-pastel {
+  --bg-primary: #fdf2f8;
+  --bg-secondary: #fce7f3;
+  --bg-tertiary: #fbcfe8;
+  --bg-hover: #f9a8d4;
+  --text-primary: #831843;
+  --text-secondary: #9d174d;
+  --text-accent: #ec4899;
+  --text-muted: #be185d;
+  --accent-primary: #ec4899;
+  --accent-secondary: #f472b6;
+  --accent-tertiary: #a78bfa;
+  --accent-success: #86efac;
+  --accent-error: #fca5a5;
+  --accent-warning: #fde68a;
+  --accent-info: #93c5fd;
+  --accent-hover: #f472b6;
+  --border-color: #fbcfe8;
+  --border-light: #fce7f3;
+  --divider-color: #fbcfe8;
+  --card-bg: #ffffff;
+  --card-bg-hover: #fdf2f8;
+  --card-shadow: 0 4px 20px rgba(236, 72, 153, 0.1);
+  --card-shadow-hover: 0 8px 30px rgba(236, 72, 153, 0.15);
+  --input-bg: #ffffff;
+  --input-border: #fbcfe8;
+  --input-focus: #ec4899;
+  --sidebar-bg: #fce7f3;
+  --sidebar-text: #831843;
+  --sidebar-border: #fbcfe8;
+  --nav-bg: rgba(253, 242, 248, 0.9);
+  --nav-text: #831843;
+  --link-color: #ec4899;
+  --link-hover: #a78bfa;
+  --code-bg: #fce7f3;
+  --code-text: #831843;
+  --code-border: #fbcfe8;
+  --heading-color: #ec4899;
+  --button-bg: #ec4899;
+  --button-text: #ffffff;
+  --button-hover: #f472b6;
+  --button-secondary-bg: #fbcfe8;
+  --button-secondary-text: #831843;
+  --button-secondary-hover: #f9a8d4;
+  --overlay-bg: rgba(131, 24, 67, 0.3);
+  --scrollbar-track: #fdf2f8;
+  --scrollbar-thumb: #fbcfe8;
+  --scrollbar-thumb-hover: #f472b6;
+  --font-family: 'Quicksand', 'Segoe UI', 'Helvetica Neue', sans-serif;
+  --font-mono: 'Consolas', 'Monaco', monospace;
+  --radius-sm: 10px;
+  --radius-md: 18px;
+  --radius-lg: 28px;
+  --radius-xl: 38px;
+  --transition-fast: 0.2s ease;
+  --transition-normal: 0.35s ease;
+  --transition-slow: 0.5s ease;
+  --pastel-pink: #f472b6;
+  --pastel-pink-light: #fbcfe8;
+  --pastel-purple: #a78bfa;
+  --pastel-purple-light: #ddd6fe;
+  --pastel-blue: #93c5fd;
+  --pastel-blue-light: #bfdbfe;
+  --pastel-green: #86efac;
+  --pastel-green-light: #bbf7d0;
+  --pastel-yellow: #fde68a;
+  --pastel-yellow-light: #fef3c7;
+  --pastel-orange: #fdba74;
+  --pastel-orange-light: #fed7aa;
+  --pastel-mint: #5eead4;
+  --pastel-rose: #fb7185;
+}
+
+/* ==========================================================================
+   41. Neon Pink - 霓虹粉
+   ========================================================================== */
+.theme-neon-pink {
+  --bg-primary: #0d0d0d;
+  --bg-secondary: #1a1a1a;
+  --bg-tertiary: #262626;
+  --bg-hover: #333333;
+  --text-primary: #ffffff;
+  --text-secondary: #ff6ec7;
+  --text-accent: #ff10f0;
+  --text-muted: #cc00cc;
+  --accent-primary: #ff10f0;
+  --accent-secondary: #ff6ec7;
+  --accent-tertiary: #ff00aa;
+  --accent-success: #39ff14;
+  --accent-error: #ff073a;
+  --accent-warning: #fff01f;
+  --accent-info: #00ffff;
+  --accent-hover: #ff6ec7;
+  --border-color: #ff10f0;
+  --border-light: #333333;
+  --divider-color: #262626;
+  --card-bg: #1a1a1a;
+  --card-bg-hover: #262626;
+  --card-shadow: 0 0 20px rgba(255, 16, 240, 0.4), 0 4px 20px rgba(0, 0, 0, 0.3);
+  --card-shadow-hover: 0 0 40px rgba(255, 16, 240, 0.6), 0 8px 30px rgba(0, 0, 0, 0.4);
+  --input-bg: #0d0d0d;
+  --input-border: #ff10f0;
+  --input-focus: #ff6ec7;
+  --sidebar-bg: #080808;
+  --sidebar-text: #ffffff;
+  --sidebar-border: #ff10f0;
+  --nav-bg: rgba(13, 13, 13, 0.95);
+  --nav-text: #ff10f0;
+  --link-color: #ff10f0;
+  --link-hover: #ff6ec7;
+  --code-bg: #1a1a1a;
+  --code-text: #ff10f0;
+  --code-border: #ff10f0;
+  --heading-color: #ff10f0;
+  --button-bg: #ff10f0;
+  --button-text: #0d0d0d;
+  --button-hover: #ff6ec7;
+  --button-secondary-bg: #262626;
+  --button-secondary-text: #ff10f0;
+  --button-secondary-hover: #333333;
+  --overlay-bg: rgba(13, 13, 13, 0.9);
+  --scrollbar-track: #0d0d0d;
+  --scrollbar-thumb: #ff10f0;
+  --scrollbar-thumb-hover: #ff6ec7;
+  --font-family: 'Orbitron', 'Montserrat', sans-serif;
+  --font-mono: 'Fira Code', 'Consolas', monospace;
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  --radius-xl: 16px;
+  --transition-fast: 0.1s ease;
+  --transition-normal: 0.2s ease;
+  --transition-slow: 0.3s ease;
+  --neon-pink-bright: #ff10f0;
+  --neon-pink-light: #ff6ec7;
+  --neon-pink-dark: #cc00cc;
+  --neon-glow-pink: 0 0 5px #ff10f0, 0 0 10px #ff10f0, 0 0 20px #ff10f0, 0 0 40px #ff10f0;
+  --neon-glow-pink-soft: 0 0 10px rgba(255, 16, 240, 0.5);
+  --neon-flicker: 0 0 5px #ff10f0, 0 0 10px #ff6ec7;
+}
+
+/* ==========================================================================
+   42. Neon Blue - 霓虹蓝
+   ========================================================================== */
+.theme-neon-blue {
+  --bg-primary: #0a0a1a;
+  --bg-secondary: #101028;
+  --bg-tertiary: #181838;
+  --bg-hover: #202048;
+  --text-primary: #ffffff;
+  --text-secondary: #00d4ff;
+  --text-accent: #00f0ff;
+  --text-muted: #0088aa;
+  --accent-primary: #00f0ff;
+  --accent-secondary: #00d4ff;
+  --accent-tertiary: #0099cc;
+  --accent-success: #00ff88;
+  --accent-error: #ff3366;
+  --accent-warning: #ffcc00;
+  --accent-info: #00f0ff;
+  --accent-hover: #00d4ff;
+  --border-color: #00f0ff;
+  --border-light: #202048;
+  --divider-color: #181838;
+  --card-bg: #101028;
+  --card-bg-hover: #181838;
+  --card-shadow: 0 0 20px rgba(0, 240, 255, 0.3), 0 4px 20px rgba(0, 0, 0, 0.3);
+  --card-shadow-hover: 0 0 40px rgba(0, 240, 255, 0.5), 0 8px 30px rgba(0, 0, 0, 0.4);
+  --input-bg: #0a0a1a;
+  --input-border: #00f0ff;
+  --input-focus: #00d4ff;
+  --sidebar-bg: #06060f;
+  --sidebar-text: #ffffff;
+  --sidebar-border: #00f0ff;
+  --nav-bg: rgba(10, 10, 26, 0.95);
+  --nav-text: #00f0ff;
+  --link-color: #00f0ff;
+  --link-hover: #00d4ff;
+  --code-bg: #101028;
+  --code-text: #00f0ff;
+  --code-border: #00f0ff;
+  --heading-color: #00f0ff;
+  --button-bg: #00f0ff;
+  --button-text: #0a0a1a;
+  --button-hover: #00d4ff;
+  --button-secondary-bg: #181838;
+  --button-secondary-text: #00f0ff;
+  --button-secondary-hover: #202048;
+  --overlay-bg: rgba(10, 10, 26, 0.9);
+  --scrollbar-track: #0a0a1a;
+  --scrollbar-thumb: #00f0ff;
+  --scrollbar-thumb-hover: #00d4ff;
+  --font-family: 'Orbitron', 'Montserrat', sans-serif;
+  --font-mono: 'Fira Code', 'Consolas', monospace;
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  --radius-xl: 16px;
+  --transition-fast: 0.1s ease;
+  --transition-normal: 0.2s ease;
+  --transition-slow: 0.3s ease;
+  --neon-blue-bright: #00f0ff;
+  --neon-blue-light: #00d4ff;
+  --neon-blue-dark: #0088aa;
+  --neon-glow-blue: 0 0 5px #00f0ff, 0 0 10px #00f0ff, 0 0 20px #00f0ff, 0 0 40px #00f0ff;
+  --neon-glow-blue-soft: 0 0 10px rgba(0, 240, 255, 0.5);
+  --neon-flicker-blue: 0 0 5px #00f0ff, 0 0 10px #00d4ff;
+}
+
+/* ==========================================================================
+   43. Minimal White - 极简白
+   ========================================================================== */
+.theme-minimal-white {
+  --bg-primary: #ffffff;
+  --bg-secondary: #fafafa;
+  --bg-tertiary: #f5f5f5;
+  --bg-hover: #eeeeee;
+  --text-primary: #000000;
+  --text-secondary: #333333;
+  --text-accent: #000000;
+  --text-muted: #999999;
+  --accent-primary: #000000;
+  --accent-secondary: #333333;
+  --accent-tertiary: #666666;
+  --accent-success: #22c55e;
+  --accent-error: #ef4444;
+  --accent-warning: #f59e0b;
+  --accent-info: #3b82f6;
+  --accent-hover: #333333;
+  --border-color: #e5e5e5;
+  --border-light: #f5f5f5;
+  --divider-color: #e5e5e5;
+  --card-bg: #ffffff;
+  --card-bg-hover: #fafafa;
+  --card-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+  --card-shadow-hover: 0 2px 8px rgba(0, 0, 0, 0.08);
+  --input-bg: #ffffff;
+  --input-border: #e5e5e5;
+  --input-focus: #000000;
+  --sidebar-bg: #fafafa;
+  --sidebar-text: #000000;
+  --sidebar-border: #e5e5e5;
+  --nav-bg: rgba(255, 255, 255, 0.95);
+  --nav-text: #000000;
+  --link-color: #000000;
+  --link-hover: #666666;
+  --code-bg: #f5f5f5;
+  --code-text: #000000;
+  --code-border: #e5e5e5;
+  --heading-color: #000000;
+  --button-bg: #000000;
+  --button-text: #ffffff;
+  --button-hover: #333333;
+  --button-secondary-bg: #f5f5f5;
+  --button-secondary-text: #000000;
+  --button-secondary-hover: #eeeeee;
+  --overlay-bg: rgba(0, 0, 0, 0.3);
+  --scrollbar-track: #ffffff;
+  --scrollbar-thumb: #d4d4d4;
+  --scrollbar-thumb-hover: #a3a3a3;
+  --font-family: 'Inter', 'Helvetica Neue', Arial, sans-serif;
+  --font-mono: 'JetBrains Mono', 'Consolas', monospace;
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  --radius-xl: 16px;
+  --transition-fast: 0.15s ease;
+  --transition-normal: 0.25s ease;
+  --transition-slow: 0.35s ease;
+  --minimal-black: #000000;
+  --minimal-gray-100: #f5f5f5;
+  --minimal-gray-200: #e5e5e5;
+  --minimal-gray-300: #d4d4d4;
+  --minimal-gray-500: #737373;
+  --minimal-gray-700: #404040;
+  --minimal-white: #ffffff;
+  --minimal-space-1: 4px;
+  --minimal-space-2: 8px;
+  --minimal-space-3: 16px;
+  --minimal-space-4: 24px;
+}
+
+/* ==========================================================================
+   44. Minimal Black - 极简黑
+   ========================================================================== */
+.theme-minimal-black {
+  --bg-primary: #000000;
+  --bg-secondary: #0a0a0a;
+  --bg-tertiary: #171717;
+  --bg-hover: #262626;
+  --text-primary: #ffffff;
+  --text-secondary: #d4d4d4;
+  --text-accent: #ffffff;
+  --text-muted: #737373;
+  --accent-primary: #ffffff;
+  --accent-secondary: #e5e5e5;
+  --accent-tertiary: #a3a3a3;
+  --accent-success: #4ade80;
+  --accent-error: #f87171;
+  --accent-warning: #fbbf24;
+  --accent-info: #60a5fa;
+  --accent-hover: #e5e5e5;
+  --border-color: #262626;
+  --border-light: #171717;
+  --divider-color: #171717;
+  --card-bg: #0a0a0a;
+  --card-bg-hover: #171717;
+  --card-shadow: 0 1px 3px rgba(255, 255, 255, 0.05);
+  --card-shadow-hover: 0 2px 8px rgba(255, 255, 255, 0.08);
+  --input-bg: #000000;
+  --input-border: #262626;
+  --input-focus: #ffffff;
+  --sidebar-bg: #050505;
+  --sidebar-text: #ffffff;
+  --sidebar-border: #262626;
+  --nav-bg: rgba(0, 0, 0, 0.95);
+  --nav-text: #ffffff;
+  --link-color: #ffffff;
+  --link-hover: #a3a3a3;
+  --code-bg: #0a0a0a;
+  --code-text: #ffffff;
+  --code-border: #262626;
+  --heading-color: #ffffff;
+  --button-bg: #ffffff;
+  --button-text: #000000;
+  --button-hover: #e5e5e5;
+  --button-secondary-bg: #171717;
+  --button-secondary-text: #ffffff;
+  --button-secondary-hover: #262626;
+  --overlay-bg: rgba(0, 0, 0, 0.8);
+  --scrollbar-track: #000000;
+  --scrollbar-thumb: #262626;
+  --scrollbar-thumb-hover: #404040;
+  --font-family: 'Inter', 'Helvetica Neue', Arial, sans-serif;
+  --font-mono: 'JetBrains Mono', 'Consolas', monospace;
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  --radius-xl: 16px;
+  --transition-fast: 0.15s ease;
+  --transition-normal: 0.25s ease;
+  --transition-slow: 0.35s ease;
+  --minimal-white: #ffffff;
+  --minimal-gray-100: #f5f5f5;
+  --minimal-gray-200: #e5e5e5;
+  --minimal-gray-300: #d4d4d4;
+  --minimal-gray-500: #737373;
+  --minimal-gray-700: #404040;
+  --minimal-black: #000000;
+  --minimal-space-1: 4px;
+  --minimal-space-2: 8px;
+  --minimal-space-3: 16px;
+  --minimal-space-4: 24px;
+}
+
+/* ==========================================================================
+   45. Paper - 纸质阅读
+   ========================================================================== */
+.theme-paper {
+  --bg-primary: #f8f4e8;
+  --bg-secondary: #f0e8d4;
+  --bg-tertiary: #e8dcc0;
+  --bg-hover: #ddd0ac;
+  --text-primary: #3a3a3a;
+  --text-secondary: #5a5a5a;
+  --text-accent: #8b4513;
+  --text-muted: #8a8a8a;
+  --accent-primary: #8b4513;
+  --accent-secondary: #a0522d;
+  --accent-tertiary: #cd853f;
+  --accent-success: #556b2f;
+  --accent-error: #8b0000;
+  --accent-warning: #b8860b;
+  --accent-info: #4682b4;
+  --accent-hover: #a0522d;
+  --border-color: #d4c8a8;
+  --border-light: #e8dcc0;
+  --divider-color: #d4c8a8;
+  --card-bg: #fdfaf2;
+  --card-bg-hover: #f8f4e8;
+  --card-shadow: 0 2px 8px rgba(139, 69, 19, 0.1);
+  --card-shadow-hover: 0 4px 16px rgba(139, 69, 19, 0.15);
+  --input-bg: #fdfaf2;
+  --input-border: #d4c8a8;
+  --input-focus: #8b4513;
+  --sidebar-bg: #f0e8d4;
+  --sidebar-text: #3a3a3a;
+  --sidebar-border: #d4c8a8;
+  --nav-bg: rgba(248, 244, 232, 0.95);
+  --nav-text: #3a3a3a;
+  --link-color: #8b4513;
+  --link-hover: #a0522d;
+  --code-bg: #f0e8d4;
+  --code-text: #3a3a3a;
+  --code-border: #d4c8a8;
+  --heading-color: #5a3a1a;
+  --button-bg: #8b4513;
+  --button-text: #f8f4e8;
+  --button-hover: #a0522d;
+  --button-secondary-bg: #e8dcc0;
+  --button-secondary-text: #3a3a3a;
+  --button-secondary-hover: #ddd0ac;
+  --overlay-bg: rgba(58, 58, 58, 0.4);
+  --scrollbar-track: #f8f4e8;
+  --scrollbar-thumb: #d4c8a8;
+  --scrollbar-thumb-hover: #cd853f;
+  --font-family: 'Georgia', 'Times New Roman', 'Songti SC', serif;
+  --font-mono: 'Courier New', monospace;
+  --radius-sm: 2px;
+  --radius-md: 4px;
+  --radius-lg: 8px;
+  --radius-xl: 12px;
+  --transition-fast: 0.2s ease;
+  --transition-normal: 0.35s ease;
+  --transition-slow: 0.5s ease;
+  --paper-cream: #f8f4e8;
+  --paper-ivory: #fdfaf2;
+  --paper-beige: #f0e8d4;
+  --paper-tan: #d4c8a8;
+  --paper-ink: #3a3a3a;
+  --paper-ink-light: #5a5a5a;
+  --paper-sepia: #8b4513;
+  --paper-line: rgba(139, 69, 19, 0.1);
+  --paper-texture: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+}
+
+/* ==========================================================================
+   46. Parchment - 羊皮卷
+   ========================================================================== */
+.theme-parchment {
+  --bg-primary: #f4e4bc;
+  --bg-secondary: #ebd4a0;
+  --bg-tertiary: #e0c488;
+  --bg-hover: #d4b470;
+  --text-primary: #4a3728;
+  --text-secondary: #6b5344;
+  --text-accent: #8b6914;
+  --text-muted: #9a8b7a;
+  --accent-primary: #8b6914;
+  --accent-secondary: #a67c00;
+  --accent-tertiary: #c9a227;
+  --accent-success: #556b2f;
+  --accent-error: #8b0000;
+  --accent-warning: #b8860b;
+  --accent-info: #4682b4;
+  --accent-hover: #a67c00;
+  --border-color: #c9a96e;
+  --border-light: #e0c488;
+  --divider-color: #c9a96e;
+  --card-bg: #f7ebc8;
+  --card-bg-hover: #f4e4bc;
+  --card-shadow: 0 4px 16px rgba(139, 105, 20, 0.15);
+  --card-shadow-hover: 0 8px 24px rgba(139, 105, 20, 0.2);
+  --input-bg: #f7ebc8;
+  --input-border: #c9a96e;
+  --input-focus: #8b6914;
+  --sidebar-bg: #ebd4a0;
+  --sidebar-text: #4a3728;
+  --sidebar-border: #c9a96e;
+  --nav-bg: rgba(244, 228, 188, 0.95);
+  --nav-text: #4a3728;
+  --link-color: #8b6914;
+  --link-hover: #a67c00;
+  --code-bg: #ebd4a0;
+  --code-text: #4a3728;
+  --code-border: #c9a96e;
+  --heading-color: #6b4423;
+  --button-bg: #8b6914;
+  --button-text: #f4e4bc;
+  --button-hover: #a67c00;
+  --button-secondary-bg: #e0c488;
+  --button-secondary-text: #4a3728;
+  --button-secondary-hover: #d4b470;
+  --overlay-bg: rgba(74, 55, 40, 0.5);
+  --scrollbar-track: #f4e4bc;
+  --scrollbar-thumb: #c9a96e;
+  --scrollbar-thumb-hover: #a67c00;
+  --font-family: 'Times New Roman', 'Georgia', 'Palatino', serif;
+  --font-mono: 'Courier New', monospace;
+  --radius-sm: 2px;
+  --radius-md: 6px;
+  --radius-lg: 12px;
+  --radius-xl: 18px;
+  --transition-fast: 0.2s ease;
+  --transition-normal: 0.4s ease;
+  --transition-slow: 0.6s ease;
+  --parchment-light: #f7ebc8;
+  --parchment-normal: #f4e4bc;
+  --parchment-medium: #ebd4a0;
+  --parchment-dark: #d4b470;
+  --parchment-brown: #8b6914;
+  --parchment-ink: #4a3728;
+  --parchment-gold: #c9a227;
+  --parchment-aged: #c9a96e;
+  --parchment-seal-red: #8b0000;
+}
+
+/* ==========================================================================
+   47. Steampunk - 蒸汽朋克
+   ========================================================================== */
+.theme-steampunk {
+  --bg-primary: #2b2014;
+  --bg-secondary: #3d2f1f;
+  --bg-tertiary: #4f3e2a;
+  --bg-hover: #614d35;
+  --text-primary: #d4b896;
+  --text-secondary: #b8956a;
+  --text-accent: #e4a952;
+  --text-muted: #8b7355;
+  --accent-primary: #e4a952;
+  --accent-secondary: #cd853f;
+  --accent-tertiary: #b8860b;
+  --accent-success: #6b8e23;
+  --accent-error: #b22222;
+  --accent-warning: #d2691e;
+  --accent-info: #4682b4;
+  --accent-hover: #daa520;
+  --border-color: #8b6914;
+  --border-light: #614d35;
+  --divider-color: #4f3e2a;
+  --card-bg: #3d2f1f;
+  --card-bg-hover: #4f3e2a;
+  --card-shadow: 0 4px 20px rgba(0, 0, 0, 0.4), inset 0 1px 0 rgba(228, 169, 82, 0.2);
+  --card-shadow-hover: 0 8px 30px rgba(0, 0, 0, 0.5), inset 0 1px 0 rgba(228, 169, 82, 0.3);
+  --input-bg: #2b2014;
+  --input-border: #8b6914;
+  --input-focus: #e4a952;
+  --sidebar-bg: #1f170e;
+  --sidebar-text: #d4b896;
+  --sidebar-border: #8b6914;
+  --nav-bg: rgba(43, 32, 20, 0.95);
+  --nav-text: #e4a952;
+  --link-color: #e4a952;
+  --link-hover: #daa520;
+  --code-bg: #3d2f1f;
+  --code-text: #e4a952;
+  --code-border: #8b6914;
+  --heading-color: #e4a952;
+  --button-bg: #cd853f;
+  --button-text: #2b2014;
+  --button-hover: #e4a952;
+  --button-secondary-bg: #4f3e2a;
+  --button-secondary-text: #d4b896;
+  --button-secondary-hover: #614d35;
+  --overlay-bg: rgba(43, 32, 20, 0.85);
+  --scrollbar-track: #2b2014;
+  --scrollbar-thumb: #8b6914;
+  --scrollbar-thumb-hover: #cd853f;
+  --font-family: 'Georgia', 'Times New Roman', serif;
+  --font-mono: 'Courier New', monospace;
+  --radius-sm: 2px;
+  --radius-md: 6px;
+  --radius-lg: 10px;
+  --radius-xl: 14px;
+  --transition-fast: 0.15s ease;
+  --transition-normal: 0.3s ease;
+  --transition-slow: 0.45s ease;
+  --steampunk-brass: #e4a952;
+  --steampunk-brass-dark: #cd853f;
+  --steampunk-brass-light: #daa520;
+  --steampunk-copper: #b87333;
+  --steampunk-bronze: #8b6914;
+  --steampunk-wood: #5d4037;
+  --steampunk-leather: #6b4423;
+  --steampunk-iron: #4a4a4a;
+  --steampunk-gear: #8b6914;
+  --steampunk-steam: rgba(255, 255, 255, 0.3);
+}
+
+/* ==========================================================================
+   48. Art Deco - 装饰艺术
+   ========================================================================== */
+.theme-artdeco {
+  --bg-primary: #1a1a2e;
+  --bg-secondary: #16213e;
+  --bg-tertiary: #0f3460;
+  --bg-hover: #1a4a7a;
+  --text-primary: #e8d5b7;
+  --text-secondary: #d4af37;
+  --text-accent: #ffd700;
+  --text-muted: #b8860b;
+  --accent-primary: #ffd700;
+  --accent-secondary: #d4af37;
+  --accent-tertiary: #b8860b;
+  --accent-success: #2e8b57;
+  --accent-error: #dc143c;
+  --accent-warning: #ff8c00;
+  --accent-info: #4169e1;
+  --accent-hover: #d4af37;
+  --border-color: #d4af37;
+  --border-light: #0f3460;
+  --divider-color: #0f3460;
+  --card-bg: linear-gradient(135deg, #16213e 0%, #1a1a2e 100%);
+  --card-bg-hover: linear-gradient(135deg, #0f3460 0%, #16213e 100%);
+  --card-shadow: 0 4px 20px rgba(212, 175, 55, 0.2);
+  --card-shadow-hover: 0 8px 30px rgba(255, 215, 0, 0.3);
+  --input-bg: #1a1a2e;
+  --input-border: #d4af37;
+  --input-focus: #ffd700;
+  --sidebar-bg: #0f1520;
+  --sidebar-text: #e8d5b7;
+  --sidebar-border: #d4af37;
+  --nav-bg: rgba(26, 26, 46, 0.95);
+  --nav-text: #ffd700;
+  --link-color: #ffd700;
+  --link-hover: #d4af37;
+  --code-bg: #16213e;
+  --code-text: #ffd700;
+  --code-border: #d4af37;
+  --heading-color: #ffd700;
+  --button-bg: #d4af37;
+  --button-text: #1a1a2e;
+  --button-hover: #ffd700;
+  --button-secondary-bg: #0f3460;
+  --button-secondary-text: #ffd700;
+  --button-secondary-hover: #1a4a7a;
+  --overlay-bg: rgba(26, 26, 46, 0.85);
+  --scrollbar-track: #1a1a2e;
+  --scrollbar-thumb: #d4af37;
+  --scrollbar-thumb-hover: #ffd700;
+  --font-family: 'Playfair Display', 'Georgia', serif;
+  --font-mono: 'Courier New', monospace;
+  --radius-sm: 2px;
+  --radius-md: 4px;
+  --radius-lg: 8px;
+  --radius-xl: 12px;
+  --transition-fast: 0.2s ease;
+  --transition-normal: 0.35s ease;
+  --transition-slow: 0.5s ease;
+  --artdeco-gold: #ffd700;
+  --artdeco-gold-dark: #d4af37;
+  --artdeco-gold-light: #ffec8b;
+  --artdeco-navy: #1a1a2e;
+  --artdeco-navy-light: #16213e;
+  --artdeco-teal: #0f3460;
+  --artdeco-cream: #e8d5b7;
+  --artdeco-black: #0a0a15;
+  --artdeco-pattern: repeating-linear-gradient(45deg, transparent, transparent 10px, rgba(212, 175, 55, 0.1) 10px, rgba(212, 175, 55, 0.1) 20px);
+}
+
+/* ==========================================================================
+   49. Memphis - 孟菲斯风格
+   ========================================================================== */
+.theme-memphis {
+  --bg-primary: #ffd93d;
+  --bg-secondary: #ff6b6b;
+  --bg-tertiary: #4ecdc4;
+  --bg-hover: #95e1d3;
+  --text-primary: #2c2c54;
+  --text-secondary: #ffffff;
+  --text-accent: #ff6b6b;
+  --text-muted: #474787;
+  --accent-primary: #ff6b6b;
+  --accent-secondary: #4ecdc4;
+  --accent-tertiary: #ffa502;
+  --accent-success: #26de81;
+  --accent-error: #eb3b5a;
+  --accent-warning: #ffa502;
+  --accent-info: #45aaf2;
+  --accent-hover: #4ecdc4;
+  --border-color: #2c2c54;
+  --border-light: #ffd93d;
+  --divider-color: #2c2c54;
+  --card-bg: #ffffff;
+  --card-bg-hover: #f8f9fa;
+  --card-shadow: 8px 8px 0 #2c2c54;
+  --card-shadow-hover: 12px 12px 0 #ff6b6b;
+  --input-bg: #ffffff;
+  --input-border: #2c2c54;
+  --input-focus: #ff6b6b;
+  --sidebar-bg: #ffd93d;
+  --sidebar-text: #2c2c54;
+  --sidebar-border: #2c2c54;
+  --nav-bg: #2c2c54;
+  --nav-text: #ffd93d;
+  --link-color: #ff6b6b;
+  --link-hover: #4ecdc4;
+  --code-bg: #4ecdc4;
+  --code-text: #2c2c54;
+  --code-border: #2c2c54;
+  --heading-color: #ff6b6b;
+  --button-bg: #ff6b6b;
+  --button-text: #ffffff;
+  --button-hover: #4ecdc4;
+  --button-secondary-bg: #ffd93d;
+  --button-secondary-text: #2c2c54;
+  --button-secondary-hover: #ffcd3c;
+  --overlay-bg: rgba(44, 44, 84, 0.5);
+  --scrollbar-track: #ffd93d;
+  --scrollbar-thumb: #2c2c54;
+  --scrollbar-thumb-hover: #ff6b6b;
+  --font-family: 'Comic Sans MS', 'Chalkboard SE', 'Marker Felt', cursive;
+  --font-mono: 'Courier New', monospace;
+  --radius-sm: 0px;
+  --radius-md: 0px;
+  --radius-lg: 0px;
+  --radius-xl: 0px;
+  --transition-fast: 0.1s ease;
+  --transition-normal: 0.2s ease;
+  --transition-slow: 0.3s ease;
+  --memphis-pink: #ff6b6b;
+  --memphis-yellow: #ffd93d;
+  --memphis-teal: #4ecdc4;
+  --memphis-navy: #2c2c54;
+  --memphis-orange: #ffa502;
+  --memphis-green: #26de81;
+  --memphis-purple: #a55eea;
+  --memphis-pattern-dots: radial-gradient(circle, #2c2c54 2px, transparent 2px);
+  --memphis-pattern-lines: repeating-linear-gradient(90deg, transparent, transparent 10px, #2c2c54 10px, #2c2c54 12px);
+  --memphis-pattern-zigzag: linear-gradient(135deg, #ff6b6b 25%, transparent 25%) -10px 0;
+}
+
+/* ==========================================================================
+   50. Bauhaus - 包豪斯
+   ========================================================================== */
+.theme-bauhaus {
+  --bg-primary: #ffffff;
+  --bg-secondary: #f5f5f5;
+  --bg-tertiary: #e5e5e5;
+  --bg-hover: #d4d4d4;
+  --text-primary: #000000;
+  --text-secondary: #333333;
+  --text-accent: #e53935;
+  --text-muted: #757575;
+  --accent-primary: #e53935;
+  --accent-secondary: #1e88e5;
+  --accent-tertiary: #fdd835;
+  --accent-success: #43a047;
+  --accent-error: #e53935;
+  --accent-warning: #fb8c00;
+  --accent-info: #1e88e5;
+  --accent-hover: #1e88e5;
+  --border-color: #000000;
+  --border-light: #e5e5e5;
+  --divider-color: #000000;
+  --card-bg: #ffffff;
+  --card-bg-hover: #f5f5f5;
+  --card-shadow: none;
+  --card-shadow-hover: none;
+  --card-border: 3px solid #000000;
+  --input-bg: #ffffff;
+  --input-border: #000000;
+  --input-focus: #e53935;
+  --sidebar-bg: #f5f5f5;
+  --sidebar-text: #000000;
+  --sidebar-border: #000000;
+  --nav-bg: #ffffff;
+  --nav-text: #000000;
+  --link-color: #e53935;
+  --link-hover: #1e88e5;
+  --code-bg: #f5f5f5;
+  --code-text: #000000;
+  --code-border: #000000;
+  --heading-color: #000000;
+  --button-bg: #e53935;
+  --button-text: #ffffff;
+  --button-hover: #c62828;
+  --button-secondary-bg: #1e88e5;
+  --button-secondary-text: #ffffff;
+  --button-secondary-hover: #1565c0;
+  --overlay-bg: rgba(0, 0, 0, 0.5);
+  --scrollbar-track: #f5f5f5;
+  --scrollbar-thumb: #000000;
+  --scrollbar-thumb-hover: #333333;
+  --font-family: 'Helvetica Neue', 'Arial', sans-serif;
+  --font-mono: 'Courier New', monospace;
+  --radius-sm: 0px;
+  --radius-md: 0px;
+  --radius-lg: 0px;
+  --radius-xl: 0px;
+  --transition-fast: 0.1s ease;
+  --transition-normal: 0.2s ease;
+  --transition-slow: 0.3s ease;
+  --bauhaus-red: #e53935;
+  --bauhaus-blue: #1e88e5;
+  --bauhaus-yellow: #fdd835;
+  --bauhaus-black: #000000;
+  --bauhaus-white: #ffffff;
+  --bauhaus-gray: #757575;
+  --bauhaus-thick-border: 4px solid #000000;
+  --bauhaus-thin-border: 2px solid #000000;
+  --bauhaus-geometric-circle: border-radius: 50%;
+  --bauhaus-geometric-square: border-radius: 0;
+}
+
+/* ==========================================================================
+   51. Japanese - 日式和风
+   ========================================================================== */
+.theme-japanese {
+  --bg-primary: #faf9f7;
+  --bg-secondary: #f0ede8;
+  --bg-tertiary: #e6e2db;
+  --bg-hover: #d9d4cc;
+  --text-primary: #1c1c1c;
+  --text-secondary: #4a4a4a;
+  --text-accent: #c41e3a;
+  --text-muted: #8a8a8a;
+  --accent-primary: #c41e3a;
+  --accent-secondary: #1c1c1c;
+  --accent-tertiary: #d4af37;
+  --accent-success: #2e8b57;
+  --accent-error: #c41e3a;
+  --accent-warning: #d4af37;
+  --accent-info: #4682b4;
+  --accent-hover: #a01830;
+  --border-color: #d9d4cc;
+  --border-light: #e6e2db;
+  --divider-color: #d9d4cc;
+  --card-bg: #ffffff;
+  --card-bg-hover: #faf9f7;
+  --card-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+  --card-shadow-hover: 0 4px 20px rgba(0, 0, 0, 0.1);
+  --input-bg: #ffffff;
+  --input-border: #d9d4cc;
+  --input-focus: #c41e3a;
+  --sidebar-bg: #f0ede8;
+  --sidebar-text: #1c1c1c;
+  --sidebar-border: #d9d4cc;
+  --nav-bg: rgba(250, 249, 247, 0.95);
+  --nav-text: #1c1c1c;
+  --link-color: #c41e3a;
+  --link-hover: #a01830;
+  --code-bg: #f0ede8;
+  --code-text: #1c1c1c;
+  --code-border: #d9d4cc;
+  --heading-color: #1c1c1c;
+  --button-bg: #c41e3a;
+  --button-text: #ffffff;
+  --button-hover: #a01830;
+  --button-secondary-bg: #e6e2db;
+  --button-secondary-text: #1c1c1c;
+  --button-secondary-hover: #d9d4cc;
+  --overlay-bg: rgba(28, 28, 28, 0.4);
+  --scrollbar-track: #faf9f7;
+  --scrollbar-thumb: #d9d4cc;
+  --scrollbar-thumb-hover: #b8b0a4;
+  --font-family: 'Hiragino Kaku Gothic ProN', 'Meiryo', 'Yu Gothic', 'Microsoft YaHei', sans-serif;
+  --font-mono: 'Consolas', 'Monaco', monospace;
+  --radius-sm: 2px;
+  --radius-md: 4px;
+  --radius-lg: 8px;
+  --radius-xl: 12px;
+  --transition-fast: 0.2s ease;
+  --transition-normal: 0.35s ease;
+  --transition-slow: 0.5s ease;
+  --japanese-red: #c41e3a;
+  --japanese-vermillion: #e60012;
+  --japanese-gold: #d4af37;
+  --japanese-black: #1c1c1c;
+  --japanese-white: #ffffff;
+  --japanese-indigo: #273a8f;
+  --japanese-green: #2e8b57;
+  --japanese-paper: #faf9f7;
+  --japanese-wood: #8b4513;
+  --japanese-cherry: #ffb7c5;
+}
+
+/* ==========================================================================
+   52. Chinese - 中式古典
+   ========================================================================== */
+.theme-chinese {
+  --bg-primary: #f5e6d3;
+  --bg-secondary: #ebd8c0;
+  --bg-tertiary: #e0caa8;
+  --bg-hover: #d4bc90;
+  --text-primary: #3d2914;
+  --text-secondary: #6b4423;
+  --text-accent: #c41e3a;
+  --text-muted: #8b6914;
+  --accent-primary: #c41e3a;
+  --accent-secondary: #d4af37;
+  --accent-tertiary: #228b22;
+  --accent-success: #228b22;
+  --accent-error: #8b0000;
+  --accent-warning: #d4af37;
+  --accent-info: #4169e1;
+  --accent-hover: #a01830;
+  --border-color: #8b4513;
+  --border-light: #d4bc90;
+  --divider-color: #c9a96e;
+  --card-bg: #fff8e8;
+  --card-bg-hover: #f5e6d3;
+  --card-shadow: 0 4px 16px rgba(139, 69, 19, 0.15);
+  --card-shadow-hover: 0 8px 24px rgba(196, 30, 58, 0.15);
+  --input-bg: #fff8e8;
+  --input-border: #c9a96e;
+  --input-focus: #c41e3a;
+  --sidebar-bg: #ebd8c0;
+  --sidebar-text: #3d2914;
+  --sidebar-border: #8b4513;
+  --nav-bg: rgba(245, 230, 211, 0.95);
+  --nav-text: #3d2914;
+  --link-color: #c41e3a;
+  --link-hover: #d4af37;
+  --code-bg: #ebd8c0;
+  --code-text: #3d2914;
+  --code-border: #c9a96e;
+  --heading-color: #8b0000;
+  --button-bg: #c41e3a;
+  --button-text: #fff8e8;
+  --button-hover: #a01830;
+  --button-secondary-bg: #e0caa8;
+  --button-secondary-text: #3d2914;
+  --button-secondary-hover: #d4bc90;
+  --overlay-bg: rgba(61, 41, 20, 0.5);
+  --scrollbar-track: #f5e6d3;
+  --scrollbar-thumb: #c9a96e;
+  --scrollbar-thumb-hover: #8b4513;
+  --font-family: 'STKaiti', 'KaiTi', '楷体', 'Songti SC', 'SimSun', serif;
+  --font-mono: 'Consolas', 'Monaco', monospace;
+  --radius-sm: 2px;
+  --radius-md: 6px;
+  --radius-lg: 10px;
+  --radius-xl: 16px;
+  --transition-fast: 0.2s ease;
+  --transition-normal: 0.4s ease;
+  --transition-slow: 0.6s ease;
+  --chinese-red: #c41e3a;
+  --chinese-crimson: #dc143c;
+  --chinese-gold: #d4af37;
+  --chinese-gold-light: #ffd700;
+  --chinese-jade: #00a86b;
+  --chinese-indigo: #273a8f;
+  --chinese-ink: #3d2914;
+  --chinese-paper: #f5e6d3;
+  --chinese-porcelain: #fff8e8;
+  --chinese-lacquer: #8b0000;
+  --chinese-cloud-pattern: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M30 15 Q45 15 45 30 Q45 45 30 45 Q15 45 15 30 Q15 15 30 15' fill='none' stroke='%23c41e3a' stroke-width='1' opacity='0.1'/%3E%3C/svg%3E");
+}
+
+/* ==========================================================================
+   53. Korean - 韩式清新
+   ========================================================================== */
+.theme-korean {
+  --bg-primary: #f8f9fa;
+  --bg-secondary: #e9ecef;
+  --bg-tertiary: #dee2e6;
+  --bg-hover: #ced4da;
+  --text-primary: #212529;
+  --text-secondary: #495057;
+  --text-accent: #e63946;
+  --text-muted: #868e96;
+  --accent-primary: #e63946;
+  --accent-secondary: #457b9d;
+  --accent-tertiary: #1d3557;
+  --accent-success: #2a9d8f;
+  --accent-error: #e63946;
+  --accent-warning: #f4a261;
+  --accent-info: #457b9d;
+  --accent-hover: #d62828;
+  --border-color: #dee2e6;
+  --border-light: #e9ecef;
+  --divider-color: #dee2e6;
+  --card-bg: #ffffff;
+  --card-bg-hover: #f8f9fa;
+  --card-shadow: 0 2px 16px rgba(0, 0, 0, 0.06);
+  --card-shadow-hover: 0 4px 24px rgba(0, 0, 0, 0.1);
+  --input-bg: #ffffff;
+  --input-border: #dee2e6;
+  --input-focus: #e63946;
+  --sidebar-bg: #e9ecef;
+  --sidebar-text: #212529;
+  --sidebar-border: #dee2e6;
+  --nav-bg: rgba(248, 249, 250, 0.95);
+  --nav-text: #212529;
+  --link-color: #e63946;
+  --link-hover: #d62828;
+  --code-bg: #e9ecef;
+  --code-text: #212529;
+  --code-border: #dee2e6;
+  --heading-color: #1d3557;
+  --button-bg: #e63946;
+  --button-text: #ffffff;
+  --button-hover: #d62828;
+  --button-secondary-bg: #dee2e6;
+  --button-secondary-text: #212529;
+  --button-secondary-hover: #ced4da;
+  --overlay-bg: rgba(33, 37, 41, 0.4);
+  --scrollbar-track: #f8f9fa;
+  --scrollbar-thumb: #dee2e6;
+  --scrollbar-thumb-hover: #adb5bd;
+  --font-family: 'Noto Sans KR', 'Malgun Gothic', 'Apple SD Gothic Neo', sans-serif;
+  --font-mono: 'Consolas', 'Monaco', monospace;
+  --radius-sm: 6px;
+  --radius-md: 12px;
+  --radius-lg: 20px;
+  --radius-xl: 28px;
+  --transition-fast: 0.2s ease;
+  --transition-normal: 0.35s ease;
+  --transition-slow: 0.5s ease;
+  --korean-red: #e63946;
+  --korean-blue: #457b9d;
+  --korean-blue-dark: #1d3557;
+  --korean-teal: #2a9d8f;
+  --korean-peach: #f4a261;
+  --korean-yellow: #e9c46a;
+  --korean-white: #f8f9fa;
+  --korean-gray: #868e96;
+  --korean-hanbok-pink: #f8b1b9;
+  --korean-hanbok-blue: #a8d8ea;
+}
+
+/* ==========================================================================
+   54. Scandinavian - 北欧风
+   ========================================================================== */
+.theme-scandinavian {
+  --bg-primary: #fafafa;
+  --bg-secondary: #f0f0f0;
+  --bg-tertiary: #e5e5e5;
+  --bg-hover: #d9d9d9;
+  --text-primary: #2c2c2c;
+  --text-secondary: #5a5a5a;
+  --text-accent: #7ba05b;
+  --text-muted: #8a8a8a;
+  --accent-primary: #7ba05b;
+  --accent-secondary: #c4a77d;
+  --accent-tertiary: #6b9ac4;
+  --accent-success: #7ba05b;
+  --accent-error: #c0392b;
+  --accent-warning: #e67e22;
+  --accent-info: #6b9ac4;
+  --accent-hover: #6b8e4a;
+  --border-color: #d9d9d9;
+  --border-light: #e5e5e5;
+  --divider-color: #d9d9d9;
+  --card-bg: #ffffff;
+  --card-bg-hover: #fafafa;
+  --card-shadow: 0 2px 12px rgba(0, 0, 0, 0.05);
+  --card-shadow-hover: 0 4px 20px rgba(0, 0, 0, 0.08);
+  --input-bg: #ffffff;
+  --input-border: #d9d9d9;
+  --input-focus: #7ba05b;
+  --sidebar-bg: #f0f0f0;
+  --sidebar-text: #2c2c2c;
+  --sidebar-border: #d9d9d9;
+  --nav-bg: rgba(250, 250, 250, 0.95);
+  --nav-text: #2c2c2c;
+  --link-color: #7ba05b;
+  --link-hover: #6b8e4a;
+  --code-bg: #f0f0f0;
+  --code-text: #2c2c2c;
+  --code-border: #d9d9d9;
+  --heading-color: #2c2c2c;
+  --button-bg: #7ba05b;
+  --button-text: #ffffff;
+  --button-hover: #6b8e4a;
+  --button-secondary-bg: #e5e5e5;
+  --button-secondary-text: #2c2c2c;
+  --button-secondary-hover: #d9d9d9;
+  --overlay-bg: rgba(44, 44, 44, 0.4);
+  --scrollbar-track: #fafafa;
+  --scrollbar-thumb: #d9d9d9;
+  --scrollbar-thumb-hover: #b8b8b8;
+  --font-family: 'Inter', 'Helvetica Neue', 'Arial', sans-serif;
+  --font-mono: 'Consolas', 'Monaco', monospace;
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 16px;
+  --radius-xl: 24px;
+  --transition-fast: 0.2s ease;
+  --transition-normal: 0.35s ease;
+  --transition-slow: 0.5s ease;
+  --scandi-white: #fafafa;
+  --scandi-gray-light: #f0f0f0;
+  --scandi-gray: #d9d9d9;
+  --scandi-gray-dark: #8a8a8a;
+  --scandi-black: #2c2c2c;
+  --scandi-green: #7ba05b;
+  --scandi-wood: #c4a77d;
+  --scandi-blue: #6b9ac4;
+  --scandi-mustard: #d4a017;
+  --scandi-rust: #b7410e;
+  --scandi-blush: #e8c4c4;
+  --scandi-sage: #b5c4b1;
+}
+
+/* ==========================================================================
+   55. Bohemian - 波西米亚
+   ========================================================================== */
+.theme-bohemian {
+  --bg-primary: #f5e6d3;
+  --bg-secondary: #ebd5b8;
+  --bg-tertiary: #dcc49c;
+  --bg-hover: #cdb380;
+  --text-primary: #5c4033;
+  --text-secondary: #8b5a2b;
+  --text-accent: #b8860b;
+  --text-muted: #a67c52;
+  --accent-primary: #b8860b;
+  --accent-secondary: #cd5c5c;
+  --accent-tertiary: #6b8e23;
+  --accent-success: #6b8e23;
+  --accent-error: #8b0000;
+  --accent-warning: #d2691e;
+  --accent-info: #4682b4;
+  --accent-hover: #daa520;
+  --border-color: #cd853f;
+  --border-light: #dcc49c;
+  --divider-color: #cd853f;
+  --card-bg: #faf0e0;
+  --card-bg-hover: #f5e6d3;
+  --card-shadow: 0 4px 16px rgba(139, 69, 19, 0.15);
+  --card-shadow-hover: 0 8px 24px rgba(184, 134, 11, 0.2);
+  --input-bg: #faf0e0;
+  --input-border: #cd853f;
+  --input-focus: #b8860b;
+  --sidebar-bg: #ebd5b8;
+  --sidebar-text: #5c4033;
+  --sidebar-border: #cd853f;
+  --nav-bg: rgba(245, 230, 211, 0.95);
+  --nav-text: #5c4033;
+  --link-color: #b8860b;
+  --link-hover: #cd5c5c;
+  --code-bg: #ebd5b8;
+  --code-text: #5c4033;
+  --code-border: #cd853f;
+  --heading-color: #8b4513;
+  --button-bg: #cd5c5c;
+  --button-text: #ffffff;
+  --button-hover: #b8860b;
+  --button-secondary-bg: #dcc49c;
+  --button-secondary-text: #5c4033;
+  --button-secondary-hover: #cdb380;
+  --overlay-bg: rgba(92, 64, 51, 0.4);
+  --scrollbar-track: #f5e6d3;
+  --scrollbar-thumb: #cd853f;
+  --scrollbar-thumb-hover: #b8860b;
+  --font-family: 'Georgia', 'Times New Roman', 'Palatino', serif;
+  --font-mono: 'Courier New', monospace;
+  --radius-sm: 6px;
+  --radius-md: 14px;
+  --radius-lg: 24px;
+  --radius-xl: 36px;
+  --transition-fast: 0.25s ease;
+  --transition-normal: 0.45s ease;
+  --transition-slow: 0.65s ease;
+  --bohemian-gold: #b8860b;
+  --bohemian-bronze: #cd853f;
+  --bohemian-terracotta: #cd5c5c;
+  --bohemian-olive: #6b8e23;
+  --bohemian-rust: #8b4513;
+  --bohemian-cream: #f5e6d3;
+  --bohemian-sand: #ebd5b8;
+  --bohemian-burgundy: #8b0000;
+  --bohemian-indigo: #4b0082;
+  --bohemian-turquoise: #40e0d0;
+  --bohemian-lace: #faf0e0;
+  --bohemian-macrame: #dcc49c;
+}
+
+/* ==========================================================================
+   56. Industrial - 工业风
+   ========================================================================== */
+.theme-industrial {
+  --bg-primary: #2b2b2b;
+  --bg-secondary: #333333;
+  --bg-tertiary: #404040;
+  --bg-hover: #4d4d4d;
+  --text-primary: #e0e0e0;
+  --text-secondary: #b3b3b3;
+  --text-accent: #ff6b35;
+  --text-muted: #808080;
+  --accent-primary: #ff6b35;
+  --accent-secondary: #f7c59f;
+  --accent-tertiary: #2f4858;
+  --accent-success: #4a7c59;
+  --accent-error: #c73e1d;
+  --accent-warning: #e8a33d;
+  --accent-info: #2f4858;
+  --accent-hover: #ff8c5a;
+  --border-color: #555555;
+  --border-light: #404040;
+  --divider-color: #404040;
+  --card-bg: #333333;
+  --card-bg-hover: #404040;
+  --card-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+  --card-shadow-hover: 0 8px 30px rgba(0, 0, 0, 0.5);
+  --input-bg: #2b2b2b;
+  --input-border: #555555;
+  --input-focus: #ff6b35;
+  --sidebar-bg: #222222;
+  --sidebar-text: #e0e0e0;
+  --sidebar-border: #555555;
+  --nav-bg: rgba(43, 43, 43, 0.95);
+  --nav-text: #e0e0e0;
+  --link-color: #ff6b35;
+  --link-hover: #ff8c5a;
+  --code-bg: #333333;
+  --code-text: #f7c59f;
+  --code-border: #555555;
+  --heading-color: #ff6b35;
+  --button-bg: #ff6b35;
+  --button-text: #2b2b2b;
+  --button-hover: #ff8c5a;
+  --button-secondary-bg: #404040;
+  --button-secondary-text: #e0e0e0;
+  --button-secondary-hover: #4d4d4d;
+  --overlay-bg: rgba(43, 43, 43, 0.85);
+  --scrollbar-track: #2b2b2b;
+  --scrollbar-thumb: #555555;
+  --scrollbar-thumb-hover: #707070;
+  --font-family: 'Roboto Condensed', 'Impact', 'Arial Narrow', sans-serif;
+  --font-mono: 'Consolas', 'Monaco', 'Courier New', monospace;
+  --radius-sm: 2px;
+  --radius-md: 4px;
+  --radius-lg: 6px;
+  --radius-xl: 8px;
+  --transition-fast: 0.1s ease;
+  --transition-normal: 0.2s ease;
+  --transition-slow: 0.3s ease;
+  --industrial-rust: #ff6b35;
+  --industrial-rust-dark: #c73e1d;
+  --industrial-rust-light: #ff8c5a;
+  --industrial-metal: #808080;
+  --industrial-metal-light: #b3b3b3;
+  --industrial-metal-dark: #555555;
+  --industrial-concrete: #a0a0a0;
+  --industrial-brick: #8b4513;
+  --industrial-pipe: #4a4a4a;
+  --industrial-warning: #e8a33d;
+  --industrial-safety: #4a7c59;
+  --industrial-rivet: radial-gradient(circle, #555555 30%, #333333 70%);
+}
+
+/* ==========================================================================
+   全局主题切换过渡效果
+   ========================================================================== */
+[class*="theme-"] {
+  transition: background-color var(--transition-normal),
+              color var(--transition-normal),
+              border-color var(--transition-normal),
+              box-shadow var(--transition-normal);
+}
+
+/* ==========================================================================
+   主题通用组件样式示例
+   ========================================================================== */
+.theme-card {
+  background-color: var(--card-bg);
+  color: var(--text-primary);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--card-shadow);
+  padding: 24px;
+  transition: all var(--transition-normal);
+}
+
+.theme-card:hover {
+  background-color: var(--card-bg-hover);
+  box-shadow: var(--card-shadow-hover);
+  transform: translateY(-2px);
+}
+
+.theme-button {
+  background-color: var(--accent-primary);
+  color: var(--button-text, var(--bg-primary));
+  border: none;
+  border-radius: var(--radius-md);
+  padding: 10px 20px;
+  font-family: var(--font-family);
+  font-weight: 500;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.theme-button:hover {
+  background-color: var(--accent-hover);
+  transform: translateY(-1px);
+}
+
+.theme-button-secondary {
+  background-color: var(--button-secondary-bg);
+  color: var(--button-secondary-text, var(--text-primary));
+}
+
+.theme-button-secondary:hover {
+  background-color: var(--button-secondary-hover);
+}
+
+.theme-input {
+  background-color: var(--input-bg);
+  color: var(--text-primary);
+  border: 1px solid var(--input-border);
+  border-radius: var(--radius-md);
+  padding: 10px 14px;
+  font-family: var(--font-family);
+  font-size: 14px;
+  transition: all var(--transition-fast);
+}
+
+.theme-input:focus {
+  outline: none;
+  border-color: var(--input-focus);
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--input-focus) 20%, transparent);
+}
+
+.theme-heading {
+  color: var(--heading-color);
+  font-family: var(--font-family);
+  font-weight: 600;
+  line-height: 1.3;
+}
+
+.theme-link {
+  color: var(--link-color);
+  text-decoration: none;
+  transition: color var(--transition-fast);
+}
+
+.theme-link:hover {
+  color: var(--link-hover);
+  text-decoration: underline;
+}
+
+.theme-code {
+  background-color: var(--code-bg);
+  color: var(--code-text);
+  border: 1px solid var(--code-border);
+  border-radius: var(--radius-sm);
+  padding: 2px 6px;
+  font-family: var(--font-mono);
+  font-size: 0.9em;
+}
+
+.theme-divider {
+  border: none;
+  border-top: 1px solid var(--divider-color);
+  margin: 16px 0;
+}
+
+.theme-badge {
+  display: inline-block;
+  padding: 4px 10px;
+  border-radius: 9999px;
+  font-size: 12px;
+  font-weight: 500;
+  font-family: var(--font-family);
+}
+
+.theme-badge-success {
+  background-color: color-mix(in srgb, var(--accent-success) 15%, transparent);
+  color: var(--accent-success);
+}
+
+.theme-badge-error {
+  background-color: color-mix(in srgb, var(--accent-error) 15%, transparent);
+  color: var(--accent-error);
+}
+
+.theme-badge-warning {
+  background-color: color-mix(in srgb, var(--accent-warning) 15%, transparent);
+  color: var(--accent-warning);
+}
+
+.theme-badge-info {
+  background-color: color-mix(in srgb, var(--accent-info) 15%, transparent);
+  color: var(--accent-info);
+}
+
+.theme-sidebar {
+  background-color: var(--sidebar-bg);
+  color: var(--sidebar-text);
+  border-right: 1px solid var(--sidebar-border);
+}
+
+.theme-navbar {
+  background-color: var(--nav-bg);
+  color: var(--nav-text);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--border-color);
+}
+
+.theme-overlay {
+  background-color: var(--overlay-bg);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1000;
+}
+
+/* 滚动条样式 */
+.theme-scrollbar::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+.theme-scrollbar::-webkit-scrollbar-track {
+  background: var(--scrollbar-track);
+}
+
+.theme-scrollbar::-webkit-scrollbar-thumb {
+  background: var(--scrollbar-thumb);
+  border-radius: 4px;
+}
+
+.theme-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: var(--scrollbar-thumb-hover);
+}
