@@ -1,0 +1,1382 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <meta name="theme-color" content="#6366f1">
+    <meta name="description" content="书桌 - 运营岗位资质刷题应用，高效备考，轻松通关">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="apple-mobile-web-app-title" content="书桌">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="msapplication-tap-highlight" content="no">
+    <link rel="manifest" href="manifest.json">
+    <link rel="icon" type="image/svg+xml" href="assets/icons/icon.svg">
+    <link rel="apple-touch-icon" href="assets/icons/icon.svg">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <title>书桌 ShuZhuo - 运营岗位资质刷题</title>
+
+    <!-- 预加载字体 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+
+    <!-- CSS 引入 -->
+    <link rel="stylesheet" href="css/themes.css">
+    <link rel="stylesheet" href="css/main.css">
+
+    <!-- SVG 图标定义（内联 Sprite） -->
+    <svg xmlns="http://www.w3.org/2000/svg" style="display: none;" aria-hidden="true">
+        <defs>
+            <!-- Logo 图标 -->
+            <symbol id="icon-logo" viewBox="0 0 32 32">
+                <path d="M4 24 L16 6 L28 24 Z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+                <path d="M8 24 L16 12 L24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+                <circle cx="16" cy="26" r="2" fill="currentColor"/>
+            </symbol>
+
+            <!-- 首页 -->
+            <symbol id="icon-home" viewBox="0 0 24 24">
+                <path d="M3 12 L12 3 L21 12 V20 C21 20.55 20.55 21 20 21 H16 V15 H8 V21 H4 C3.45 21 3 20.55 3 20 Z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+            </symbol>
+
+            <!-- 顺序练习 -->
+            <symbol id="icon-order" viewBox="0 0 24 24">
+                <rect x="4" y="4" width="16" height="16" rx="2" fill="none" stroke="currentColor" stroke-width="2"/>
+                <path d="M8 12 L12 16 L16 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </symbol>
+
+            <!-- 随机练习 -->
+            <symbol id="icon-shuffle" viewBox="0 0 24 24">
+                <path d="M16 3 H21 V8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M4 20 L21 3" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                <path d="M16 21 H21 V16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M4 4 L9 9" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                <path d="M15 15 L21 21" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            </symbol>
+
+            <!-- 模拟考试 -->
+            <symbol id="icon-exam" viewBox="0 0 24 24">
+                <path d="M14 2 H6 C4.9 2 4 2.9 4 4 V20 C4 21.1 4.9 22 6 22 H18 C19.1 22 20 21.1 20 20 V8 Z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+                <path d="M14 2 V8 H20" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+                <path d="M8 13 H16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                <path d="M8 17 H13" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                <circle cx="9" cy="17" r="0.5" fill="currentColor" style="display:none"/>
+            </symbol>
+
+            <!-- 错题本 -->
+            <symbol id="icon-wrong" viewBox="0 0 24 24">
+                <path d="M4 4 H16 L20 8 V20 C20 21.1 19.1 22 18 22 H4 C2.9 22 2 21.1 2 20 V6 C2 4.9 2.9 4 4 4 Z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+                <path d="M16 4 V8 H20" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+                <path d="M8 12 L12 16 M12 12 L8 16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            </symbol>
+
+            <!-- 收藏 -->
+            <symbol id="icon-favorite" viewBox="0 0 24 24">
+                <path d="M12 21 L3.5 12.5 C2 11 2 8.5 3.5 7 C5 5.5 7.5 5.5 9 7 L12 10 L15 7 C16.5 5.5 19 5.5 20.5 7 C22 8.5 22 11 20.5 12.5 Z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+            </symbol>
+
+            <!-- 每日一练 -->
+            <symbol id="icon-daily" viewBox="0 0 24 24">
+                <circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="2"/>
+                <path d="M12 7 V12 L15.5 14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M12 2 V4 M12 20 V22 M2 12 H4 M20 12 H22" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            </symbol>
+
+            <!-- 章节练习 -->
+            <symbol id="icon-chapter" viewBox="0 0 24 24">
+                <path d="M4 19.5 C4 18.5 4.5 17.5 6 17 C7.5 16.5 9 16 12 16 C15 16 16.5 16.5 18 17 C19.5 17.5 20 18.5 20 19.5 V20 C20 20.55 19.55 21 19 21 H5 C4.45 21 4 20.55 4 20 Z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+                <circle cx="12" cy="9" r="4" fill="none" stroke="currentColor" stroke-width="2"/>
+            </symbol>
+
+            <!-- 设置 -->
+            <symbol id="icon-settings" viewBox="0 0 24 24">
+                <circle cx="12" cy="12" r="3" fill="none" stroke="currentColor" stroke-width="2"/>
+                <path d="M19.4 15 A1.7 1.7 0 0 0 20.3 17.2 L21.7 18.6 A2 2 0 1 1 18.6 21.7 L17.2 20.3 A1.7 1.7 0 0 0 15 19.4 A1.7 1.7 0 0 0 14.2 21.7 V23.1 A2 2 0 1 1 10.2 23.1 V21.7 A1.7 1.7 0 0 0 9 19.4 A1.7 1.7 0 0 0 6.8 20.3 L5.4 21.7 A2 2 0 1 1 2.3 18.6 L3.7 17.2 A1.7 1.7 0 0 0 4.6 15 A1.7 1.7 0 0 0 2.3 14.2 H0.9 A2 2 0 1 1 0.9 10.2 H2.3 A1.7 1.7 0 0 0 4.6 9 A1.7 1.7 0 0 0 3.7 6.8 L2.3 5.4 A2 2 0 1 1 5.4 2.3 L6.8 3.7 A1.7 1.7 0 0 0 9 4.6 A1.7 1.7 0 0 0 9.8 2.3 V0.9 A2 2 0 1 1 13.8 0.9 V2.3 A1.7 1.7 0 0 0 15 4.6 A1.7 1.7 0 0 0 17.2 3.7 L18.6 2.3 A2 2 0 1 1 21.7 5.4 L20.3 6.8 A1.7 1.7 0 0 0 19.4 9" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+            </symbol>
+
+            <!-- 皮肤/主题 -->
+            <symbol id="icon-palette" viewBox="0 0 24 24">
+                <path d="M12 22 C6.5 22 2 17.5 2 12 S6.5 2 12 2 C17.5 2 22 6.5 22 12 C22 14.5 21 16.5 19 17.5 C18 18 17.5 19 17.5 20 C17.5 21 17 22 16 22 Z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+                <circle cx="7.5" cy="10.5" r="1.5" fill="currentColor"/>
+                <circle cx="12" cy="7.5" r="1.5" fill="currentColor"/>
+                <circle cx="16.5" cy="10.5" r="1.5" fill="currentColor"/>
+            </symbol>
+
+            <!-- 统计 -->
+            <symbol id="icon-stats" viewBox="0 0 24 24">
+                <path d="M3 3 V21 H21" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M7 17 L11 11 L15 14 L21 7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </symbol>
+
+            <!-- 关闭 -->
+            <symbol id="icon-close" viewBox="0 0 24 24">
+                <path d="M18 6 L6 18 M6 6 L18 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            </symbol>
+
+            <!-- 菜单 -->
+            <symbol id="icon-menu" viewBox="0 0 24 24">
+                <path d="M3 6 H21 M3 12 H21 M3 18 H21" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            </symbol>
+
+            <!-- 上一题 -->
+            <symbol id="icon-prev" viewBox="0 0 24 24">
+                <path d="M15 6 L9 12 L15 18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </symbol>
+
+            <!-- 下一题 -->
+            <symbol id="icon-next" viewBox="0 0 24 24">
+                <path d="M9 6 L15 12 L9 18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </symbol>
+
+            <!-- 暂停 -->
+            <symbol id="icon-pause" viewBox="0 0 24 24">
+                <rect x="6" y="4" width="4" height="16" rx="1" fill="currentColor"/>
+                <rect x="14" y="4" width="4" height="16" rx="1" fill="currentColor"/>
+            </symbol>
+
+            <!-- 播放 -->
+            <symbol id="icon-play" viewBox="0 0 24 24">
+                <path d="M6 4 L20 12 L6 20 Z" fill="currentColor"/>
+            </symbol>
+
+            <!-- 答题卡 -->
+            <symbol id="icon-card" viewBox="0 0 24 24">
+                <rect x="3" y="3" width="18" height="18" rx="2" fill="none" stroke="currentColor" stroke-width="2"/>
+                <path d="M7 8 H17 M7 12 H17 M7 16 H13" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            </symbol>
+
+            <!-- 声音开 -->
+            <symbol id="icon-sound-on" viewBox="0 0 24 24">
+                <path d="M11 5 L6 9 H2 V15 H6 L11 19 Z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+                <path d="M15.5 8.5 A5 5 0 0 1 15.5 15.5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                <path d="M18.5 5.5 A9 9 0 0 1 18.5 18.5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            </symbol>
+
+            <!-- 声音关 -->
+            <symbol id="icon-sound-off" viewBox="0 0 24 24">
+                <path d="M11 5 L6 9 H2 V15 H6 L11 19 Z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+                <path d="M17 9 L22 14 M22 9 L17 14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            </symbol>
+
+            <!-- 字体 -->
+            <symbol id="icon-font" viewBox="0 0 24 24">
+                <path d="M4 20 L9 4 L11 4 L16 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M6 15 H12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                <path d="M15 20 L19 4 L21 4 L22 9" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </symbol>
+
+            <!-- 背景 -->
+            <symbol id="icon-bg" viewBox="0 0 24 24">
+                <rect x="3" y="3" width="18" height="18" rx="2" fill="none" stroke="currentColor" stroke-width="2"/>
+                <circle cx="8.5" cy="8.5" r="1.5" fill="currentColor"/>
+                <path d="M21 15 L17 10 L11 17 L7 13 L3 18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </symbol>
+
+            <!-- 奖杯 -->
+            <symbol id="icon-trophy" viewBox="0 0 24 24">
+                <path d="M8 21 H16 M12 17 V21 M7 4 H17 V11 C17 13.5 14.8 15.5 12 15.5 C9.2 15.5 7 13.5 7 11 Z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+                <path d="M17 6 H20 C20.55 6 21 6.45 21 7 V9 C21 11.5 19 13.5 17 14 M7 6 H4 C3.45 6 3 6.45 3 7 V9 C3 11.5 5 13.5 7 14" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+            </symbol>
+
+            <!-- 火焰 -->
+            <symbol id="icon-fire" viewBox="0 0 24 24">
+                <path d="M12 2 C14 6 18 7 18 12 C18 16.5 14.5 20 12 20 C9.5 20 6 16.5 6 12 C6 9 8 8 8 5 C10 7 11 5 12 2 Z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+                <path d="M12 11 C13 13 14.5 13.5 14.5 15.5 C14.5 17 13.5 18 12 18 C10.5 18 9.5 17 9.5 15.5 C9.5 14 11 14 11 13" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+            </symbol>
+
+            <!-- 闪电 -->
+            <symbol id="icon-bolt" viewBox="0 0 24 24">
+                <path d="M13 2 L4 14 H11 L10 22 L20 10 H13 Z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+            </symbol>
+
+            <!-- 书本 -->
+            <symbol id="icon-book" viewBox="0 0 24 24">
+                <path d="M4 4 H10 C12 4 12 6 12 6 V20 C12 20 12 18 10 18 H4 Z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+                <path d="M20 4 H14 C12 4 12 6 12 6 V20 C12 20 12 18 14 18 H20 Z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+            </symbol>
+
+            <!-- 搜索 -->
+            <symbol id="icon-search" viewBox="0 0 24 24">
+                <circle cx="11" cy="11" r="7" fill="none" stroke="currentColor" stroke-width="2"/>
+                <path d="M21 21 L16.5 16.5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            </symbol>
+
+            <!-- 刷新 -->
+            <symbol id="icon-refresh" viewBox="0 0 24 24">
+                <path d="M21 12 A9 9 0 1 1 18.5 5.5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                <path d="M21 3 V9 H15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </symbol>
+
+            <!-- 勾选 -->
+            <symbol id="icon-check" viewBox="0 0 24 24">
+                <path d="M5 12 L10 17 L20 7" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </symbol>
+
+            <!-- 更多 -->
+            <symbol id="icon-more" viewBox="0 0 24 24">
+                <circle cx="5" cy="12" r="2" fill="currentColor"/>
+                <circle cx="12" cy="12" r="2" fill="currentColor"/>
+                <circle cx="19" cy="12" r="2" fill="currentColor"/>
+            </symbol>
+
+            <!-- 左箭头 -->
+            <symbol id="icon-arrow-left" viewBox="0 0 24 24">
+                <path d="M19 12 H5 M12 19 L5 12 L12 5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </symbol>
+
+            <!-- 右箭头 -->
+            <symbol id="icon-arrow-right" viewBox="0 0 24 24">
+                <path d="M5 12 H19 M12 5 L19 12 L12 19" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </symbol>
+
+            <!-- 下载 -->
+            <symbol id="icon-download" viewBox="0 0 24 24">
+                <path d="M12 3 V15 M7 10 L12 15 L17 10" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M5 21 H19" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            </symbol>
+
+            <!-- 分享 -->
+            <symbol id="icon-share" viewBox="0 0 24 24">
+                <circle cx="18" cy="5" r="3" fill="none" stroke="currentColor" stroke-width="2"/>
+                <circle cx="6" cy="12" r="3" fill="none" stroke="currentColor" stroke-width="2"/>
+                <circle cx="18" cy="19" r="3" fill="none" stroke="currentColor" stroke-width="2"/>
+                <path d="M8.6 13.5 L15.4 17.5 M15.4 6.5 L8.6 10.5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            </symbol>
+
+            <!-- 提示 -->
+            <symbol id="icon-hint" viewBox="0 0 24 24">
+                <path d="M9 18 H15 M10 22 H14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                <path d="M12 2 A8 8 0 0 1 12 18 A8 8 0 0 1 12 2" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+            </symbol>
+
+            <!-- 笔记 -->
+            <symbol id="icon-note" viewBox="0 0 24 24">
+                <path d="M4 4 H16 L20 8 V20 C20 21.1 19.1 22 18 22 H6 C4.9 22 4 21.1 4 20 Z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+                <path d="M16 4 V8 H20" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+                <path d="M8 13 H14 M8 17 H12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            </symbol>
+
+            <!-- 星星 -->
+            <symbol id="icon-star" viewBox="0 0 24 24">
+                <path d="M12 2 L15 9 L22 9.5 L17 14.5 L18.5 22 L12 18 L5.5 22 L7 14.5 L2 9.5 L9 9 Z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+            </symbol>
+        </defs>
+    </svg>
+
+    <!-- 内联加载动画样式 -->
+    <style>
+        /* 初始加载遮罩 */
+        #app-loader {
+            position: fixed;
+            inset: 0;
+            z-index: 9999;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            transition: opacity 0.5s ease, visibility 0.5s ease;
+        }
+
+        #app-loader.loader-hidden {
+            opacity: 0;
+            visibility: hidden;
+        }
+
+        .loader-logo {
+            width: 80px;
+            height: 80px;
+            position: relative;
+            animation: loader-bounce 2s ease-in-out infinite;
+        }
+
+        .loader-logo svg {
+            width: 100%;
+            height: 100%;
+            color: #fff;
+            filter: drop-shadow(0 4px 12px rgba(0,0,0,0.15));
+        }
+
+        .loader-title {
+            margin-top: 24px;
+            font-size: 28px;
+            font-weight: 700;
+            color: #fff;
+            letter-spacing: 8px;
+            animation: loader-fade-in 0.8s ease;
+        }
+
+        .loader-subtitle {
+            margin-top: 8px;
+            font-size: 13px;
+            color: rgba(255,255,255,0.7);
+            letter-spacing: 3px;
+            animation: loader-fade-in 1s ease;
+        }
+
+        .loader-bar {
+            width: 160px;
+            height: 3px;
+            margin-top: 32px;
+            background: rgba(255,255,255,0.2);
+            border-radius: 2px;
+            overflow: hidden;
+            animation: loader-fade-in 1.2s ease;
+        }
+
+        .loader-bar::before {
+            content: '';
+            display: block;
+            width: 40%;
+            height: 100%;
+            background: #fff;
+            border-radius: 2px;
+            animation: loader-progress 1.5s ease-in-out infinite;
+        }
+
+        .loader-tip {
+            margin-top: 20px;
+            font-size: 12px;
+            color: rgba(255,255,255,0.5);
+            animation: loader-fade-in 1.5s ease;
+        }
+
+        @keyframes loader-bounce {
+            0%, 100% { transform: translateY(0) scale(1); }
+            50% { transform: translateY(-8px) scale(1.05); }
+        }
+
+        @keyframes loader-progress {
+            0% { transform: translateX(-100%); }
+            100% { transform: translateX(400%); }
+        }
+
+        @keyframes loader-fade-in {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* 防止加载前 FOUC */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+            -webkit-font-smoothing: antialiased;
+            overflow: hidden;
+        }
+    </style>
+</head>
+<body class="theme-indigo">
+    <!-- 加载动画 -->
+    <div id="app-loader" class="app-loader" role="status" aria-label="加载中">
+        <div class="loader-logo">
+            <svg viewBox="0 0 32 32" aria-hidden="true">
+                <path d="M4 24 L16 6 L28 24 Z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+                <path d="M8 24 L16 12 L24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+                <circle cx="16" cy="26" r="2" fill="currentColor"/>
+            </svg>
+        </div>
+        <h1 class="loader-title">书桌</h1>
+        <p class="loader-subtitle">SHUZHUO</p>
+        <div class="loader-bar" aria-hidden="true"></div>
+        <p class="loader-tip">正在准备题库，请稍候...</p>
+    </div>
+
+    <!-- 粒子背景画布 -->
+    <canvas id="particles-canvas" class="particles-canvas" aria-hidden="true"></canvas>
+
+    <!-- 应用主容器 -->
+    <div id="app" class="app-container" style="visibility: hidden;">
+
+        <!-- ============== 顶部导航栏 ============== -->
+        <header class="app-header" role="banner">
+            <div class="header-left">
+                <!-- 移动端菜单按钮 -->
+                <button class="btn-icon btn-menu-mobile" id="btn-toggle-sidebar" aria-label="打开菜单">
+                    <svg class="icon"><use href="#icon-menu"/></svg>
+                </button>
+                <!-- Logo -->
+                <div class="app-logo" id="app-logo">
+                    <svg class="icon logo-icon"><use href="#icon-logo"/></svg>
+                    <span class="logo-text">书桌</span>
+                    <span class="logo-badge" id="current-mode-badge">练习</span>
+                </div>
+            </div>
+
+            <div class="header-center">
+                <!-- 模式切换 Tabs -->
+                <nav class="mode-tabs" role="tablist" id="mode-tabs">
+                    <button class="mode-tab active" role="tab" data-mode="practice" aria-selected="true">
+                        <svg class="icon"><use href="#icon-order"/></svg>
+                        <span>练习模式</span>
+                    </button>
+                    <button class="mode-tab" role="tab" data-mode="exam" aria-selected="false">
+                        <svg class="icon"><use href="#icon-exam"/></svg>
+                        <span>考试模式</span>
+                    </button>
+                    <button class="mode-tab" role="tab" data-mode="review" aria-selected="false">
+                        <svg class="icon"><use href="#icon-wrong"/></svg>
+                        <span>复习模式</span>
+                    </button>
+                </nav>
+            </div>
+
+            <div class="header-right">
+                <!-- 搜索按钮 -->
+                <button class="btn-icon" id="btn-search" aria-label="搜索题目">
+                    <svg class="icon"><use href="#icon-search"/></svg>
+                </button>
+                <!-- 皮肤切换入口 -->
+                <button class="btn-icon" id="btn-theme-quick" aria-label="切换皮肤">
+                    <svg class="icon"><use href="#icon-palette"/></svg>
+                </button>
+                <!-- 统计入口 -->
+                <button class="btn-icon" id="btn-stats" aria-label="学习统计">
+                    <svg class="icon"><use href="#icon-stats"/></svg>
+                </button>
+                <!-- 设置按钮 -->
+                <button class="btn-icon" id="btn-settings" aria-label="设置">
+                    <svg class="icon"><use href="#icon-settings"/></svg>
+                </button>
+            </div>
+        </header>
+
+        <!-- ============== 主体区域 ============== -->
+        <div class="app-body">
+
+            <!-- 侧边栏遮罩（移动端） -->
+            <div class="sidebar-overlay" id="sidebar-overlay" aria-hidden="true"></div>
+
+            <!-- 侧边栏 -->
+            <aside class="app-sidebar" id="app-sidebar" role="navigation" aria-label="刷题模式">
+                <div class="sidebar-header">
+                    <h2 class="sidebar-title">刷题模式</h2>
+                    <button class="btn-icon btn-close-sidebar" id="btn-close-sidebar" aria-label="关闭侧边栏">
+                        <svg class="icon"><use href="#icon-close"/></svg>
+                    </button>
+                </div>
+
+                <nav class="mode-list">
+                    <button class="mode-item active" data-mode-entry="order">
+                        <span class="mode-item-icon">
+                            <svg class="icon"><use href="#icon-order"/></svg>
+                        </span>
+                        <span class="mode-item-info">
+                            <span class="mode-item-name">顺序练习</span>
+                            <span class="mode-item-desc">按题库顺序逐题练习</span>
+                        </span>
+                        <span class="mode-item-badge">2380</span>
+                    </button>
+
+                    <button class="mode-item" data-mode-entry="random">
+                        <span class="mode-item-icon">
+                            <svg class="icon"><use href="#icon-shuffle"/></svg>
+                        </span>
+                        <span class="mode-item-info">
+                            <span class="mode-item-name">随机练习</span>
+                            <span class="mode-item-desc">打乱顺序随机抽取</span>
+                        </span>
+                        <span class="mode-item-badge">随机</span>
+                    </button>
+
+                    <button class="mode-item" data-mode-entry="chapter">
+                        <span class="mode-item-icon">
+                            <svg class="icon"><use href="#icon-chapter"/></svg>
+                        </span>
+                        <span class="mode-item-info">
+                            <span class="mode-item-name">章节练习</span>
+                            <span class="mode-item-desc">按章节分类专项突破</span>
+                        </span>
+                        <span class="mode-item-badge">12章</span>
+                    </button>
+
+                    <button class="mode-item" data-mode-entry="daily">
+                        <span class="mode-item-icon">
+                            <svg class="icon"><use href="#icon-daily"/></svg>
+                        </span>
+                        <span class="mode-item-info">
+                            <span class="mode-item-name">每日一练</span>
+                            <span class="mode-item-desc">每天10道题保持手感</span>
+                        </span>
+                        <span class="mode-item-badge badge-new">新</span>
+                    </button>
+
+                    <button class="mode-item" data-mode-entry="exam">
+                        <span class="mode-item-icon">
+                            <svg class="icon"><use href="#icon-exam"/></svg>
+                        </span>
+                        <span class="mode-item-info">
+                            <span class="mode-item-name">模拟考试</span>
+                            <span class="mode-item-desc">全真模拟考试环境</span>
+                        </span>
+                        <span class="mode-item-badge">100题</span>
+                    </button>
+
+                    <button class="mode-item" data-mode-entry="wrong">
+                        <span class="mode-item-icon">
+                            <svg class="icon"><use href="#icon-wrong"/></svg>
+                        </span>
+                        <span class="mode-item-info">
+                            <span class="mode-item-name">错题本</span>
+                            <span class="mode-item-desc">错题回顾巩固记忆</span>
+                        </span>
+                        <span class="mode-item-badge badge-wrong">36</span>
+                    </button>
+
+                    <button class="mode-item" data-mode-entry="favorite">
+                        <span class="mode-item-icon">
+                            <svg class="icon"><use href="#icon-favorite"/></svg>
+                        </span>
+                        <span class="mode-item-info">
+                            <span class="mode-item-name">收藏夹</span>
+                            <span class="mode-item-desc">收藏重点题目</span>
+                        </span>
+                        <span class="mode-item-badge badge-fav">12</span>
+                    </button>
+
+                    <button class="mode-item" data-mode-entry="challenge">
+                        <span class="mode-item-icon">
+                            <svg class="icon"><use href="#icon-bolt"/></svg>
+                        </span>
+                        <span class="mode-item-info">
+                            <span class="mode-item-name">挑战模式</span>
+                            <span class="mode-item-desc">限时答题挑战高分</span>
+                        </span>
+                        <span class="mode-item-badge badge-hot">HOT</span>
+                    </button>
+                </nav>
+
+                <!-- 学习数据概览 -->
+                <div class="sidebar-footer">
+                    <div class="mini-stats">
+                        <div class="mini-stat">
+                            <div class="mini-stat-value" id="mini-total-days">15</div>
+                            <div class="mini-stat-label">学习天数</div>
+                        </div>
+                        <div class="mini-stat">
+                            <div class="mini-stat-value" id="mini-total-questions">1,248</div>
+                            <div class="mini-stat-label">累计题数</div>
+                        </div>
+                        <div class="mini-stat">
+                            <div class="mini-stat-value" id="mini-accuracy">78%</div>
+                            <div class="mini-stat-label">正确率</div>
+                        </div>
+                    </div>
+                    <div class="streak-info">
+                        <svg class="icon icon-fire"><use href="#icon-fire"/></svg>
+                        <span>连续学习 <strong id="streak-days">7</strong> 天</span>
+                    </div>
+                </div>
+            </aside>
+
+            <!-- 主内容区 -->
+            <main class="app-main" role="main">
+
+                <!-- ============== 欢迎/首页面板 ============== -->
+                <section class="panel panel-welcome active" id="panel-welcome" role="tabpanel">
+                    <div class="welcome-container">
+                        <div class="welcome-hero">
+                            <div class="welcome-illustration">
+                                <svg class="welcome-logo" viewBox="0 0 120 120" aria-hidden="true">
+                                    <defs>
+                                        <linearGradient id="welcomeGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                                            <stop offset="0%" style="stop-color:#667eea"/>
+                                            <stop offset="100%" style="stop-color:#764ba2"/>
+                                        </linearGradient>
+                                    </defs>
+                                    <path d="M15 90 L60 20 L105 90 Z" fill="none" stroke="url(#welcomeGrad)" stroke-width="3" stroke-linejoin="round"/>
+                                    <path d="M30 90 L60 45 L90 90" fill="none" stroke="url(#welcomeGrad)" stroke-width="3" stroke-linejoin="round"/>
+                                    <circle cx="60" cy="98" r="6" fill="url(#welcomeGrad)"/>
+                                </svg>
+                            </div>
+                            <h1 class="welcome-title">欢迎回来，同学</h1>
+                            <p class="welcome-subtitle">今天也要继续加油哦~</p>
+                        </div>
+
+                        <!-- 今日学习卡片 -->
+                        <div class="welcome-stats-grid">
+                            <div class="welcome-stat-card">
+                                <div class="stat-card-icon icon-today">
+                                    <svg class="icon"><use href="#icon-daily"/></svg>
+                                </div>
+                                <div class="stat-card-info">
+                                    <div class="stat-card-value" id="today-done">23</div>
+                                    <div class="stat-card-label">今日已做</div>
+                                </div>
+                            </div>
+                            <div class="welcome-stat-card">
+                                <div class="stat-card-icon icon-target">
+                                    <svg class="icon"><use href="#icon-bolt"/></svg>
+                                </div>
+                                <div class="stat-card-info">
+                                    <div class="stat-card-value" id="today-target">50</div>
+                                    <div class="stat-card-label">今日目标</div>
+                                </div>
+                            </div>
+                            <div class="welcome-stat-card">
+                                <div class="stat-card-icon icon-rate">
+                                    <svg class="icon"><use href="#icon-trophy"/></svg>
+                                </div>
+                                <div class="stat-card-info">
+                                    <div class="stat-card-value" id="today-accuracy">82%</div>
+                                    <div class="stat-card-label">今日正确率</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 快速开始 -->
+                        <div class="welcome-actions">
+                            <button class="btn btn-primary btn-lg" id="btn-continue-practice">
+                                <svg class="icon"><use href="#icon-play"/></svg>
+                                继续练习
+                                <span class="btn-sub">第 128 题 / 共 2380 题</span>
+                            </button>
+                            <div class="quick-actions">
+                                <button class="btn btn-secondary" data-quick="random">
+                                    <svg class="icon"><use href="#icon-shuffle"/></svg>
+                                    随机刷题
+                                </button>
+                                <button class="btn btn-secondary" data-quick="wrong">
+                                    <svg class="icon"><use href="#icon-wrong"/></svg>
+                                    错题回顾
+                                </button>
+                                <button class="btn btn-secondary" data-quick="exam">
+                                    <svg class="icon"><use href="#icon-exam"/></svg>
+                                    模拟考试
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- 学习进度 -->
+                        <div class="welcome-progress-section">
+                            <div class="section-header">
+                                <h3 class="section-title">整体学习进度</h3>
+                                <span class="section-more" id="progress-detail">查看详情</span>
+                            </div>
+                            <div class="progress-bar-large">
+                                <div class="progress-track">
+                                    <div class="progress-fill" id="overall-progress" style="width: 35%"></div>
+                                </div>
+                                <div class="progress-labels">
+                                    <span>已完成 833/2380 题</span>
+                                    <span>35%</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- ============== 题目练习面板 ============== -->
+                <section class="panel panel-quiz" id="panel-quiz" role="tabpanel" hidden>
+                    <!-- 顶部进度条 -->
+                    <div class="quiz-progress-bar">
+                        <div class="quiz-progress-track">
+                            <div class="quiz-progress-fill" id="quiz-progress-fill" style="width: 15%"></div>
+                        </div>
+                        <div class="quiz-progress-info">
+                            <span class="progress-current">第 <strong id="current-q-num">1</strong> 题</span>
+                            <span class="progress-total">/ <span id="total-q-num">100</span> 题</span>
+                            <span class="progress-type" id="question-type">单选题</span>
+                        </div>
+                    </div>
+
+                    <!-- 题目展示区 -->
+                    <div class="question-container" id="question-container">
+                        <div class="question-header">
+                            <span class="question-index" id="question-index">01</span>
+                            <span class="question-category" id="question-category">运营基础</span>
+                            <button class="btn-icon btn-favorite" id="btn-favorite" aria-label="收藏">
+                                <svg class="icon"><use href="#icon-favorite"/></svg>
+                            </button>
+                        </div>
+
+                        <div class="question-stem" id="question-stem">
+                            <p>以下关于用户运营的描述，哪一项是最准确的？</p>
+                        </div>
+
+                        <!-- 选项区 -->
+                        <div class="options-list" id="options-list" role="radiogroup" aria-label="题目选项">
+                            <label class="option-item" data-option="A">
+                                <input type="radio" name="question-option" value="A">
+                                <span class="option-marker">A</span>
+                                <span class="option-text">用户运营只需要关注用户数量的增长</span>
+                            </label>
+                            <label class="option-item" data-option="B">
+                                <input type="radio" name="question-option" value="B">
+                                <span class="option-marker">B</span>
+                                <span class="option-text">用户运营的核心是提升用户价值和生命周期</span>
+                            </label>
+                            <label class="option-item" data-option="C">
+                                <input type="radio" name="question-option" value="C">
+                                <span class="option-marker">C</span>
+                                <span class="option-text">用户运营等同于活动运营</span>
+                            </label>
+                            <label class="option-item" data-option="D">
+                                <input type="radio" name="question-option" value="D">
+                                <span class="option-marker">D</span>
+                                <span class="option-text">用户运营只需要处理用户投诉</span>
+                            </label>
+                        </div>
+
+                        <!-- 答案解析区（默认隐藏） -->
+                        <div class="answer-analysis" id="answer-analysis" hidden>
+                            <div class="analysis-header">
+                                <span class="analysis-result" id="analysis-result">
+                                    <svg class="icon"><use href="#icon-check"/></svg>
+                                    回答正确
+                                </span>
+                                <span class="correct-answer" id="correct-answer">正确答案：B</span>
+                            </div>
+                            <div class="analysis-content">
+                                <h4>解析：</h4>
+                                <p id="analysis-text">用户运营是指以用户为中心，通过各种运营手段提升用户活跃度、留存率和付费转化率，从而实现用户生命周期价值最大化的运营方式。其核心是提升用户价值和生命周期，而不仅仅是数量增长或活动执行。</p>
+                            </div>
+                            <div class="analysis-tags">
+                                <span class="tag">用户运营</span>
+                                <span class="tag">运营基础</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 操作栏 -->
+                    <div class="quiz-actions">
+                        <button class="btn btn-action btn-prev" id="btn-prev-question">
+                            <svg class="icon"><use href="#icon-prev"/></svg>
+                            上一题
+                        </button>
+
+                        <div class="action-center">
+                            <button class="btn-icon btn-hint" id="btn-hint" aria-label="提示">
+                                <svg class="icon"><use href="#icon-hint"/></svg>
+                                <span class="btn-icon-label">提示</span>
+                            </button>
+                            <button class="btn-icon btn-answer-card" id="btn-answer-card" aria-label="答题卡">
+                                <svg class="icon"><use href="#icon-card"/></svg>
+                                <span class="btn-icon-label">答题卡</span>
+                            </button>
+                            <button class="btn-icon btn-note" id="btn-note" aria-label="笔记">
+                                <svg class="icon"><use href="#icon-note"/></svg>
+                                <span class="btn-icon-label">笔记</span>
+                            </button>
+                        </div>
+
+                        <button class="btn btn-primary btn-action btn-next" id="btn-next-question">
+                            下一题
+                            <svg class="icon"><use href="#icon-next"/></svg>
+                        </button>
+                    </div>
+                </section>
+
+                <!-- ============== 答题卡面板 ============== -->
+                <div class="answer-card-panel" id="answer-card-panel" hidden role="dialog" aria-modal="true" aria-label="答题卡">
+                    <div class="answer-card-content">
+                        <div class="answer-card-header">
+                            <h3>答题卡</h3>
+                            <div class="answer-card-legend">
+                                <span class="legend-item"><i class="legend-dot answered"></i>已答</span>
+                                <span class="legend-item"><i class="legend-dot unanswered"></i>未答</span>
+                                <span class="legend-item"><i class="legend-dot current"></i>当前</span>
+                                <span class="legend-item"><i class="legend-dot wrong"></i>答错</span>
+                                <span class="legend-item"><i class="legend-dot correct"></i>答对</span>
+                            </div>
+                            <button class="btn-icon" id="btn-close-card" aria-label="关闭答题卡">
+                                <svg class="icon"><use href="#icon-close"/></svg>
+                            </button>
+                        </div>
+                        <div class="answer-card-grid" id="answer-card-grid">
+                            <!-- 由 JS 动态生成 -->
+                        </div>
+                        <div class="answer-card-footer">
+                            <div class="card-stats">
+                                <span>已答：<strong id="card-answered">15</strong>/100</span>
+                                <span>正确率：<strong id="card-accuracy">80%</strong></span>
+                            </div>
+                            <button class="btn btn-primary" id="btn-submit-exam">
+                                <svg class="icon"><use href="#icon-check"/></svg>
+                                提交答卷
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ============== 统计面板 ============== -->
+                <section class="panel panel-stats" id="panel-stats" role="tabpanel" hidden>
+                    <div class="stats-container">
+                        <header class="stats-header">
+                            <h2 class="stats-title">学习统计</h2>
+                            <div class="stats-period-tabs">
+                                <button class="period-tab active" data-period="week">本周</button>
+                                <button class="period-tab" data-period="month">本月</button>
+                                <button class="period-tab" data-period="all">全部</button>
+                            </div>
+                        </header>
+
+                        <!-- 总体数据卡片 -->
+                        <div class="stats-overview">
+                            <div class="stat-card stat-card-primary">
+                                <div class="stat-card-header">
+                                    <svg class="icon"><use href="#icon-book"/></svg>
+                                    <span>累计刷题</span>
+                                </div>
+                                <div class="stat-card-body">
+                                    <span class="stat-big-number" id="stat-total-questions">1,248</span>
+                                    <span class="stat-trend up">
+                                        <svg class="icon"><use href="#icon-arrow-right"/></svg>
+                                        +12% 较上周
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="stat-card stat-card-success">
+                                <div class="stat-card-header">
+                                    <svg class="icon"><use href="#icon-check"/></svg>
+                                    <span>正确率</span>
+                                </div>
+                                <div class="stat-card-body">
+                                    <span class="stat-big-number" id="stat-accuracy">78.5%</span>
+                                    <span class="stat-trend up">
+                                        <svg class="icon"><use href="#icon-arrow-right"/></svg>
+                                        +3.2%
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="stat-card stat-card-warning">
+                                <div class="stat-card-header">
+                                    <svg class="icon"><use href="#icon-fire"/></svg>
+                                    <span>连续学习</span>
+                                </div>
+                                <div class="stat-card-body">
+                                    <span class="stat-big-number" id="stat-streak">7 天</span>
+                                    <span class="stat-trend">
+                                        保持加油！
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="stat-card stat-card-info">
+                                <div class="stat-card-header">
+                                    <svg class="icon"><use href="#icon-daily"/></svg>
+                                    <span>学习时长</span>
+                                </div>
+                                <div class="stat-card-body">
+                                    <span class="stat-big-number" id="stat-duration">42.5h</span>
+                                    <span class="stat-trend up">
+                                        <svg class="icon"><use href="#icon-arrow-right"/></svg>
+                                        +5.5h
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 刷题趋势图 -->
+                        <div class="stats-chart-section">
+                            <h3 class="chart-title">刷题趋势</h3>
+                            <div class="chart-container" id="chart-trend">
+                                <!-- 由 JS 绘制图表 -->
+                                <canvas id="trend-chart-canvas"></canvas>
+                            </div>
+                        </div>
+
+                        <!-- 章节掌握度 -->
+                        <div class="stats-chart-section">
+                            <h3 class="chart-title">章节掌握度</h3>
+                            <div class="chapter-mastery-list" id="chapter-mastery-list">
+                                <div class="mastery-item">
+                                    <div class="mastery-header">
+                                        <span class="mastery-name">运营基础</span>
+                                        <span class="mastery-percent">85%</span>
+                                    </div>
+                                    <div class="mastery-bar">
+                                        <div class="mastery-fill" style="width: 85%; background: linear-gradient(90deg, #10b981, #34d399);"></div>
+                                    </div>
+                                </div>
+                                <div class="mastery-item">
+                                    <div class="mastery-header">
+                                        <span class="mastery-name">用户运营</span>
+                                        <span class="mastery-percent">72%</span>
+                                    </div>
+                                    <div class="mastery-bar">
+                                        <div class="mastery-fill" style="width: 72%; background: linear-gradient(90deg, #6366f1, #818cf8);"></div>
+                                    </div>
+                                </div>
+                                <div class="mastery-item">
+                                    <div class="mastery-header">
+                                        <span class="mastery-name">内容运营</span>
+                                        <span class="mastery-percent">68%</span>
+                                    </div>
+                                    <div class="mastery-bar">
+                                        <div class="mastery-fill" style="width: 68%; background: linear-gradient(90deg, #f59e0b, #fbbf24);"></div>
+                                    </div>
+                                </div>
+                                <div class="mastery-item">
+                                    <div class="mastery-header">
+                                        <span class="mastery-name">活动运营</span>
+                                        <span class="mastery-percent">45%</span>
+                                    </div>
+                                    <div class="mastery-bar">
+                                        <div class="mastery-fill" style="width: 45%; background: linear-gradient(90deg, #ef4444, #f87171);"></div>
+                                    </div>
+                                </div>
+                                <div class="mastery-item">
+                                    <div class="mastery-header">
+                                        <span class="mastery-name">数据运营</span>
+                                        <span class="mastery-percent">60%</span>
+                                    </div>
+                                    <div class="mastery-bar">
+                                        <div class="mastery-fill" style="width: 60%; background: linear-gradient(90deg, #8b5cf6, #a78bfa);"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 能力雷达图 -->
+                        <div class="stats-chart-section">
+                            <h3 class="chart-title">能力雷达</h3>
+                            <div class="chart-container radar-chart-container">
+                                <canvas id="radar-chart-canvas"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- ============== 错题集面板 ============== -->
+                <section class="panel panel-wrong-book" id="panel-wrong-book" role="tabpanel" hidden>
+                    <div class="wrong-book-container">
+                        <header class="wrong-book-header">
+                            <h2 class="wrong-book-title">错题本</h2>
+                            <div class="wrong-book-actions">
+                                <button class="btn btn-secondary btn-sm" id="btn-wrong-filter">
+                                    <svg class="icon"><use href="#icon-more"/></svg>
+                                    筛选
+                                </button>
+                                <button class="btn btn-primary btn-sm" id="btn-wrong-practice">
+                                    <svg class="icon"><use href="#icon-play"/></svg>
+                                    开始复习
+                                </button>
+                            </div>
+                        </header>
+
+                        <!-- 错题统计 -->
+                        <div class="wrong-stats">
+                            <div class="wrong-stat-item">
+                                <span class="wrong-stat-value" id="wrong-total">36</span>
+                                <span class="wrong-stat-label">错题总数</span>
+                            </div>
+                            <div class="wrong-stat-item">
+                                <span class="wrong-stat-value" id="wrong-reviewed">12</span>
+                                <span class="wrong-stat-label">已复习</span>
+                            </div>
+                            <div class="wrong-stat-item">
+                                <span class="wrong-stat-value" id="wrong-mastered">5</span>
+                                <span class="wrong-stat-label">已掌握</span>
+                            </div>
+                        </div>
+
+                        <!-- 错题分类 -->
+                        <div class="wrong-tabs">
+                            <button class="wrong-tab active" data-wrong-tab="all">全部</button>
+                            <button class="wrong-tab" data-wrong-tab="unreviewed">待复习</button>
+                            <button class="wrong-tab" data-wrong-tab="mastered">已掌握</button>
+                        </div>
+
+                        <!-- 错题列表 -->
+                        <div class="wrong-list" id="wrong-list">
+                            <article class="wrong-item">
+                                <div class="wrong-item-header">
+                                    <span class="wrong-item-index">01</span>
+                                    <span class="wrong-item-category">用户运营</span>
+                                    <span class="wrong-item-date">3天前</span>
+                                </div>
+                                <div class="wrong-item-question">以下关于用户留存的说法，错误的是？</div>
+                                <div class="wrong-item-meta">
+                                    <span class="wrong-count">错误 2 次</span>
+                                    <button class="btn-text">查看详情</button>
+                                </div>
+                            </article>
+
+                            <article class="wrong-item">
+                                <div class="wrong-item-header">
+                                    <span class="wrong-item-index">02</span>
+                                    <span class="wrong-item-category">内容运营</span>
+                                    <span class="wrong-item-date">2天前</span>
+                                </div>
+                                <div class="wrong-item-question">内容运营的核心指标不包括以下哪一项？</div>
+                                <div class="wrong-item-meta">
+                                    <span class="wrong-count">错误 1 次</span>
+                                    <button class="btn-text">查看详情</button>
+                                </div>
+                            </article>
+
+                            <article class="wrong-item">
+                                <div class="wrong-item-header">
+                                    <span class="wrong-item-index">03</span>
+                                    <span class="wrong-item-category">活动运营</span>
+                                    <span class="wrong-item-date">1天前</span>
+                                </div>
+                                <div class="wrong-item-question">活动运营的AARRR模型中，第二个A代表什么？</div>
+                                <div class="wrong-item-meta">
+                                    <span class="wrong-count">错误 3 次</span>
+                                    <button class="btn-text">查看详情</button>
+                                </div>
+                            </article>
+                        </div>
+                    </div>
+                </section>
+            </main>
+        </div>
+
+        <!-- ============== 底部状态栏 ============== -->
+        <footer class="app-footer" role="contentinfo">
+            <div class="footer-left">
+                <div class="footer-stat">
+                    <svg class="icon icon-correct"><use href="#icon-check"/></svg>
+                    <span class="stat-label">正确率</span>
+                    <span class="stat-value" id="footer-accuracy">78%</span>
+                </div>
+            </div>
+
+            <div class="footer-center">
+                <div class="footer-progress">
+                    <div class="footer-progress-track">
+                        <div class="footer-progress-fill" id="footer-progress-fill" style="width: 35%"></div>
+                    </div>
+                    <span class="footer-progress-text" id="footer-progress-text">833 / 2380 题</span>
+                </div>
+            </div>
+
+            <div class="footer-right">
+                <div class="footer-stat">
+                    <svg class="icon"><use href="#icon-daily"/></svg>
+                    <span class="stat-label">计时器</span>
+                    <span class="stat-value timer-value" id="footer-timer">00:15:32</span>
+                </div>
+                <button class="btn-icon btn-timer-toggle" id="btn-timer-toggle" aria-label="暂停计时">
+                    <svg class="icon"><use href="#icon-pause"/></svg>
+                </button>
+                <button class="btn-icon btn-sound-toggle" id="btn-sound-toggle" aria-label="音效开关">
+                    <svg class="icon"><use href="#icon-sound-on"/></svg>
+                </button>
+            </div>
+        </footer>
+
+        <!-- ============== 设置面板（弹窗） ============== -->
+        <div class="modal modal-settings" id="modal-settings" role="dialog" aria-modal="true" aria-labelledby="settings-title" hidden>
+            <div class="modal-backdrop" data-close-modal="settings"></div>
+            <div class="modal-dialog">
+                <header class="modal-header">
+                    <h2 class="modal-title" id="settings-title">设置</h2>
+                    <button class="btn-icon" data-close-modal="settings" aria-label="关闭设置">
+                        <svg class="icon"><use href="#icon-close"/></svg>
+                    </button>
+                </header>
+
+                <div class="modal-body">
+                    <!-- 设置导航 -->
+                    <nav class="settings-nav">
+                        <button class="settings-nav-item active" data-settings-tab="theme">
+                            <svg class="icon"><use href="#icon-palette"/></svg>
+                            <span>皮肤主题</span>
+                        </button>
+                        <button class="settings-nav-item" data-settings-tab="font">
+                            <svg class="icon"><use href="#icon-font"/></svg>
+                            <span>字体设置</span>
+                        </button>
+                        <button class="settings-nav-item" data-settings-tab="sound">
+                            <svg class="icon"><use href="#icon-sound-on"/></svg>
+                            <span>音效设置</span>
+                        </button>
+                        <button class="settings-nav-item" data-settings-tab="background">
+                            <svg class="icon"><use href="#icon-bg"/></svg>
+                            <span>背景自定义</span>
+                        </button>
+                        <button class="settings-nav-item" data-settings-tab="about">
+                            <svg class="icon"><use href="#icon-logo"/></svg>
+                            <span>关于书桌</span>
+                        </button>
+                    </nav>
+
+                    <div class="settings-content">
+                        <!-- 皮肤主题 -->
+                        <div class="settings-pane active" id="settings-theme">
+                            <h3 class="settings-section-title">选择主题皮肤</h3>
+                            <div class="theme-grid">
+                                <button class="theme-card active" data-theme="indigo">
+                                    <span class="theme-preview theme-indigo-preview"></span>
+                                    <span class="theme-name">经典靛蓝</span>
+                                </button>
+                                <button class="theme-card" data-theme="ocean">
+                                    <span class="theme-preview theme-ocean-preview"></span>
+                                    <span class="theme-name">海洋蓝</span>
+                                </button>
+                                <button class="theme-card" data-theme="forest">
+                                    <span class="theme-preview theme-forest-preview"></span>
+                                    <span class="theme-name">森林绿</span>
+                                </button>
+                                <button class="theme-card" data-theme="sunset">
+                                    <span class="theme-preview theme-sunset-preview"></span>
+                                    <span class="theme-name">落日橙</span>
+                                </button>
+                                <button class="theme-card" data-theme="rose">
+                                    <span class="theme-preview theme-rose-preview"></span>
+                                    <span class="theme-name">玫瑰粉</span>
+                                </button>
+                                <button class="theme-card" data-theme="dark">
+                                    <span class="theme-preview theme-dark-preview"></span>
+                                    <span class="theme-name">暗夜模式</span>
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- 字体设置 -->
+                        <div class="settings-pane" id="settings-font">
+                            <h3 class="settings-section-title">字体大小</h3>
+                            <div class="font-size-control">
+                                <button class="btn-icon" id="btn-font-decrease" aria-label="减小字体">
+                                    <svg class="icon"><use href="#icon-font"/></svg>
+                                </button>
+                                <div class="font-size-slider">
+                                    <input type="range" id="font-size-slider" min="12" max="20" value="16" step="1">
+                                    <div class="font-size-labels">
+                                        <span>小</span>
+                                        <span>标准</span>
+                                        <span>大</span>
+                                    </div>
+                                </div>
+                                <button class="btn-icon" id="btn-font-increase" aria-label="增大字体">
+                                    <svg class="icon"><use href="#icon-font"/></svg>
+                                </button>
+                            </div>
+
+                            <h3 class="settings-section-title">字体样式</h3>
+                            <div class="font-family-options">
+                                <button class="font-option active" data-font="default">
+                                    <span class="font-preview" style="font-family: inherit;">系统默认</span>
+                                </button>
+                                <button class="font-option" data-font="songti">
+                                    <span class="font-preview" style="font-family: 'SimSun', 'Songti SC', serif;">宋体</span>
+                                </button>
+                                <button class="font-option" data-font="heiti">
+                                    <span class="font-preview" style="font-family: 'SimHei', 'Heiti SC', sans-serif;">黑体</span>
+                                </button>
+                                <button class="font-option" data-font="kaiti">
+                                    <span class="font-preview" style="font-family: 'KaiTi', 'Kaiti SC', serif;">楷体</span>
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- 音效设置 -->
+                        <div class="settings-pane" id="settings-sound">
+                            <h3 class="settings-section-title">音效开关</h3>
+                            <div class="setting-row">
+                                <div class="setting-info">
+                                    <span class="setting-name">答题音效</span>
+                                    <span class="setting-desc">选择答案时播放反馈音效</span>
+                                </div>
+                                <label class="toggle-switch">
+                                    <input type="checkbox" id="sound-toggle-answer" checked>
+                                    <span class="toggle-slider"></span>
+                                </label>
+                            </div>
+                            <div class="setting-row">
+                                <div class="setting-info">
+                                    <span class="setting-name">按钮音效</span>
+                                    <span class="setting-desc">点击按钮时播放点击音效</span>
+                                </div>
+                                <label class="toggle-switch">
+                                    <input type="checkbox" id="sound-toggle-click" checked>
+                                    <span class="toggle-slider"></span>
+                                </label>
+                            </div>
+                            <div class="setting-row">
+                                <div class="setting-info">
+                                    <span class="setting-name">倒计时提示</span>
+                                    <span class="setting-desc">考试模式最后1分钟提示音</span>
+                                </div>
+                                <label class="toggle-switch">
+                                    <input type="checkbox" id="sound-toggle-timer" checked>
+                                    <span class="toggle-slider"></span>
+                                </label>
+                            </div>
+
+                            <h3 class="settings-section-title">音量调节</h3>
+                            <div class="volume-control">
+                                <svg class="icon"><use href="#icon-sound-off"/></svg>
+                                <input type="range" id="volume-slider" min="0" max="100" value="70">
+                                <svg class="icon"><use href="#icon-sound-on"/></svg>
+                            </div>
+                        </div>
+
+                        <!-- 背景自定义 -->
+                        <div class="settings-pane" id="settings-background">
+                            <h3 class="settings-section-title">背景样式</h3>
+                            <div class="bg-options">
+                                <button class="bg-option active" data-bg="gradient">
+                                    <span class="bg-preview bg-gradient-preview"></span>
+                                    <span class="bg-name">渐变背景</span>
+                                </button>
+                                <button class="bg-option" data-bg="particles">
+                                    <span class="bg-preview bg-particles-preview"></span>
+                                    <span class="bg-name">粒子动画</span>
+                                </button>
+                                <button class="bg-option" data-bg="solid">
+                                    <span class="bg-preview bg-solid-preview"></span>
+                                    <span class="bg-name">纯色背景</span>
+                                </button>
+                                <button class="bg-option" data-bg="custom">
+                                    <span class="bg-preview bg-custom-preview"></span>
+                                    <span class="bg-name">自定义图片</span>
+                                </button>
+                            </div>
+
+                            <h3 class="settings-section-title">背景模糊度</h3>
+                            <div class="blur-control">
+                                <input type="range" id="bg-blur-slider" min="0" max="20" value="0">
+                                <div class="blur-labels">
+                                    <span>清晰</span>
+                                    <span>模糊</span>
+                                </div>
+                            </div>
+
+                            <h3 class="settings-section-title">背景透明度</h3>
+                            <div class="opacity-control">
+                                <input type="range" id="bg-opacity-slider" min="30" max="100" value="85">
+                                <div class="opacity-labels">
+                                    <span>透明</span>
+                                    <span>不透明</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 关于 -->
+                        <div class="settings-pane" id="settings-about">
+                            <div class="about-section">
+                                <div class="about-logo">
+                                    <svg class="icon"><use href="#icon-logo"/></svg>
+                                </div>
+                                <h3 class="about-name">书桌 ShuZhuo</h3>
+                                <p class="about-version">版本 1.0.0</p>
+                                <p class="about-desc">运营岗位资质刷题应用<br>让学习更高效，让通关更轻松</p>
+                            </div>
+                            <div class="about-links">
+                                <button class="about-link-item">
+                                    <svg class="icon"><use href="#icon-star"/></svg>
+                                    <span>给个好评</span>
+                                </button>
+                                <button class="about-link-item">
+                                    <svg class="icon"><use href="#icon-share"/></svg>
+                                    <span>分享给好友</span>
+                                </button>
+                                <button class="about-link-item">
+                                    <svg class="icon"><use href="#icon-download"/></svg>
+                                    <span>检查更新</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <footer class="modal-footer">
+                    <button class="btn btn-secondary" data-close-modal="settings">取消</button>
+                    <button class="btn btn-primary" id="btn-save-settings">保存设置</button>
+                </footer>
+            </div>
+        </div>
+
+        <!-- ============== 搜索面板 ============== -->
+        <div class="modal modal-search" id="modal-search" role="dialog" aria-modal="true" aria-labelledby="search-title" hidden>
+            <div class="modal-backdrop" data-close-modal="search"></div>
+            <div class="modal-dialog modal-dialog-sm">
+                <header class="modal-header">
+                    <h2 class="modal-title" id="search-title">搜索题目</h2>
+                    <button class="btn-icon" data-close-modal="search" aria-label="关闭搜索">
+                        <svg class="icon"><use href="#icon-close"/></svg>
+                    </button>
+                </header>
+                <div class="modal-body">
+                    <div class="search-box">
+                        <svg class="icon search-icon"><use href="#icon-search"/></svg>
+                        <input type="text" id="search-input" placeholder="输入关键词搜索题目..." autofocus>
+                    </div>
+                    <div class="search-history">
+                        <div class="search-history-header">
+                            <span>搜索历史</span>
+                            <button class="btn-text" id="btn-clear-history">清空</button>
+                        </div>
+                        <div class="search-tags">
+                            <span class="search-tag">用户运营</span>
+                            <span class="search-tag">AARRR模型</span>
+                            <span class="search-tag">转化率</span>
+                            <span class="search-tag">留存率</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ============== Toast 提示容器 ============== -->
+        <div class="toast-container" id="toast-container" aria-live="polite"></div>
+
+        <!-- ============== 快捷键提示 ============== -->
+        <div class="shortcuts-hint" id="shortcuts-hint" hidden>
+            <div class="shortcut-item"><kbd>A</kbd> <span>选项A</span></div>
+            <div class="shortcut-item"><kbd>B</kbd> <span>选项B</span></div>
+            <div class="shortcut-item"><kbd>C</kbd> <span>选项C</span></div>
+            <div class="shortcut-item"><kbd>D</kbd> <span>选项D</span></div>
+            <div class="shortcut-item"><kbd>←</kbd> <span>上一题</span></div>
+            <div class="shortcut-item"><kbd>→</kbd> <span>下一题</span></div>
+            <div class="shortcut-item"><kbd>Space</kbd> <span>显示答案</span></div>
+        </div>
+    </div>
+
+    <!-- JS 引入（按顺序） -->
+    <script src="js/utils.js" defer></script>
+    <script src="js/compat.js" defer></script>
+    <script src="js/particles.js" defer></script>
+    <script src="js/sounds.js" defer></script>
+    <script src="js/stats.js" defer></script>
+    <script src="js/modes.js" defer></script>
+    <script src="js/easter-eggs.js" defer></script>
+    <script src="js/themes.js" defer></script>
+    <script src="js/app.js" defer></script>
+
+    <!-- 加载完成后隐藏加载动画 -->
+    <script>
+        window.addEventListener('load', function() {
+            setTimeout(function() {
+                var loader = document.getElementById('app-loader');
+                var app = document.getElementById('app');
+                if (loader) {
+                    loader.classList.add('loader-hidden');
+                }
+                if (app) {
+                    app.style.visibility = 'visible';
+                }
+                setTimeout(function() {
+                    if (loader && loader.parentNode) {
+                        loader.parentNode.removeChild(loader);
+                    }
+                }, 600);
+            }, 800);
+        });
+    </script>
+
+    <!-- Service Worker 注册 -->
+    <script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', function() {
+                navigator.serviceWorker.register('sw.js').then(function(registration) {
+                    console.log('SW registered: ', registration.scope);
+                    registration.addEventListener('updatefound', function() {
+                        var installingWorker = registration.installing;
+                        installingWorker.addEventListener('statechange', function() {
+                            if (installingWorker.state === 'installed' && navigator.serviceWorker.controller) {
+                                console.log('New content available; please refresh.');
+                            }
+                        });
+                    });
+                }).catch(function(error) {
+                    console.warn('SW registration failed: ', error);
+                });
+            });
+        }
+    </script>
+</body>
+</html>
